@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>智慧商业管理平台|商综体管理</title>
+  <link rel="shortcut icon" href="../image/favicon.ico">
+  <link rel="stylesheet" href="../plugins/ol3/ol.css">
+  <link rel="stylesheet" href="../plugins/layui/css/layui.css">
+  <script src="../plugins/ol3/ol.js"></script>
+  <script src="../plugins/ol3/ol3-util-extends.js"></script>
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <script src="../plugins/jquery/jquery.cookie.js"></script>
+  <script src="../plugins/jquery/jquery.extend.js"></script>
+  <script src="../plugins/layui/layui.all.js"></script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="css/layui-extend.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="../plugins/common/common_config.js"></script>
+  <script src="js/busi_manage.js"></script>
+</head>
+<body>
+  <!-- 内容主体区域 -->
+  <div class="main-content">
+    <div class="layui-tab">
+      <ul class="layui-tab-title">
+        <li class="layui-this">商综体管理</li>
+      </ul>
+      <div class="layui-tab-content">
+        <form class="layui-form search-form" action="">
+          <div class="layui-inline search-element">
+            <label>商综体名称：</label>
+            <div class="layui-input-inline">
+              <input type="text" name="busi_name" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="search-btn">搜索</button>
+          <button type="button" class="layui-btn layui-btn-normal" lay-submit="" id="busi_add" title="新增、删除都只是超管权限,管理员的编辑权限只能编辑名称、地址、备注。">新增</button>
+        </form>
+        <table  id="busi_data" class="layui-hide" lay-filter='busi_data'></table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 弹窗 -->
+  <form  id="edit_form" class="layui-form layui-form-pane" style="display: none;" lay-filter="edit_form">
+    <div class="edit-form layui-form-item">
+      <div class="edit-form-left">
+        <div class="layui-form-item">
+          <label class="layui-form-label">名称：</label>
+          <div class="layui-input-inline">
+            <input type="text" name="busi_name" lay-verify="required" lay-reqtext="名称是必填项!" autocomplete="off" class="layui-input">
+            <input type="hidden" name="busi_id">
+          </div>
+          <div class="layui-form-mid"><span class="required-sign">*</span></div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">地址：</label>
+          <div class="layui-input-inline">
+            <input type="text" name="address" lay-verify="required" lay-reqtext="地址是必填项!" autocomplete="off" class="layui-input">
+          </div>
+          <div class="layui-form-mid"><span class="required-sign">*</span></div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">经度：</label>
+          <div class="layui-input-inline">
+            <input type="text" name="lon" lay-verify="required|coordinate" autocomplete="off" class="layui-input" placeholder="小数点后至少保留五位小数">
+          </div>
+          <div class="layui-form-mid"><span class="required-sign">*</span><img class="map-postion" src="image/position1.png" title="定位"></div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">纬度：</label>
+          <div class="layui-input-inline">
+            <input type="text" name="lat" lay-verify="required|coordinate" autocomplete="off" class="layui-input" placeholder="小数点后至少保留五位小数">
+          </div>
+          <div class="layui-form-mid"><span class="required-sign">*</span></div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">竞争项目：</label>
+          <div class="layui-input-inline">
+            <input type="radio" name="flag" value="1" title="启用">
+            <input type="radio" name="flag" value="0" title="停用" checked="">
+          </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+          <div style="display: flex;">
+            <label class="layui-form-label">边界：</label>
+          </div>
+          <div class="layui-input-block">
+            <textarea class="layui-textarea" name="wkt"></textarea>
+          </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+          <label class="layui-form-label">备注：</label>
+          <div class="layui-input-block">
+            <textarea class="layui-textarea" name="remarks"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="edit-form-right">
+        <div id="map">
+          <div class="map-btns">
+            <div class="map-btns-content">
+              <div class="map-btn" id="map_postion_btn" title="开始取坐标"></div>
+              <div class="map-btn" id="map_polygon_btn" title="开始绘制边界"></div>
+              <div class="map-btn" id="map_cancel_btn" title="取消"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-form-item" style="margin-top:40px">
+      <div class="layui-input-block">
+          <button class="layui-btn  layui-btn-normal " lay-submit="" lay-filter="edit-btn">确认修改</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- 穿梭框 -->
+  <div id="edit_transfer" style="display: none;" lay-filter="edit_transfer"></div>
+</body>
+</html>

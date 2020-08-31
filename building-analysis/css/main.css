@@ -1,0 +1,607 @@
+html, body, #map, #main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div {
+    user-select:none;
+}
+
+.layui-slider-step {
+    background-color: #5c6fd7;
+}
+
+#title_box {
+    width: 100%;
+    height: 8%;
+    /*background-color: #0b132b;*/
+    background-image: url("../image/titlebackgroud.png");
+    background-size: cover;
+    position: absolute;
+    top: -5px;
+    /*filter: alpha(Opacity=95);*/
+    /*-moz-opacity: 0.95;*/
+    /*opacity: 0.95;*/
+}
+
+#now_type {
+    width: 8%;
+    height: 120px;
+    background-color: #0b132b;
+    /*background-image: url("../image/leftbackground.png");*/
+    /*background-size: cover;*/
+    position: absolute;
+    top: 6%;
+    left: 68%;
+    filter: alpha(Opacity=8);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#chart1box {
+    width: 27%;
+    height: 24%;
+    /*background-color: #0b132b;*/
+    background-image: url("../image/leftbackground.png");
+    background-size: cover;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    /*filter: alpha(Opacity=95);*/
+    /*-moz-opacity: 0.95;*/
+    /*opacity: 0.95;*/
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#chart2box {
+    width: 25%;
+    height: 24%;
+    background-image: url("../image/leftbackground.png");
+    background-size: cover;
+    position: absolute;
+    bottom: 5px;
+    left: 27%;
+    /*filter: alpha(Opacity=95);*/
+    /*-moz-opacity: 0.95;*/
+    /*opacity: 0.95;*/
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#chart3box {
+    width: 25%;
+    height: 24%;
+    background-image: url("../image/leftbackground.png");
+    background-size: cover;
+    position: absolute;
+    bottom: 5px;
+    left: 52%;
+    /*filter: alpha(Opacity=95);*/
+    /*-moz-opacity: 0.95;*/
+    /*opacity: 0.95;*/
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#chartRightbox {
+    width: 25%;
+    height: 93%;
+    background-image: url("../image/rightBackground.png");
+    background-size: cover;
+    position: absolute;
+    bottom: 5px;
+    left: 76%;
+    /*filter: alpha(Opacity=95);*/
+    /*-moz-opacity: 0.95;*/
+    /*opacity: 0.95;*/
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#chart4box {
+    width: 22%;
+    height: 24%;
+    background-color: #0b132b;
+    position: absolute;
+    bottom: calc(5px + 25%);
+    left: 77%;
+    filter: alpha(Opacity=95);
+    -moz-opacity: 0.95;
+    opacity: 0.95;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.chartbox_title {
+    color: #ffffff;
+    margin-left: 4px;
+    margin-top: 2px;
+    font-weight: bold;
+    font-size: 14pt;
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+
+#chart3box1 {
+    width: 100%;
+    height: calc(100% - 42px);
+}
+
+#chart3boxleft {
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+
+#chart3boxleft img {
+    margin-left: calc(20% - 16px);
+    margin-top: 4px;
+}
+
+#chart3boxleft p {
+    color: #ffffff;
+    margin: 4px;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12pt;
+    line-height: 25px;
+}
+
+#chart3 {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+#rb {
+    width: 22%;
+    height: 24%;
+    background-color: #0b132b;
+    position: absolute;
+    bottom: 5px;
+    left: 77%;
+    filter: alpha(Opacity=95);
+    -moz-opacity: 0.95;
+    opacity: 0.95;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#rb ul {
+    color: #fff;
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    background-color: #020629;
+    width: calc(50% - 20px);
+    float: left;
+}
+
+#rb li {
+    margin-top: 2px;
+    height: 20px;
+    vertical-align: center;
+}
+
+.ul_li_it1 {
+    display: -moz-inline-box;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 10pt;
+    text-align: center;
+    line-height: 16px;
+}
+
+.ul_li_0 {
+    background: url(../image/bg_li_1.png) no-repeat;
+}
+
+.ul_li_1 {
+    background: url(../image/bg_li_2.png) no-repeat;
+}
+
+.ul_li_2 {
+    background: url(../image/bg_li_3.png) no-repeat;
+}
+
+.ul_li_3 {
+    background: url(../image/bg_li_4.png) no-repeat;
+}
+
+.ul_li_4 {
+    background: url(../image/bg_li_5.png) no-repeat;
+}
+
+.ul_li_it2 {
+    height: 16px;
+    width: 16px;
+}
+
+.ul_li_it3 {
+    display: -moz-inline-box;
+    display: inline-block;
+    width: 50px;
+    height: 16px;
+    font-size: 4pt;
+    text-align: left;
+    line-height: 16px;
+}
+
+.ul_li_it4 {
+    display: -moz-inline-box;
+    display: inline-block;
+    height: 16px;
+    font-size: 4pt;
+    text-align: left;
+    line-height: 16px;
+}
+
+.rb_title {
+    width: 50%;
+    text-align: center;
+    float: left;
+    color: #fff;
+    height: 20px;
+    font-size: 12pt;
+    line-height: 20px;
+}
+
+#chart4box_left {
+    width: 50%;
+    height: calc(100% - 50px);
+    float: left;
+}
+
+#chart4box1 {
+    width: 50%;
+    height: calc(100% - 50px);
+    float: left;
+}
+
+#chart4 {
+    width: 100%;
+    height: 50%;
+}
+
+#chart4box_bottom {
+    width: 100%;
+    height: 50%;
+}
+
+#chart4box_left tr {
+    height: 22%;
+    width: 100%;
+    color: #fff;
+    font-size: 8pt;
+}
+
+#chart4box_left img {
+    width: 16px;
+    height: 16px;
+}
+
+#chart4box_bottom tr {
+    height: 22%;
+    width: 100%;
+    color: #fff;
+    font-size: 8pt;
+}
+
+#chart4box_bottom img {
+    width: 16px;
+    height: 16px;
+}
+
+#chart5box {
+    width: 22%;
+    height: 24%;
+    background-color: #0b132b;
+    position: absolute;
+    bottom: calc(5px + 50%);
+    left: 77%;
+    filter: alpha(Opacity=95);
+    -moz-opacity: 0.95;
+    opacity: 0.95;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#chart5box_left, #chart5box_right {
+    width: 50%;
+    float: left;
+    height: calc(100% - 42px);
+}
+
+#chart5box_left div {
+    width: 100%;
+    height: 50%;
+    line-height: calc(50% - 1px);
+}
+
+#chart5box_left img {
+    vertical-align: middle;
+}
+
+#woman_ratio {
+    color: #e86465;
+}
+
+#man_ratio {
+    color: #50aef5;
+}
+
+#chart5box_right > div {
+    width: 100%;
+    height: 50%;
+}
+
+#legend_table5 {
+    width: 100%;
+    height: 100%;
+}
+
+#legend_table5 tr {
+    height: 20%;
+    width: 100%;
+    color: #fff;
+    font-size: 4pt;
+    padding: 0px;
+    margin: 0px;
+}
+
+#legend_table5 img {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+
+.chartbox p {
+    color: #ffffff;
+    margin-left: 4px;
+    margin-top: 2px;
+    font-weight: bold;
+    font-size: 14pt;
+    line-height: 40px;
+    margin-bottom: 0px;
+}
+
+/*#chart6box {*/
+/*    width: 22%;*/
+/*    height: 24%;*/
+/*    background-color: #0b132b;*/
+/*    position: absolute;*/
+/*    bottom: calc(5px + 75%);*/
+/*    left: 77%;*/
+/*    filter: alpha(Opacity=95);*/
+/*    -moz-opacity: 0.95;*/
+/*    opacity: 0.95;*/
+/*    border-width: 0px;*/
+/*    border-style: solid;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+#chart6box_left, #chart6box_right {
+    width: 50%;
+    height: calc(100% - 42px);
+    float: left;
+}
+
+#chart6box_left tr {
+    height: 25%;
+    width: 100%;
+    color: #fff;
+    font-size: 4pt;
+    padding: 0px;
+    margin: 0px;
+}
+
+#chart6box_left img {
+    height: 60%;
+    vertical-align: middle;
+}
+
+#chart6box_right > div {
+    width: 100%;
+    height: 50%;
+}
+
+#legend_table6 {
+    width: 100%;
+    height: 100%;
+}
+
+#legend_table6 tr {
+    height: 20%;
+    width: 100%;
+    color: #fff;
+    font-size: 4pt;
+    padding: 0px;
+    margin: 0px;
+}
+
+#legend_table6 img {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+
+.circle_1 {
+    width: 10px;
+    height: 10px;
+    background: #64a7e6;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.circle_2 {
+    width: 10px;
+    height: 10px;
+    background: #80cd57;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.circle_3 {
+    width: 10px;
+    height: 10px;
+    background: #efc968;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.circle_4 {
+    width: 10px;
+    height: 10px;
+    background: #e49261;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.circle_5 {
+    width: 10px;
+    height: 10px;
+    background: #e0695b;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#controller_box {
+    width: 48%;
+    height: 50px;
+    bottom: 26%;
+    position: absolute;
+    background-color: #0b132b;
+    left: 13.5%;
+    min-width: 700px;
+    filter: alpha(Opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#select_box {
+    width: 8%;
+    height: 50px;
+    bottom: 26%;
+    position: absolute;
+    background-color: #0b132b;
+    left: 4%;
+    filter: alpha(Opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#date_sleect_box {
+    width: 80px;
+    height: 25px;
+    top: 12px;
+    left: 0px;
+    position: absolute;
+}
+
+#time_box {
+    width: calc(100% - 80px);
+    height: 100%;
+    left: 80px;
+    position: absolute;
+    background-color: #031345;
+}
+
+#time_list {
+    color: white;
+    list-style-type: none;
+    overflow-x: auto;
+    list-style: none;
+    white-space: nowrap;
+    width: calc(100% - 20px);
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+}
+
+#time_list li {
+    display: inline-block;
+    width: 50px;
+    line-height: 40px;
+}
+
+.time_item {
+    text-align: center;
+    font-size: 10pt;
+}
+
+.time_item_line {
+    width: 100%;
+    height: 6px;
+    background-color: red; /* 浏览器不支持时显示 */
+    background-image: linear-gradient(#e66465, #9198e5);
+}
+
+#cursor_left, #cursor_right {
+    width: 16px;
+    height: 16px;
+    background-image: url("../image/cursor.png");
+    position: absolute;
+    left: 77px;
+}
+
+#cursor_right {
+    left: 177px;
+}
+
+#cursor {
+    width: 2px;
+    height: 40px;
+    background: #ff0000;
+    left: 149px;
+    position: absolute;
+}
+
+#btn_box {
+    width: 80px;
+    height: 100%;
+    left: 100%;
+    margin-left: 10px;
+    position: absolute;
+    background-color: #031345;
+}
+
+#detail-data-box{
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    left: 5px;
+    top: 40px;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <title>智慧商业管理平台 - Wisdom Business Platform</title> -->
+    <title>竞争分析</title>
+    <link rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="./plugins/ol3/ol.css">
+    <link rel="stylesheet" href="./plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="./plugins/ol3/ol-extent.css">
+    <link rel="stylesheet" href="./css/font_icon.css">
+    <link rel="stylesheet" href="./css/style_override.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div id="main">
+    <div id="map" style="background-color:#0a0620"></div>
+    <div id="title_box">
+      <div class="title-logo">
+        <img src="image/icon_logo.png">
+      </div>
+      <div id="switch_item_box" class="switch-item-box">
+        <div class="switch-item-title"><span class="title"></span><span class="nav-more"></span></div>
+        <div class="switch-item-content">
+          <div class="switch-item-search">
+            <input type="text" name="keyWord" autocomplete="off" placeholder="请输入关键字" class="layui-input">
+            <div class="switch-item-search-btn"></div>
+          </div>
+          <div class="switch-item-list">
+            <div class="switch-item selected">乐成中心</div>
+            <div class="switch-item">西单大悦城</div>
+            <div class="switch-item">富力广场</div>
+            <div class="switch-item">九龙商厦</div>
+            <div class="switch-item">合生汇</div>
+            <div class="switch-item-norecord">查询无记录</div>
+          </div>
+        </div>
+      </div>
+      <div class="login-state-box">
+        <ul class="layui-nav">
+          <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" class="login-state-icon">
+              <img id="login_user_icon0" src="image/sys_mode/unlogin.jpg" class="layui-nav-img">
+              <!-- <span id="login_user_name0"></span> -->
+            </a>
+            <dl class="layui-nav-child">
+              <dd>
+                <!-- <div class="text-name">用户：</div> -->
+                <div class="text-value">
+                  <img id="login_user_icon1" src="image/sys_mode/unlogin.jpg" class="layui-nav-img">
+                  <span id="login_user_name1">未登录</span>
+                </div>
+              </dd>
+              <dd>
+                <!-- <div class="text-name">电话：</div> -->
+                <div class="text-value"><span id="login_phone"></span></div></dd>
+              <dd>
+                <a href="#" id="login_quit_btn">登录系统</a>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <div class="vertical-split-line"></div>
+      <div class="switch-page-box">
+        <div class="switch-page-item" id="switch_user_flow">
+          <div class="switch-page-icon">
+            <img src="image/sys_mode/analysis1.png">
+          </div>
+          <div class="switch-page-text">
+            <span>客流分析</span>
+          </div>
+        </div>
+        <div class="switch-page-item disabled" id="switch_compete_analysis">
+          <div class="switch-page-icon">
+            <img src="image/sys_mode/compete0.png">
+          </div>
+          <div class="switch-page-text">
+            <span>竞争分析</span>
+          </div>
+        </div>
+        <div class="switch-page-item" id="switch_system_manage">
+          <div class="switch-page-icon">
+            <img src="image/sys_mode/system1.png">
+          </div>
+          <div class="switch-page-text">
+            <span>系统管理</span>
+          </div>
+        </div>
+        <!-- <button id="switch_user_flow" type="button" class="layui-btn layui-btn-normal">客流分析</button>
+        <button id="switch_compete_analysis" type="button" class="layui-btn layui-btn-disabled">竞争分析</button>
+        <button id="switch_system_manage" type="button" class="layui-btn layui-btn-normal">系统管理</button> -->
+      </div>
+    </div>
+    <div id="left-search" class="left-search">
+      <div class="single-box feature">
+        <div class="single-box-title">竞争分析</div>
+        <div class="single-box-content search-flow">
+          <div class="search-flow-box">
+            <div class="target-name">起止日期</div>
+            <div class="target-value">
+              <input type="text" readonly id="startDateSel" placeholder="yyyy-MM-dd">
+                <label>--</label>
+              <input type="text" readonly id="endDateSel" placeholder="yyyy-MM-dd">
+            </div>
+            <div class="target-btn">
+              <button id="analysis" type="button" class="layui-btn">分析</button>
+            </div>
+          </div>
+          <div class="search-flow-box search-flow-hide">
+            <div class="target-name">时段</div>
+            <div class="target-value">
+              <div id="slide" class="slider"></div>
+              <div class="slider-extend">
+                <span id="slide_symbol_start" class="slide-symbol">00:00</span>
+                <span id="slide_symbol_end" class="slide-symbol">00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="left-box-local">
+
+    </div>
+    <div class="left-box local-fixed">
+      <div class="single-box search-flow">
+        <div class="compose-search">
+          <input id="analysis-charts-search" type="text" name="title" lay-verify="title" autocomplete="off" class="compose-search-input" placeholder="请输入关键字">
+          <button id="analysis-charts-clear-btn" type="button" class="compose-search-btn">清除</button>
+          <button id="analysis-charts-search-btn" type="button" class="compose-search-btn">搜索</button>
+        </div>
+      </div>
+      <div class="analysis-charts-content local-fixed">
+      </div>
+    </div>
+</div>
+</body>
+<script src="./plugins/ol3/ol.js"></script>
+<script src="./plugins/ol3/ol3-flashmarker.js"></script>
+<script src="./plugins/ol3/ol3-util-extends.js"></script>
+<script src="./plugins/ol3/ol3-measure.js"></script>
+<script src="./plugins/ol3/ol3-moveline.js"></script>
+<script src="./plugins/ol3/ol3-infowindow-extends.js"></script>
+<script src="./plugins/ol3/ol3-search-control.js"></script>
+<script src="./plugins/echarts/echarts.js"></script>
+<script src="./plugins/jquery/jquery.min.js"></script>
+<script src="./plugins/jquery/jquery.cookie.js"></script>
+<script src="./plugins/jquery/jquery.block.js"></script>
+<script src="./plugins/jquery/jquery.extend.js"></script>
+<script src="./plugins/layui/layui.all.js"></script>
+<script src="./plugins/common/common_config.js"></script>
+<script src="./js/compete_analysis_main_gis.js"></script>
+<script src="./js/compete_analysis_main.js"></script>
+</html>

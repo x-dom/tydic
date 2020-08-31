@@ -1,0 +1,100 @@
+.cesium-indoormap-legend {
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    width: 40px;
+    text-align: center;
+    line-height: 1.3em;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,.1);
+    background-color: #fff;
+    margin-top: -100px;
+    font-family: Arial,sans-serif;
+    color: #565656;
+}
+
+.cesium-indoormap-legend .floor-plus, .cesium-indoormap-legend .floor-minus{
+    height: 32px;
+    width: 32px;
+    margin: 0 auto;
+    border-radius: 16px;
+    position: relative;
+    text-align: center;
+    line-height: 1.3em;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cesium-indoormap-legend .floor-plus::after, .cesium-indoormap-legend .floor-minus::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top-color: #777;
+}
+
+.cesium-indoormap-legend .floor-plus::after {
+    border-bottom-color: #777;
+    border-top-color: transparent;
+    bottom: 11px;
+}
+
+.cesium-indoormap-legend .floor-plus.disabled, .cesium-indoormap-legend .floor-minus.disabled {
+    -webkit-pointer-events: none!important;
+    pointer-events: none!important;
+    cursor: default;
+}
+
+.cesium-indoormap-legend .floor-plus.disabled::after {
+    border-bottom-color: #ddd;
+}
+
+.cesium-indoormap-legend .floor-minus.disabled::after {
+    border-top-color: #ddd;
+}
+
+.cesium-indoormap-legend .floor-list-box {
+    max-height: 160px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.cesium-indoormap-legend ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 4px;
+    width: 40px;
+    box-sizing: border-box;
+}
+
+.cesium-indoormap-legend ul li {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+}
+
+.cesium-indoormap-legend ul li.selected {
+    color: #fff;
+    background-color: #4196ff;
+}
+
+.cesium-indoormap-legend ul li div {
+    cursor: pointer;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 12px;
+}
+
+.floor-list-box::-webkit-scrollbar {
+    width: 0!important;
+    height: 0!important;
+}

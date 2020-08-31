@@ -1,0 +1,4176 @@
+{
+    "RECORDS": [
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2834",
+            "grid_rsrp": "-118.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2835",
+            "grid_rsrp": "-94.2"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2836",
+            "grid_rsrp": "-98.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2837",
+            "grid_rsrp": "-114.63"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2910",
+            "grid_rsrp": "-87.96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2911",
+            "grid_rsrp": "-101.01"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2912",
+            "grid_rsrp": "-87.89"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2913",
+            "grid_rsrp": "-96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2914",
+            "grid_rsrp": "-83.88"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2915",
+            "grid_rsrp": "-117.06"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2916",
+            "grid_rsrp": "-98.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2986",
+            "grid_rsrp": "-89.16"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2987",
+            "grid_rsrp": "-87.11"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2988",
+            "grid_rsrp": "-88.38"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2989",
+            "grid_rsrp": "-86.58"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2990",
+            "grid_rsrp": "-109.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2991",
+            "grid_rsrp": "-110.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "2992",
+            "grid_rsrp": "-93.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "2992",
+            "grid_rsrp": "-93.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3061",
+            "grid_rsrp": "-81.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3062",
+            "grid_rsrp": "-104.72"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3063",
+            "grid_rsrp": "-96.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3064",
+            "grid_rsrp": "-96.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3065",
+            "grid_rsrp": "-110.86"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3066",
+            "grid_rsrp": "-80.43"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3067",
+            "grid_rsrp": "-99.78"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3067",
+            "grid_rsrp": "-99.78"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3068",
+            "grid_rsrp": "-88.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3068",
+            "grid_rsrp": "-88.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3069",
+            "grid_rsrp": "-103.46"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3070",
+            "grid_rsrp": "-88.16"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3137",
+            "grid_rsrp": "-90.17"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3137",
+            "grid_rsrp": "-90.17"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3138",
+            "grid_rsrp": "-97.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3138",
+            "grid_rsrp": "-97.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3139",
+            "grid_rsrp": "-108.38"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3139",
+            "grid_rsrp": "-108.38"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3140",
+            "grid_rsrp": "-118.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3140",
+            "grid_rsrp": "-118.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3140",
+            "grid_rsrp": "-118.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3141",
+            "grid_rsrp": "-101.01"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3141",
+            "grid_rsrp": "-101.01"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3142",
+            "grid_rsrp": "-92.63"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3143",
+            "grid_rsrp": "-84.46"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3143",
+            "grid_rsrp": "-84.46"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3144",
+            "grid_rsrp": "-84.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3145",
+            "grid_rsrp": "-87.43"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3146",
+            "grid_rsrp": "-113.7"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3147",
+            "grid_rsrp": "-117"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3148",
+            "grid_rsrp": "-97"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3213",
+            "grid_rsrp": "-94.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3213",
+            "grid_rsrp": "-94.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3214",
+            "grid_rsrp": "-98.16"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3214",
+            "grid_rsrp": "-98.16"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3215",
+            "grid_rsrp": "-110.86"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3215",
+            "grid_rsrp": "-110.86"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3215",
+            "grid_rsrp": "-110.86"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3216",
+            "grid_rsrp": "-94.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395797",
+            "gridunit_name": "海阳镇政府",
+            "grid_id": "3216",
+            "grid_rsrp": "-94.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3217",
+            "grid_rsrp": "-107.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3217",
+            "grid_rsrp": "-107.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3218",
+            "grid_rsrp": "-88.86"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3218",
+            "grid_rsrp": "-88.86"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3219",
+            "grid_rsrp": "-95.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3219",
+            "grid_rsrp": "-95.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213386",
+            "gridunit_name": "绿地上郡小区",
+            "grid_id": "3219",
+            "grid_rsrp": "-95.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3219",
+            "grid_rsrp": "-95.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3220",
+            "grid_rsrp": "-106.98"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3220",
+            "grid_rsrp": "-106.98"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3221",
+            "grid_rsrp": "-103.16"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3222",
+            "grid_rsrp": "-94.76"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3223",
+            "grid_rsrp": "-117"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3224",
+            "grid_rsrp": "-108.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3225",
+            "grid_rsrp": "-95.04"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3225",
+            "grid_rsrp": "-95.04"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3226",
+            "grid_rsrp": "-94.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3289",
+            "grid_rsrp": "-83.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3290",
+            "grid_rsrp": "-118.86"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3291",
+            "grid_rsrp": "-112.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3291",
+            "grid_rsrp": "-112.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3292",
+            "grid_rsrp": "-99.13"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3293",
+            "grid_rsrp": "-95.8"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3294",
+            "grid_rsrp": "-88.58"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3294",
+            "grid_rsrp": "-88.58"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3295",
+            "grid_rsrp": "-117.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3295",
+            "grid_rsrp": "-117.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3296",
+            "grid_rsrp": "-88.32"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3296",
+            "grid_rsrp": "-88.32"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3297",
+            "grid_rsrp": "-107.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3297",
+            "grid_rsrp": "-107.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3297",
+            "grid_rsrp": "-107.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3298",
+            "grid_rsrp": "-102.98"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3298",
+            "grid_rsrp": "-102.98"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3299",
+            "grid_rsrp": "-92.68"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3299",
+            "grid_rsrp": "-92.68"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3300",
+            "grid_rsrp": "-103.27"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3300",
+            "grid_rsrp": "-103.27"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3301",
+            "grid_rsrp": "-106.14"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3301",
+            "grid_rsrp": "-106.14"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3302",
+            "grid_rsrp": "-99.03"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3303",
+            "grid_rsrp": "-96.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3303",
+            "grid_rsrp": "-96.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3304",
+            "grid_rsrp": "-92.98"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3304",
+            "grid_rsrp": "-92.98"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3365",
+            "grid_rsrp": "-106.39"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3366",
+            "grid_rsrp": "-94.12"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3367",
+            "grid_rsrp": "-91.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3367",
+            "grid_rsrp": "-91.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4358",
+            "grid_rsrp": "-82.61"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3368",
+            "grid_rsrp": "-89.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3368",
+            "grid_rsrp": "-89.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3369",
+            "grid_rsrp": "-81.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3369",
+            "grid_rsrp": "-81.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3370",
+            "grid_rsrp": "-97.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3370",
+            "grid_rsrp": "-97.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3371",
+            "grid_rsrp": "-82.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3372",
+            "grid_rsrp": "-87.88"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3372",
+            "grid_rsrp": "-87.88"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3373",
+            "grid_rsrp": "-87.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3373",
+            "grid_rsrp": "-87.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3373",
+            "grid_rsrp": "-87.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213626",
+            "gridunit_name": "凤凰小区",
+            "grid_id": "3374",
+            "grid_rsrp": "-117.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3374",
+            "grid_rsrp": "-117.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3375",
+            "grid_rsrp": "-107.54"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3376",
+            "grid_rsrp": "-98.8"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3377",
+            "grid_rsrp": "-80.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3378",
+            "grid_rsrp": "-107.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3378",
+            "grid_rsrp": "-107.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3379",
+            "grid_rsrp": "-93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3379",
+            "grid_rsrp": "-93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3380",
+            "grid_rsrp": "-91.03"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3381",
+            "grid_rsrp": "-80.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3382",
+            "grid_rsrp": "-113.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3441",
+            "grid_rsrp": "-82.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3442",
+            "grid_rsrp": "-114.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3443",
+            "grid_rsrp": "-85.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3443",
+            "grid_rsrp": "-85.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3444",
+            "grid_rsrp": "-113.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3444",
+            "grid_rsrp": "-113.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3444",
+            "grid_rsrp": "-113.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3445",
+            "grid_rsrp": "-107.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3445",
+            "grid_rsrp": "-107.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3445",
+            "grid_rsrp": "-107.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3446",
+            "grid_rsrp": "-118.43"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395753",
+            "gridunit_name": "金色玫瑰小区",
+            "grid_id": "3446",
+            "grid_rsrp": "-118.43"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3446",
+            "grid_rsrp": "-118.43"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213648",
+            "gridunit_name": "齐云山西大道水果市场",
+            "grid_id": "3446",
+            "grid_rsrp": "-118.43"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3447",
+            "grid_rsrp": "-84.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3447",
+            "grid_rsrp": "-84.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213648",
+            "gridunit_name": "齐云山西大道水果市场",
+            "grid_id": "3447",
+            "grid_rsrp": "-84.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3448",
+            "grid_rsrp": "-84.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3448",
+            "grid_rsrp": "-84.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213654",
+            "gridunit_name": "海阳华府小区",
+            "grid_id": "3448",
+            "grid_rsrp": "-84.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3448",
+            "grid_rsrp": "-84.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3449",
+            "grid_rsrp": "-87.72"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3449",
+            "grid_rsrp": "-87.72"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3449",
+            "grid_rsrp": "-87.72"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3450",
+            "grid_rsrp": "-104.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3450",
+            "grid_rsrp": "-104.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3451",
+            "grid_rsrp": "-111.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3452",
+            "grid_rsrp": "-111.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3453",
+            "grid_rsrp": "-110.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3453",
+            "grid_rsrp": "-110.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3454",
+            "grid_rsrp": "-97.78"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3454",
+            "grid_rsrp": "-97.78"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3455",
+            "grid_rsrp": "-93.78"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3456",
+            "grid_rsrp": "-91.04"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3457",
+            "grid_rsrp": "-93.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3458",
+            "grid_rsrp": "-101.11"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3459",
+            "grid_rsrp": "-99.65"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3516",
+            "grid_rsrp": "-116.96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3517",
+            "grid_rsrp": "-106.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3518",
+            "grid_rsrp": "-108.88"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3519",
+            "grid_rsrp": "-89.33"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3520",
+            "grid_rsrp": "-92.08"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3520",
+            "grid_rsrp": "-92.08"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3521",
+            "grid_rsrp": "-104.97"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238704",
+            "gridunit_name": "状元故里大酒店",
+            "grid_id": "3521",
+            "grid_rsrp": "-104.97"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3521",
+            "grid_rsrp": "-104.97"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3522",
+            "grid_rsrp": "-92.14"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3522",
+            "grid_rsrp": "-92.14"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213648",
+            "gridunit_name": "齐云山西大道水果市场",
+            "grid_id": "3522",
+            "grid_rsrp": "-92.14"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3523",
+            "grid_rsrp": "-100.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3523",
+            "grid_rsrp": "-100.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213648",
+            "gridunit_name": "齐云山西大道水果市场",
+            "grid_id": "3523",
+            "grid_rsrp": "-100.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3524",
+            "grid_rsrp": "-118.96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3524",
+            "grid_rsrp": "-118.96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3525",
+            "grid_rsrp": "-100.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3526",
+            "grid_rsrp": "-89.19"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3526",
+            "grid_rsrp": "-89.19"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3527",
+            "grid_rsrp": "-106.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3527",
+            "grid_rsrp": "-106.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3528",
+            "grid_rsrp": "-93.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3528",
+            "grid_rsrp": "-93.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3529",
+            "grid_rsrp": "-92.54"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3529",
+            "grid_rsrp": "-92.54"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3530",
+            "grid_rsrp": "-88.81"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3531",
+            "grid_rsrp": "-117.88"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3532",
+            "grid_rsrp": "-98.39"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3533",
+            "grid_rsrp": "-98.37"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3534",
+            "grid_rsrp": "-94.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3535",
+            "grid_rsrp": "-101.42"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3592",
+            "grid_rsrp": "-88.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3592",
+            "grid_rsrp": "-88.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3593",
+            "grid_rsrp": "-84.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3594",
+            "grid_rsrp": "-114.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3595",
+            "grid_rsrp": "-103.96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3596",
+            "grid_rsrp": "-94.07"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3596",
+            "grid_rsrp": "-94.07"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3597",
+            "grid_rsrp": "-104.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3597",
+            "grid_rsrp": "-104.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3597",
+            "grid_rsrp": "-104.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238704",
+            "gridunit_name": "状元故里大酒店",
+            "grid_id": "3597",
+            "grid_rsrp": "-104.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3597",
+            "grid_rsrp": "-104.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213648",
+            "gridunit_name": "齐云山西大道水果市场",
+            "grid_id": "3597",
+            "grid_rsrp": "-104.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3598",
+            "grid_rsrp": "-100.09"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3598",
+            "grid_rsrp": "-100.09"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3598",
+            "grid_rsrp": "-100.09"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213648",
+            "gridunit_name": "齐云山西大道水果市场",
+            "grid_id": "3598",
+            "grid_rsrp": "-100.09"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3599",
+            "grid_rsrp": "-80.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "213658",
+            "gridunit_name": "城北新村",
+            "grid_id": "3599",
+            "grid_rsrp": "-80.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3599",
+            "grid_rsrp": "-80.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3600",
+            "grid_rsrp": "-103.19"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3600",
+            "grid_rsrp": "-103.19"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3601",
+            "grid_rsrp": "-110.37"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3601",
+            "grid_rsrp": "-110.37"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3602",
+            "grid_rsrp": "-116.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3602",
+            "grid_rsrp": "-116.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3602",
+            "grid_rsrp": "-116.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3603",
+            "grid_rsrp": "-89.08"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3604",
+            "grid_rsrp": "-87.2"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3604",
+            "grid_rsrp": "-87.2"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3605",
+            "grid_rsrp": "-89.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3605",
+            "grid_rsrp": "-89.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3606",
+            "grid_rsrp": "-100.01"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3607",
+            "grid_rsrp": "-93.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3608",
+            "grid_rsrp": "-90.61"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3609",
+            "grid_rsrp": "-92.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3668",
+            "grid_rsrp": "-90.1"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3668",
+            "grid_rsrp": "-90.1"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3669",
+            "grid_rsrp": "-86.57"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3669",
+            "grid_rsrp": "-86.57"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3670",
+            "grid_rsrp": "-103.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3670",
+            "grid_rsrp": "-103.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3671",
+            "grid_rsrp": "-100.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3672",
+            "grid_rsrp": "-111.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3672",
+            "grid_rsrp": "-111.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3673",
+            "grid_rsrp": "-94.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3673",
+            "grid_rsrp": "-94.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3674",
+            "grid_rsrp": "-107.38"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3675",
+            "grid_rsrp": "-101.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3676",
+            "grid_rsrp": "-95.81"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215689",
+            "gridunit_name": "鹤山新村",
+            "grid_id": "3677",
+            "grid_rsrp": "-99.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3677",
+            "grid_rsrp": "-99.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3678",
+            "grid_rsrp": "-117.06"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3678",
+            "grid_rsrp": "-117.06"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3679",
+            "grid_rsrp": "-91.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3679",
+            "grid_rsrp": "-91.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3680",
+            "grid_rsrp": "-87.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3680",
+            "grid_rsrp": "-87.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3680",
+            "grid_rsrp": "-87.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3681",
+            "grid_rsrp": "-112.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3681",
+            "grid_rsrp": "-112.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3681",
+            "grid_rsrp": "-112.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3682",
+            "grid_rsrp": "-93.78"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3683",
+            "grid_rsrp": "-81.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3684",
+            "grid_rsrp": "-114.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3744",
+            "grid_rsrp": "-98.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3745",
+            "grid_rsrp": "-94.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3746",
+            "grid_rsrp": "-90.21"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3746",
+            "grid_rsrp": "-90.21"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3747",
+            "grid_rsrp": "-102.61"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3747",
+            "grid_rsrp": "-102.61"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394331",
+            "gridunit_name": "虹楼苑小区",
+            "grid_id": "3748",
+            "grid_rsrp": "-99.94"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395790",
+            "gridunit_name": "民生苑小区",
+            "grid_id": "3748",
+            "grid_rsrp": "-99.94"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3748",
+            "grid_rsrp": "-99.94"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3748",
+            "grid_rsrp": "-99.94"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394331",
+            "gridunit_name": "虹楼苑小区",
+            "grid_id": "3749",
+            "grid_rsrp": "-108.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3749",
+            "grid_rsrp": "-108.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231794",
+            "gridunit_name": "休宁工行",
+            "grid_id": "3749",
+            "grid_rsrp": "-108.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3749",
+            "grid_rsrp": "-108.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3750",
+            "grid_rsrp": "-110.87"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3750",
+            "grid_rsrp": "-110.87"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3751",
+            "grid_rsrp": "-96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238697",
+            "gridunit_name": "黄山市新宇假日酒店",
+            "grid_id": "3752",
+            "grid_rsrp": "-112.58"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238700",
+            "gridunit_name": "新宇南楼假日酒店",
+            "grid_id": "3753",
+            "grid_rsrp": "-116.2"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3753",
+            "grid_rsrp": "-116.2"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3754",
+            "grid_rsrp": "-93.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3754",
+            "grid_rsrp": "-93.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3755",
+            "grid_rsrp": "-98.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215714",
+            "gridunit_name": "天伦华庭小区",
+            "grid_id": "3755",
+            "grid_rsrp": "-98.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3755",
+            "grid_rsrp": "-98.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3756",
+            "grid_rsrp": "-80.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215502",
+            "gridunit_name": "休宁县海阳第一中学",
+            "grid_id": "3756",
+            "grid_rsrp": "-80.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215714",
+            "gridunit_name": "天伦华庭小区",
+            "grid_id": "3756",
+            "grid_rsrp": "-80.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3757",
+            "grid_rsrp": "-83.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3757",
+            "grid_rsrp": "-83.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3758",
+            "grid_rsrp": "-118.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3758",
+            "grid_rsrp": "-118.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3759",
+            "grid_rsrp": "-99.79"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3760",
+            "grid_rsrp": "-88.58"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3820",
+            "grid_rsrp": "-89.21"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3821",
+            "grid_rsrp": "-92.63"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394014",
+            "gridunit_name": "翰林家园小区",
+            "grid_id": "3821",
+            "grid_rsrp": "-92.63"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3822",
+            "grid_rsrp": "-115.44"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394014",
+            "gridunit_name": "翰林家园小区",
+            "grid_id": "3822",
+            "grid_rsrp": "-115.44"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394331",
+            "gridunit_name": "虹楼苑小区",
+            "grid_id": "3823",
+            "grid_rsrp": "-84.41"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3823",
+            "grid_rsrp": "-84.41"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3823",
+            "grid_rsrp": "-84.41"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394331",
+            "gridunit_name": "虹楼苑小区",
+            "grid_id": "3824",
+            "grid_rsrp": "-80.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3824",
+            "grid_rsrp": "-80.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3824",
+            "grid_rsrp": "-80.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394331",
+            "gridunit_name": "虹楼苑小区",
+            "grid_id": "3825",
+            "grid_rsrp": "-85.74"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3825",
+            "grid_rsrp": "-85.74"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3826",
+            "grid_rsrp": "-112.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3826",
+            "grid_rsrp": "-112.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232896",
+            "gridunit_name": "富宁广场商业区",
+            "grid_id": "3827",
+            "grid_rsrp": "-106.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3827",
+            "grid_rsrp": "-106.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3827",
+            "grid_rsrp": "-106.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238700",
+            "gridunit_name": "新宇南楼假日酒店",
+            "grid_id": "3828",
+            "grid_rsrp": "-84.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3828",
+            "grid_rsrp": "-84.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238700",
+            "gridunit_name": "新宇南楼假日酒店",
+            "grid_id": "3829",
+            "grid_rsrp": "-116.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3829",
+            "grid_rsrp": "-116.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3829",
+            "grid_rsrp": "-116.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3830",
+            "grid_rsrp": "-101.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215714",
+            "gridunit_name": "天伦华庭小区",
+            "grid_id": "3830",
+            "grid_rsrp": "-101.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3830",
+            "grid_rsrp": "-101.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3831",
+            "grid_rsrp": "-116.25"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3831",
+            "grid_rsrp": "-116.25"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215714",
+            "gridunit_name": "天伦华庭小区",
+            "grid_id": "3831",
+            "grid_rsrp": "-116.25"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215703",
+            "gridunit_name": "徽商步行街",
+            "grid_id": "3831",
+            "grid_rsrp": "-116.25"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3832",
+            "grid_rsrp": "-109.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "215714",
+            "gridunit_name": "天伦华庭小区",
+            "grid_id": "3832",
+            "grid_rsrp": "-109.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3833",
+            "grid_rsrp": "-110.87"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3834",
+            "grid_rsrp": "-105.67"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3834",
+            "grid_rsrp": "-105.67"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3835",
+            "grid_rsrp": "-104.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3836",
+            "grid_rsrp": "-83.78"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3895",
+            "grid_rsrp": "-98.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3896",
+            "grid_rsrp": "-112.76"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3897",
+            "grid_rsrp": "-100.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394014",
+            "gridunit_name": "翰林家园小区",
+            "grid_id": "3897",
+            "grid_rsrp": "-100.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3898",
+            "grid_rsrp": "-92.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3898",
+            "grid_rsrp": "-92.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394014",
+            "gridunit_name": "翰林家园小区",
+            "grid_id": "3898",
+            "grid_rsrp": "-92.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3899",
+            "grid_rsrp": "-84.74"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3899",
+            "grid_rsrp": "-84.74"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394331",
+            "gridunit_name": "虹楼苑小区",
+            "grid_id": "3900",
+            "grid_rsrp": "-115.63"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3900",
+            "grid_rsrp": "-115.63"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394331",
+            "gridunit_name": "虹楼苑小区",
+            "grid_id": "3901",
+            "grid_rsrp": "-116.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3901",
+            "grid_rsrp": "-116.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3901",
+            "grid_rsrp": "-116.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3902",
+            "grid_rsrp": "-92.95"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3903",
+            "grid_rsrp": "-96.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3903",
+            "grid_rsrp": "-96.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3904",
+            "grid_rsrp": "-81.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3905",
+            "grid_rsrp": "-92.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3906",
+            "grid_rsrp": "-104.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396016",
+            "gridunit_name": "县电信局",
+            "grid_id": "3907",
+            "grid_rsrp": "-89.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3907",
+            "grid_rsrp": "-89.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3907",
+            "grid_rsrp": "-89.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396016",
+            "gridunit_name": "县电信局",
+            "grid_id": "3908",
+            "grid_rsrp": "-102.6"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3908",
+            "grid_rsrp": "-102.6"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3908",
+            "grid_rsrp": "-102.6"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3909",
+            "grid_rsrp": "-107.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3909",
+            "grid_rsrp": "-107.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "238458",
+            "gridunit_name": "萝宁街片区",
+            "grid_id": "3910",
+            "grid_rsrp": "-99.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3910",
+            "grid_rsrp": "-99.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3910",
+            "grid_rsrp": "-99.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "122625",
+            "gridunit_name": "齐宁街片区",
+            "grid_id": "3911",
+            "grid_rsrp": "-91.44"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3911",
+            "grid_rsrp": "-91.44"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3971",
+            "grid_rsrp": "-80.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3972",
+            "grid_rsrp": "-116.19"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3973",
+            "grid_rsrp": "-89.99"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394014",
+            "gridunit_name": "翰林家园小区",
+            "grid_id": "3973",
+            "grid_rsrp": "-89.99"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3974",
+            "grid_rsrp": "-80.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "3974",
+            "grid_rsrp": "-80.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394014",
+            "gridunit_name": "翰林家园小区",
+            "grid_id": "3974",
+            "grid_rsrp": "-80.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "3974",
+            "grid_rsrp": "-80.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3975",
+            "grid_rsrp": "-114.38"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "3975",
+            "grid_rsrp": "-114.38"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3976",
+            "grid_rsrp": "-115.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "3976",
+            "grid_rsrp": "-115.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "3977",
+            "grid_rsrp": "-89.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395883",
+            "gridunit_name": "齐云小区",
+            "grid_id": "3977",
+            "grid_rsrp": "-89.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395851",
+            "gridunit_name": "世纪苑小区",
+            "grid_id": "3977",
+            "grid_rsrp": "-89.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3977",
+            "grid_rsrp": "-89.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "3977",
+            "grid_rsrp": "-89.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "3978",
+            "grid_rsrp": "-108.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395883",
+            "gridunit_name": "齐云小区",
+            "grid_id": "3978",
+            "grid_rsrp": "-108.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3978",
+            "grid_rsrp": "-108.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "3979",
+            "grid_rsrp": "-102.76"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3979",
+            "grid_rsrp": "-102.76"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "394078",
+            "gridunit_name": "新宁广场小区",
+            "grid_id": "3979",
+            "grid_rsrp": "-102.76"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "3980",
+            "grid_rsrp": "-86.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3980",
+            "grid_rsrp": "-86.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "3981",
+            "grid_rsrp": "-103.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "3981",
+            "grid_rsrp": "-103.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3981",
+            "grid_rsrp": "-103.75"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "3982",
+            "grid_rsrp": "-81.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3982",
+            "grid_rsrp": "-81.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "3982",
+            "grid_rsrp": "-81.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396016",
+            "gridunit_name": "县电信局",
+            "grid_id": "3983",
+            "grid_rsrp": "-88.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395911",
+            "gridunit_name": "新天地小区",
+            "grid_id": "3983",
+            "grid_rsrp": "-88.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "3983",
+            "grid_rsrp": "-88.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396016",
+            "gridunit_name": "县电信局",
+            "grid_id": "3984",
+            "grid_rsrp": "-107.26"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "3984",
+            "grid_rsrp": "-107.26"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3984",
+            "grid_rsrp": "-107.26"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3985",
+            "grid_rsrp": "-119.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3986",
+            "grid_rsrp": "-108.5"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "3987",
+            "grid_rsrp": "-81.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "3987",
+            "grid_rsrp": "-81.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4047",
+            "grid_rsrp": "-86.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4048",
+            "grid_rsrp": "-103.85"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4049",
+            "grid_rsrp": "-109.8"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4050",
+            "grid_rsrp": "-96.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4050",
+            "grid_rsrp": "-96.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4051",
+            "grid_rsrp": "-119.98"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4052",
+            "grid_rsrp": "-101.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "231795",
+            "gridunit_name": "齐云山东大道县工商管理",
+            "grid_id": "4053",
+            "grid_rsrp": "-106.32"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4053",
+            "grid_rsrp": "-106.32"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4053",
+            "grid_rsrp": "-106.32"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4053",
+            "grid_rsrp": "-106.32"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4054",
+            "grid_rsrp": "-119.97"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4055",
+            "grid_rsrp": "-95.02"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4056",
+            "grid_rsrp": "-89.03"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4056",
+            "grid_rsrp": "-89.03"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4057",
+            "grid_rsrp": "-97.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4057",
+            "grid_rsrp": "-97.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4058",
+            "grid_rsrp": "-86.81"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4058",
+            "grid_rsrp": "-86.81"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4059",
+            "grid_rsrp": "-104.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396016",
+            "gridunit_name": "县电信局",
+            "grid_id": "4060",
+            "grid_rsrp": "-84.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4060",
+            "grid_rsrp": "-84.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "4060",
+            "grid_rsrp": "-84.51"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4061",
+            "grid_rsrp": "-101.89"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4061",
+            "grid_rsrp": "-101.89"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "4061",
+            "grid_rsrp": "-101.89"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4062",
+            "grid_rsrp": "-112.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "4062",
+            "grid_rsrp": "-112.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4063",
+            "grid_rsrp": "-98.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395997",
+            "gridunit_name": "状元世家",
+            "grid_id": "4063",
+            "grid_rsrp": "-98.24"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4064",
+            "grid_rsrp": "-100.8"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4123",
+            "grid_rsrp": "-97.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4124",
+            "grid_rsrp": "-106.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4125",
+            "grid_rsrp": "-118.28"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4126",
+            "grid_rsrp": "-117.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4126",
+            "grid_rsrp": "-117.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4127",
+            "grid_rsrp": "-86.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4127",
+            "grid_rsrp": "-86.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4128",
+            "grid_rsrp": "-114.94"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4129",
+            "grid_rsrp": "-101.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4129",
+            "grid_rsrp": "-101.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4129",
+            "grid_rsrp": "-101.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4130",
+            "grid_rsrp": "-112.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4130",
+            "grid_rsrp": "-112.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4131",
+            "grid_rsrp": "-101.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4131",
+            "grid_rsrp": "-101.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4132",
+            "grid_rsrp": "-106.1"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4132",
+            "grid_rsrp": "-106.1"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4133",
+            "grid_rsrp": "-92.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4133",
+            "grid_rsrp": "-92.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4134",
+            "grid_rsrp": "-93.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4134",
+            "grid_rsrp": "-93.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4134",
+            "grid_rsrp": "-93.45"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4135",
+            "grid_rsrp": "-109.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4135",
+            "grid_rsrp": "-109.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4136",
+            "grid_rsrp": "-90.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4136",
+            "grid_rsrp": "-90.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4137",
+            "grid_rsrp": "-82.57"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4137",
+            "grid_rsrp": "-82.57"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4138",
+            "grid_rsrp": "-97.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4139",
+            "grid_rsrp": "-112.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4140",
+            "grid_rsrp": "-115.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4141",
+            "grid_rsrp": "-94.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4199",
+            "grid_rsrp": "-97.04"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4200",
+            "grid_rsrp": "-84.71"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4201",
+            "grid_rsrp": "-87.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4202",
+            "grid_rsrp": "-106.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4202",
+            "grid_rsrp": "-106.53"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4203",
+            "grid_rsrp": "-87.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4203",
+            "grid_rsrp": "-87.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4203",
+            "grid_rsrp": "-87.22"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4204",
+            "grid_rsrp": "-90.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4204",
+            "grid_rsrp": "-90.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4205",
+            "grid_rsrp": "-83.67"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4205",
+            "grid_rsrp": "-83.67"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395868",
+            "gridunit_name": "县供电大楼",
+            "grid_id": "4205",
+            "grid_rsrp": "-83.67"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4206",
+            "grid_rsrp": "-109.73"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4207",
+            "grid_rsrp": "-111.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4207",
+            "grid_rsrp": "-111.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4208",
+            "grid_rsrp": "-86.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395908",
+            "gridunit_name": "柏树路片区",
+            "grid_id": "4208",
+            "grid_rsrp": "-86.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4208",
+            "grid_rsrp": "-86.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395925",
+            "gridunit_name": "县前街",
+            "grid_id": "4209",
+            "grid_rsrp": "-86.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4209",
+            "grid_rsrp": "-86.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4209",
+            "grid_rsrp": "-86.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4209",
+            "grid_rsrp": "-86.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4210",
+            "grid_rsrp": "-114.14"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4210",
+            "grid_rsrp": "-114.14"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4211",
+            "grid_rsrp": "-109.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4211",
+            "grid_rsrp": "-109.93"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4212",
+            "grid_rsrp": "-96.65"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4212",
+            "grid_rsrp": "-96.65"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4212",
+            "grid_rsrp": "-96.65"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4213",
+            "grid_rsrp": "-115.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4213",
+            "grid_rsrp": "-115.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4214",
+            "grid_rsrp": "-106.32"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4215",
+            "grid_rsrp": "-90.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4216",
+            "grid_rsrp": "-92.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4217",
+            "grid_rsrp": "-102.23"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4275",
+            "grid_rsrp": "-83.64"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4276",
+            "grid_rsrp": "-112.25"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4277",
+            "grid_rsrp": "-119.17"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4278",
+            "grid_rsrp": "-84.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4278",
+            "grid_rsrp": "-84.29"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4279",
+            "grid_rsrp": "-98.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4280",
+            "grid_rsrp": "-113.09"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4281",
+            "grid_rsrp": "-88.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4281",
+            "grid_rsrp": "-88.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4282",
+            "grid_rsrp": "-108.05"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4283",
+            "grid_rsrp": "-86.35"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4284",
+            "grid_rsrp": "-81.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4284",
+            "grid_rsrp": "-81.3"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4285",
+            "grid_rsrp": "-102.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4285",
+            "grid_rsrp": "-102.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396006",
+            "gridunit_name": "石羊干",
+            "grid_id": "4285",
+            "grid_rsrp": "-102.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4285",
+            "grid_rsrp": "-102.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4286",
+            "grid_rsrp": "-110"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4286",
+            "grid_rsrp": "-110"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4287",
+            "grid_rsrp": "-109.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4288",
+            "grid_rsrp": "-93.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4288",
+            "grid_rsrp": "-93.4"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4289",
+            "grid_rsrp": "-106.8"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4289",
+            "grid_rsrp": "-106.8"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4290",
+            "grid_rsrp": "-110.12"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4291",
+            "grid_rsrp": "-113.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4292",
+            "grid_rsrp": "-93.79"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4293",
+            "grid_rsrp": "-87.38"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4351",
+            "grid_rsrp": "-105.42"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4352",
+            "grid_rsrp": "-81.18"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4353",
+            "grid_rsrp": "-88.09"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396506",
+            "gridunit_name": "火车站",
+            "grid_id": "4354",
+            "grid_rsrp": "-105.26"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4354",
+            "grid_rsrp": "-105.26"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4355",
+            "grid_rsrp": "-117.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4356",
+            "grid_rsrp": "-87.67"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4357",
+            "grid_rsrp": "-82.6"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4357",
+            "grid_rsrp": "-82.6"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4359",
+            "grid_rsrp": "-80.96"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4360",
+            "grid_rsrp": "-101.54"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4360",
+            "grid_rsrp": "-101.54"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4361",
+            "grid_rsrp": "-111.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4362",
+            "grid_rsrp": "-90.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4362",
+            "grid_rsrp": "-90.47"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4363",
+            "grid_rsrp": "-93.52"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4364",
+            "grid_rsrp": "-118.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "232543",
+            "gridunit_name": "横江路片区",
+            "grid_id": "4364",
+            "grid_rsrp": "-118.92"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4365",
+            "grid_rsrp": "-91.65"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4366",
+            "grid_rsrp": "-87.2"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4367",
+            "grid_rsrp": "-97.12"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4368",
+            "grid_rsrp": "-88.16"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4369",
+            "grid_rsrp": "-114.84"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4431",
+            "grid_rsrp": "-82.72"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4432",
+            "grid_rsrp": "-115.11"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4433",
+            "grid_rsrp": "-97.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396490",
+            "gridunit_name": "休宁县农机宿舍",
+            "grid_id": "4433",
+            "grid_rsrp": "-97.77"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4434",
+            "grid_rsrp": "-83.12"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4434",
+            "grid_rsrp": "-83.12"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4435",
+            "grid_rsrp": "-118.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4435",
+            "grid_rsrp": "-118.83"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4436",
+            "grid_rsrp": "-112.61"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4436",
+            "grid_rsrp": "-112.61"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4437",
+            "grid_rsrp": "-117.71"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4438",
+            "grid_rsrp": "-118.71"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4441",
+            "grid_rsrp": "-114.15"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4442",
+            "grid_rsrp": "-99.36"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4443",
+            "grid_rsrp": "-95.34"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4444",
+            "grid_rsrp": "-90.56"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4509",
+            "grid_rsrp": "-95.31"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4510",
+            "grid_rsrp": "-112.87"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4511",
+            "grid_rsrp": "-96.66"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395295",
+            "gridunit_name": "梨园新村",
+            "grid_id": "4512",
+            "grid_rsrp": "-117.6"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4512",
+            "grid_rsrp": "-117.6"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4513",
+            "grid_rsrp": "-107.69"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4519",
+            "grid_rsrp": "-106.58"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "396027",
+            "gridunit_name": "万宁街沿街",
+            "grid_id": "4520",
+            "grid_rsrp": "-83.43"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4585",
+            "grid_rsrp": "-82.88"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4586",
+            "grid_rsrp": "-113.91"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4587",
+            "grid_rsrp": "-91.65"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4588",
+            "grid_rsrp": "-102.67"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4589",
+            "grid_rsrp": "-103.49"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4664",
+            "grid_rsrp": "-95.68"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4665",
+            "grid_rsrp": "-98.9"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4740",
+            "grid_rsrp": "-102.74"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4816",
+            "grid_rsrp": "-96.19"
+        },
+        {
+            "district_name": "休宁县",
+            "gridunit_id": "395648",
+            "gridunit_name": "龙升小区",
+            "grid_id": "4892",
+            "grid_rsrp": "-99.34"
+        }
+    ]
+}

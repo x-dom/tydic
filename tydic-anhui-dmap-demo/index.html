@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>楼宇3D覆盖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="./public/base.css">
+    <link rel="stylesheet" href="./plugins/layui-v2.5.5/layui/css/layui.css">
+   
+    <script type="text/javascript" src="./plugins/jquery.min.js"></script>
+    <script src="./plugins/layui-v2.5.5/layui/layui.all.js"></script>
+    <script type="text/javascript" src="./cesium/DMap.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/indexGIS.js"></script>
+</head>
+
+<body>
+    <div class="page-box-wrap relative">
+      <div class="left-box-wrap">
+            <!-- <div class="layui-collapse" lay-accordion="left-box">
+              <div class="layui-colla-item ">
+                <h2 class="layui-colla-title">网格</h2>
+                <div class="layui-colla-content layui-show">
+                    <div class="table-box" id="grid-table"></div>
+                </div>
+              </div>
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title">关联楼宇</h2>
+                <div class="layui-colla-content">
+                    <div class="table-box" id="building-table"></div>
+                </div>
+              </div>
+              <div class="layui-colla-item">
+                <h2 class="layui-colla-title">关联扇区</h2>
+                <div class="layui-colla-content">
+                    <div class="table-box" id="sector-table"></div>
+                </div>
+              </div>
+            </div> -->
+        <div class="grid-box-wrap">
+            <div class="box-title" id="grid-box-title" data-open="1">
+                <h3>网格</h3>
+                <svg t="1570775126412" class="icon transfrom" viewBox="0 0 1024 1024"  p-id="2876" width="16" height="16">
+                    <path d="M343.72482251 7.6747145l-119.21674833 119.21674835 385.81151577 385.81151577-385.81151577 385.81151578 119.21674833 119.21674834 505.00720109-505.04932715z" p-id="2877"></path>
+                </svg>
+            </div>
+            <div class="box-wrap" id="grid-table-box">
+                <div class="table-box" id="grid-table" lay-filter="grid-table"></div>
+            </div>
+        </div> 
+        <div class="building-box-wrap">
+            <div class="box-title" id="building-box-title" data-open="1">
+                <h3>楼宇</h3>
+                <svg t="1570775126412" class="icon transfrom" viewBox="0 0 1024 1024"  p-id="2876" width="16" height="16">
+                    <path d="M343.72482251 7.6747145l-119.21674833 119.21674835 385.81151577 385.81151577-385.81151577 385.81151578 119.21674833 119.21674834 505.00720109-505.04932715z" p-id="2877"></path>
+                </svg>
+            </div>
+            <div class="box-wrap" id="building-table-box">
+                <div class="table-box" id="building-table" lay-filter="building-table"></div>
+            </div>
+        </div> 
+        <div class="sector-box-wrap">
+            <div class="box-title" id="sector-box-title" data-open="1">
+                <h3>扇区</h3>
+                <svg t="1570775126412" class="icon transfrom" viewBox="0 0 1024 1024"  p-id="2876" width="16" height="16">
+                    <path d="M343.72482251 7.6747145l-119.21674833 119.21674835 385.81151577 385.81151577-385.81151577 385.81151578 119.21674833 119.21674834 505.00720109-505.04932715z" p-id="2877"></path>
+                </svg>
+            </div>
+            <div class="box-wrap" id="sector-table-box">
+                <div class="table-box" id="sector-table" lay-filter="sector-table"></div>
+            </div>
+        </div>    
+      </div>
+      <div class="gis-box-wrap">
+          <div id="map"></div>
+      </div>
+    </div>
+</body>
+</html>

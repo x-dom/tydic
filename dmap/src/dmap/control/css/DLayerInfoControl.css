@@ -1,0 +1,150 @@
+.dmap-layerinfo-container{
+    padding: 5px 0;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #c6cbe5;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0px 0px 5px #65aceb;
+    box-shadow: inset 0px 0px 5px #65aceb;
+    text-align: left;
+}
+
+.dmap-layerinfo-title{
+    padding: 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+
+.dmap-layerinfo-title-text{
+    display: inline-block;
+    width: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dmap-layerinfo-closer{
+    float: right;
+    cursor: pointer;
+}
+
+.dmap-layerinfo-closer:hover{
+    font-weight: bold;
+}
+
+.dmap-layerinfo-content{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: calc(100% - 30px);
+}
+
+.dmap-layerinfo-group{
+    text-align: left;
+    padding-left: 5px;
+}
+
+.dmap-layerinfo-list{
+    font-size: 14px;
+}
+
+.dmap-layerinfo-arrow{
+    height: 0px;
+    width: 0px;
+    margin-left: calc(50% - 5px);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #c6cbe5;
+}
+
+.dmap-layerinfo-list-attr{
+    padding-left: 10px;
+    min-height: 16px;
+    font-size: 12px;
+    
+}
+
+.dmap-layerinfo-list-value{
+    padding-left: 10px;
+    padding-right: 5px;
+    min-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dmap-layerinfo-blue .dmap-layerinfo-container{
+    color: #aec1e7;
+    background: rgba(3, 39, 68, 0.9);
+    border-color: #4c91ce;
+    -webkit-box-shadow: inset 0px 0px 5px #4c91ce;
+    box-shadow: inset 0px 0px 5px #4c91ce;
+}
+
+.dmap-layerinfo-blue  .dmap-layerinfo-title{
+    border-color: #5f65a1;
+}
+
+.dmap-layerinfo-blue .dmap-layerinfo-arrow{
+    border-top: 10px solid #4c91ce;
+}
+
+.dmap-layerinfo-blue select{
+    background: transparent;
+    color: #aec1e7;
+    border-color: #5f65a1;
+}
+
+.dmap-layerinfo-blue select option{
+    color: #000;
+}
+
+/* .dmap-layerinfo-blue .dmap-layerinfo-list-attr{
+    background-color: rgba(53, 60, 138, 0.5);
+}
+
+.dmap-layerinfo-blue .dmap-layerinfo-list-value{
+    background-color: rgba(10, 6, 33, 0.5);
+} */
+
+/* .dmap-layerinfo-blue .dmap-layerinfo-list div:hover{
+    background-color: #5f65a1;
+} */
+
+.dmap-layerinfo-light .dmap-layerinfo-container{
+    padding: 5px 0;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #7a87c9;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0px 0px 5px #65aceb;
+    box-shadow: inset 0px 0px 5px #65aceb;
+}
+
+.dmap-layerinfo-light  .dmap-layerinfo-title{
+    border-color: #5f65a1;
+}
+
+.dmap-layerinfo-light .dmap-layerinfo-arrow{
+    border-top: 10px solid #7a87c9;
+}
+
+.dmap-layerinfo-light select{
+    background: transparent;
+    color: #000000;
+    border-color: #c6cbe5;
+}
+
+/* .dmap-layerinfo-light .dmap-layerinfo-list-attr{
+    background-color: rgba(165, 171, 237, 0.5);
+}
+
+.dmap-layerinfo-light .dmap-layerinfo-list-value{
+    background-color: rgba(211, 206, 239, 0.5);
+} */
+
+/* .dmap-layerinfo-light .dmap-layerinfo-list div:hover{
+    background-color: #828ad3;
+} */

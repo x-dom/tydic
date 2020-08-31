@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../font/icomoon.eot?ouz8ak');
+    src:  url('../font/icomoon.eot?ouz8ak#iefix') format('embedded-opentype'),
+      url('../font/icomoon.ttf?ouz8ak') format('truetype'),
+      url('../font/icomoon.woff?ouz8ak') format('woff'),
+      url('../font/icomoon.svg?ouz8ak#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* 字体部分 */
+  .icon-logo:before {
+    /*content: "\e901";*/
+    color: #515151;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  .icon-man:before {
+    content: "\e905";
+    font-size: 50px;
+    color: #0490fc;
+  }
+  .icon-women:before {
+    content: "\e906";
+    font-size: 50px;
+    color: #d573fc;
+  }
+  .icon-plus:before {
+    content: "\e903";
+    color: #ffffff;
+    display: inline-block;
+    margin: 7px 10px;
+  }
+  .icon-minus:before {
+    content: "\e904";
+    color: #ffffff;
+    display: inline-block;
+    margin: 7px 10px;
+  }
+  .icon-min .path2:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+  .icon-min .path3:before {
+    content: "\e906";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+  .icon-select-down:before {
+    content: "\e902";
+    color: #ffffff;
+  }
+  .icon-add:before {
+    content: "\e900";
+    color: #ffffff;
+  }
+  .icon-files-empty:before {
+    content: "\e925";
+  }
+  .icon-alarm:before {
+    content: "\e950";
+  }
+  .icon-display:before {
+    content: "\e956";
+  }
+  .icon-stats-bars:before {
+    content: "\e99c";
+  }
+
+  /* 样式部分*/
+#title_box {
+    width: auto;
+    height: 8%;
+    /* background-color: #0b132b; */
+    background: none;
+    background-size: cover;
+    position: absolute;
+    z-index: 999;
+    top: -5px;
+    /* -moz-opacity: 0.95; */
+    /* opacity: 0.95; */
+}
+.left-box {
+    width: calc(25% - 10px);
+    height: calc(91% - 10px);
+    background-color: rgba(4,30,71,0.6);
+    position: absolute;
+    z-index: 999;
+    bottom: 10px;
+    left: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+.single-box.feature-1{
+  height:auto;
+}
+.reside-bar-box{
+  width: 55%;
+}
+.reside-warp{
+  display: flex;
+  justify-content:space-between;
+
+}
+.box-warp{
+  height: 100%;
+  width: 45%;
+}
+.box-warp,.echarts-box{
+  height: 100%;
+}
+.family-pie-box{
+ width: 55%;
+ height: 100%;
+}
+.family-bar-box{
+  width: 45%;
+  height: 100%;
+}
+#detail-data-box {
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  z-index: 999;
+  right: 5px;
+  top: 80px;
+  left: auto;
+}
+.table-title {
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 10px;
+  background-color: rgba(23,50,112,0.6);
+}
+.layui-table-view {
+  background-color: rgba(23,50,112,0.6);
+  margin: 0;
+}
+.layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row]{
+  border-color: rgba(255,255,255,0.8);
+}
+#time-line{
+  height: 80%;
+}
+.layui-slider{
+  background: rgba(49,66,82,0.5);
+
+}
+.layui-slider-bar{
+  background:#0c819e!important; 
+  width:8%;
+  left:0%;
+}
+.layui-slider-wrap-btn{
+  border-radius: 0!important;
+}
+
+.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table-total, .layui-table-total tr, .layui-table[lay-even] tr:nth-child(even){
+  background-color: #2f56a5;
+}
+
+.layui-laypage button, .layui-laypage input,.layui-table-page select{
+  background-color: #1a4b70;
+}

@@ -1,0 +1,13 @@
+
+#cesiumContainer{
+    position: relative;
+}
+
+.default-line{
+    position: absolute;
+    bottom: 60px;
+    left: 10%;
+    width: 80%;
+    height: 5px;
+    background: #c1c1c1;
+}

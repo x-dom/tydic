@@ -1,0 +1,266 @@
+.width-100{
+  width: 100%;
+}
+.height-100{
+  height: 100%;
+}
+
+.left-box{
+  width: calc(25% - 10px);
+    height: calc(95% - 10px);
+    background-color: rgba(23,50,112,0.9);
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(120,160,252,1) 0px 0px 8px 1px inset;
+}
+.single-box{
+  width: 100%;
+  border-bottom:2px solid #4ba1f940;
+  padding-bottom:5px;
+  box-sizing: border-box;
+}
+.single-box:last-of-type{
+  border-bottom:none;
+}
+.single-box.feature-1{
+  height: 12%;
+}
+.single-box.feature-2{
+  height: 18%;
+}
+.single-box.feature-3{
+  height: 18%;
+}
+.single-box.feature-4{
+  height: 25%;
+}
+.single-box.feature-5{
+  height: 27%;
+}
+.single-box .sinngle-box-title{
+  color:#71d5ec;
+  height: 25px;
+  line-height: 25px;
+  text-indent: 10px;
+}
+.table-title{
+  color:#71d5ec;
+  height: 25px;
+  line-height: 25px;
+  text-indent: 10px;
+  background-color: rgba(23,50,112,0.9);
+}
+.single-box .single-box-content{
+  height: calc(100% - 25px);
+  /* padding: 5px 10px; */
+}
+.people-flow{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.people-flow-box{
+  flex:1;
+  margin: 0 2px;
+}
+.people-flow-box .target-value{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.people-flow-box .target-name{
+  font-size: 12px;
+  padding: 5px 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.people-flow-box .target-name span{
+  margin: 0 2px;
+}
+.people-flow-box .target-number{
+  font-size: 18px;
+}
+.people-flow-box .target-value{
+  background-color: #0e2f52;
+  padding: 2px 0;
+  border:1px solid #21334b;
+}
+.people-flow-box .target-name,.people-flow-box .target-number{
+  color: white;
+}
+.target-rate{
+  display: none;
+}
+.target-rate span.top{
+  color: #69936f;
+}
+.target-rate span.bottom{
+  color: #861f54;
+}
+.reside-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+.reside-bar-box{
+  height: 100%;
+}
+.reside-txt-title{
+ margin: 0 0 10px 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.reside-txt-title svg{
+  margin: 0 5px 0 0;
+}
+.reside-bar-box{
+  width: 70%;
+}
+.reside-txt-box{
+  width: 30%;
+}
+.reside-txt-data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e2f52;
+  padding: 5px 0;
+  border:1px solid #21334b;
+}
+.sex-age-box{
+  display: flex;
+  width: 100%;
+}
+.age-pie-box{
+  width: 70%;
+}
+.sex-txt-box{
+  height: 100%;
+  width: 30%;
+  color: white;
+}
+.sex-rows{
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sex-rows b{
+  margin: 0 0 0 10px;
+}
+.client-box{
+  display: flex;
+}
+.client-pie{
+  width: 55%;
+}
+.use-bar{
+  width: 45%;
+}
+.time-line{
+  height: 150px;
+  width: 50%;
+  position: absolute;
+  z-index: 999;
+  bottom:10px;
+  left: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(23,50,112,0.9);
+  box-shadow: rgba(120,160,252,1) 0px 0px 8px 1px inset;
+}
+.layui-input{
+  background-color: transparent !important;
+}
+.time-date-box{
+  width: 100px;
+  padding: 0 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: space-around;
+}
+.time-date{
+  height: 20%;
+}
+.time-line-controller-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+  margin-bottom: -20px;
+}
+.time-line-controller-buttons svg{
+  cursor: pointer;
+}
+.time-line-box{
+  height: 100%;
+  width: calc(100% - 100px);
+}
+#detail-data-box{
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  right: 5px;
+  top: 33px;
+  left: auto;
+}
+#detail-data-box.open{
+  right: -40%;
+  transition:right 0.5s;
+}
+#detail-data-box.close{
+  right: 5px;
+  transition:right 0.5s;
+}
+#open-button{
+  position:absolute;
+  top:50%;
+  left:0;
+  left: -22px;
+  cursor:pointer;
+  transform: rotate(0deg);
+  transition:transform 0.5s;
+  width:22px;
+  height:22px;
+}
+#open-button.close{
+  transform: rotate(180deg);
+  transition:transform 0.5s;
+}
+
+
+
+
+
+/* 样式覆盖 */
+.layui-table-view{
+  background-color: rgba(23,50,112,0.9);
+  margin: 0;
+}
+.layui-table{
+  background-color: transparent;
+  color: rgb(211, 206, 206);
+}
+.layui-table thead tr,.layui-table-header{
+  background-color: transparent;
+  color: rgb(211, 206, 206);
+}
+.layui-table tbody tr:hover{
+  background-color: rgba(174, 175, 177, 0.5);
+  color: rgb(34, 34, 34);
+}
+.layui-laypage a, .layui-laypage span,.layui-laypage input,.layui-laypage button,.layui-laypage select{
+  color: rgb(211, 206, 206);
+}
+.layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row]{
+  border-color: rgba(120,160,252,1);
+}

@@ -1,0 +1,205 @@
+body,html,.page-box-wrap{
+  width: 100%;
+  height: 100%;
+}
+.left{
+  float: left;
+}
+.page-box-wrap{
+  /* background-image: url(../image/login_bg.gif); */
+  background-image: url(../image/login_bg3.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+.title-logo {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 35px;
+}
+
+.title-logo img {
+  height: 100%;
+  max-width: 408px;
+  width: 100%;
+}
+
+.bg_left {
+  width: 416px;
+  height: 50px;
+  background: url(../image/login_leftB.png) left top no-repeat;
+  position: absolute;
+  left: -28px;
+  top: -50px;
+  z-index: 1;
+}
+
+.bg_right {
+  width: 416px;
+  height: 50px;
+  background: url(../image/login_rightB.png) left top no-repeat;
+  position: absolute;
+  left: 0px;
+  bottom: -50px;
+  z-index: 1;
+}
+
+.login-info-box{
+  width: 298px;
+  height: 230px;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 18%;
+  margin: auto;
+  padding: 0px 45px;
+  background-color: #fff;
+}
+.login-info-rows{
+  width: 100%;
+  height: 40px;
+}
+.login-rows-err{
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  text-indent: 10px;
+  color: red;
+}
+.user-row,.pas-row{
+  border-radius: 5px;
+}
+.user-row{
+  background-color: #63c6de;
+  border:1px solid #b8e6f0;
+}
+.pas-row{
+  background-color: #63c6de;
+  border:1px solid #b8e6f0;
+}
+.login-names{
+  width: 50px;
+  height: 40px;
+  position: relative;
+}
+.login-value{
+  width: calc(100% - 50px);
+  height: 100%;
+}
+.login-value input{
+  width: 100%;
+  height: 100%;
+  background-color: transparent !important;
+  border:none;
+  outline: none;
+  color: white !important;
+  font-size: 16px;
+  text-indent: 5px;
+}
+input:-webkit-autofill,input[type="password" i],input[type="text" i]{
+  background-color: transparent !important;
+  color: white !important;
+}
+.login-icon{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+}
+.user-icon{
+  width: 28px;
+  height: 30px;
+  background-image: url(../image/user.gif);
+}
+.pas-icon{
+  width: 21px;
+  height: 30px;
+  background-image: url(../image/pas.gif);
+}
+.submit-button,.pas-button{
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit-button{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  background: #5753f5;
+  border-radius: 20px;
+  box-shadow: 0px 0px 6px #5753f5;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  float: left;
+  text-align: center;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+}
+
+#drag {
+  position: relative;
+  background: #3db4d0;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+  text-indent: 110px;
+  color: white;
+  font-size: 14px;
+  border: 1px solid #f7f7f7;
+  float: left;
+}
+#drag .drag_bg {
+  background-color: #3db4d0;
+  height: 40px;
+  width: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#drag .drag_text {
+  position: absolute;
+  top: 0px;
+  width: auto;
+  color: white;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+}
+#drag .handler {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 45px;
+  height: 38px;
+  color: #2db4d0;
+  border: 1px solid #ccc;
+  cursor: move;
+}
+#drag .handler.start{
+  border-radius: 5px 0px 0 5px;
+}
+#drag .handler.end{
+  border-radius: 0 5px 5px 0;
+}

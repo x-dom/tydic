@@ -1,0 +1,60 @@
+/* 样式覆盖 */
+.layui-table-view{
+    background-color: rgba(23,50,112,0.6);
+    margin: 0;
+  }
+  .layui-table{
+    background-color: transparent;
+    color: rgb(211, 206, 206);
+  }
+  .layui-table thead tr,.layui-table-header{
+    background-color: transparent;
+    color: rgb(211, 206, 206);
+  }
+  .layui-table tbody tr:hover{
+    background-color: rgba(174, 175, 177, 0.5);
+    color: rgb(34, 34, 34);
+  }
+  .layui-laypage a, .layui-laypage span,.layui-laypage input,.layui-laypage button,.layui-laypage select{
+    color: rgb(211, 206, 206);
+  }
+  .layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row]{
+    border-color: rgba(120,160,252,1);
+  }
+  
+  .layui-slider{
+    background: rgba(49,66,82,0.5);
+  
+  }
+  /* .layui-slider-bar{
+    background:#0c819e!important; 
+    width:8%;
+    left:0%;
+    height: 7px;
+    margin-top: -1px;
+  } */
+  .layui-slider-wrap-btn{
+    border-radius: 0;
+    width: 5px;
+    height: 14px;
+    border: 1px solid #0c819e!important;
+    border-radius: 2px;
+  }
+  
+  .layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table-total, .layui-table-total tr, .layui-table[lay-even] tr:nth-child(even){
+    background-color: #2f56a5;
+  }
+  
+  .layui-laypage button, .layui-laypage input,.layui-table-page select{
+    background-color: #1a4b70;
+  }
+  
+  .layui-input, .layui-select, .layui-textarea{
+    background-color: #0b132b;
+    color: white;
+  }
+
+  th .layui-table-cell{
+    padding: 0px;
+    text-align: center;
+  }

@@ -1,0 +1,420 @@
+body,html,.page-box-wrap{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.page-box-wrap{
+    overflow: hidden;
+    background: #080d23;
+}
+.left-box-wrap{
+    width: calc(15% - 10px);
+    height: calc((100% - 210px)*2/3);
+    position: absolute;
+    top: 80px;
+    left: 25%;
+    margin: 5px;
+    z-index: 999;
+}
+.page-title{
+    width: 400px;
+    height: 80px;
+    line-height: 80px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999;
+    font-size: 40px;
+    color: white;
+}
+.content-box>.box-arrow-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgba(255,255,255,0.1);
+}
+.box-arrow-box>.l-l-t,.box-arrow-box>.l-l-b,.box-arrow-box>.r-l-t,.box-arrow-box>.r-l-b{
+    width: 0;
+    height: 8px;
+    border-left:1px solid #4d88fe;
+    position: absolute;
+}
+.box-arrow-box>.l-h-t,.box-arrow-box>.l-h-b,.box-arrow-box>.r-h-t,.box-arrow-box>.r-h-b{
+    width: 8px;
+    height: 0;
+    border-bottom:1px solid #4d88fe;
+    position: absolute;
+}
+.box-arrow-box>.l-l-t{
+    top:0;
+    left: 0;
+}
+.box-arrow-box>.l-l-b{
+    bottom:0;
+    left: 0;
+}
+.box-arrow-box>.r-l-t{
+    top:0;
+    right: 0;
+}
+.box-arrow-box>.r-l-b{
+    bottom: 0;
+    right: 0;
+}
+.box-arrow-box>.l-h-t{
+    top:0;
+    left: 0;
+}
+.box-arrow-box>.l-h-b{
+    bottom:0;
+    left: 0;
+}
+.box-arrow-box>.r-h-t{
+    top:0;
+    right: 0;
+}
+.box-arrow-box>.r-h-b{
+    bottom: 0;
+    right: 0;
+}
+.people-number-box{
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    z-index: 999;
+    top:5px;
+    right: calc(25% + 10px);
+}
+.people-all-number-box{
+    width: 100%;
+    height: 40%;
+    margin: 5px 0;
+}
+.people-current-number-box{
+    width: 100%;
+    height: calc(60% - 30px);
+    margin:5px 0;
+}
+.feature-box-wrap{
+    width: 100%;
+    height: 100%;
+}
+.feature-box-wrap>.feature-title{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-indent: 10px;
+    font-size: 16px;
+    color:white;
+    background: -webkit-linear-gradient(right,rgba(255,255,255,0), rgba(255,255,255,0.3)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,rgba(255,255,255,0), rgba(255,255,255,0.3)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,rgba(255,255,255,0), rgba(219, 156, 156, 0.3)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(right,rgba(255,255,255,0), rgba(255,255,255,0.3)); /* 标准的语法 */
+}
+.feature-box{
+    width: 100%;
+    height: calc(100% - 25px);
+}
+.people-number-box .feature-box-wrap>.feature-title{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 10px;
+    font-size: 16px;
+    color:white;
+    background:transparent;
+    text-align: center;
+}
+.people-number-box .feature-box{
+    width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+    margin: 5px 0 5px 0;
+    align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+.single-card-box{
+    height: 100%;
+    text-align: center;
+    float: left;
+    font-size: 30px;
+    color: white;
+    border:1px solid #1285d5;
+    background-color:rgba(2,101,143,1 );
+    margin: 0 5px;
+    display: flex;
+    align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+
+.logo-box{
+    width: 190px;
+    height: 80px;
+    position: absolute;
+    top:0;
+    left: calc(25% + 10px);
+    z-index: 9999;
+    background-image: url(./../res/icon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.map{
+    background: #0a0621;
+    height: calc((100% - 30px)*2/3) ;
+}
+
+.page-box-left-panel,.page-box-right-panel,.page-box-cent-panel{
+    float: left;
+}
+
+.page-box-left-panel,.page-box-right-panel{
+    width: calc(25% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+}
+
+.page-box-cent-panel{
+    width: calc(100% - 50%);
+    height: 100%;
+}
+.page-count-box{
+    width: 100%;
+    height: calc((100% - 100px)/3);
+    margin-top: 20px;
+}
+.page-count-box-title{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+}
+.page-count-box-title .select{
+    display: inline-block;
+    font-size: 8px;
+    padding: 0px 10px 0px 20px;
+    cursor: pointer;
+}
+.page-count-box-content{
+    width: 100%;
+    height: calc(100% - 40px);
+}
+.page-count-box-content-border{
+    /*border: 1px solid #fff;*/
+    border: 1px solid #080d23;
+}
+.page-count-box-content .page-count-box-content-tab-box{
+    padding-left: 10px;
+    line-height: 25px;
+}
+.page-count-box-content .page-count-box-content-tab-box label{
+    cursor: pointer;
+}
+.page-count-box-content .page-count-box-content-tab-box .selected{
+    color: #ec9b42;
+}
+.page-count-box-content .page-count-box-content-tab-box .selected{
+    color: #3582de;
+}
+.page-count-box-content .page-count-box-content-tab-box-next{
+    width: 100%;
+    height: calc(100% - 25px);
+}
+.page-count-box-timer-controller{
+    background: #171829;
+    height: 62px;
+}
+.center-controller-content{
+    width: 100%;
+    height: 100%;
+}
+.center-controller-button-box{
+    width: 106px;
+    height: 100%;
+    float: left;
+    border: 1px solid gray;
+    background: #313142;
+}
+
+.center-controller-box{
+    width: calc(100% - 110px);
+    height: 100%;
+    float: left;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid gray;
+}
+
+.center-controller-cent-line{
+    position: absolute;
+    height: 2px;
+    background: #ccc;
+    width: calc(100% - 50% - 110px);
+    margin-top: 27px
+}
+
+.center-controller-cent-arrow{
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #9e9e9e;
+    border-right: 2px solid #9e9e9e;
+    transform: rotate(45deg);
+    position: absolute;
+    right: calc(25% + 1px);
+    margin-top: 23px;
+}
+
+.center-controller-time-box{
+    text-align: left;
+}
+
+.center-controller-time-box .timer-controller-item{
+    color: #9e9e9e;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    margin-top: 23px;
+    border: 2px solid #9e9e9e;
+    background: #9e9e9e;
+    display: inline-block;
+    margin-left: calc((100% - 260px)/13);
+    cursor: pointer;
+}
+
+.center-controller-time-box .selected{
+    background: #ec9b42;
+    border-color: #f1f15b;
+    color: #f1f15b;
+}
+
+.center-controller-time-box  .timer-controller-item  .timer-controller-item-text{
+    transform: rotate(-45deg);
+}
+
+.timer-controller-box{
+    margin-top: 13px;
+    margin-left: 13px;
+}
+.timer-controller-box .timer-controller-box-previous{
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 22px;
+    background-size: 100%;
+    margin-top: 5px;
+    background-image: url(../res/previous.png);
+}
+.timer-controller-box .timer-controller-box-start{
+    cursor: pointer;
+    float: left;
+    width: 32px;
+    height: 32px;
+    background-image: url(../res/start.png);
+    margin-right: 10px;
+}
+.timer-controller-box .timer-controller-box-stop{
+    cursor: pointer;
+    float: left;
+    width: 22px;
+    height: 22px;
+    background-size: 100%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url(../res/stop.png);
+}
+.timer-controller-box .timer-controller-box-next{
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 22px;
+    background-size: 100%;
+    margin-top: 5px;
+    background-image: url(../res/previous.png);
+    transform: rotate(180deg);
+}
+
+.gis-controller-btn-box{
+
+}
+.gis-controller-size.max{
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: calc((100% - 30px)*2/3 - 74px);
+    right: calc(25% + 5px);
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0.8;
+    border: 1px solid rgba(115,201,241,1);
+    border-radius: 5px;
+    background-color: #365381;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../res/max.png);
+}
+
+.gis-controller-size.min{
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: calc((100% - 30px)*2/3 - 74px);
+    right: calc(25% + 5px);
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0.8;
+    border: 1px solid rgba(115,201,241,1);
+    border-radius: 5px;
+    background-color: #365381;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../res/min.png);
+}
+
+.gis-controller-tab{
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    font-size: 16px;
+    text-align: center;
+    color: #9ab0cc;
+    opacity: 0.8;
+    background-color: #365381;
+    position: absolute;
+    top: calc((100% - 30px)*2/3 - 74px);
+    right: calc(25% + 33px);
+    z-index: 999;
+    cursor: pointer;
+    border: 1px solid rgba(115,201,241,1);
+    border-radius: 5px;
+}
+
+.gis-controller-size.max:hover, .gis-controller-size.min:hover, .gis-controller-tab:hover{
+    opacity: 1;
+}
+
+#dailyTrendSelect{
+    background: #080d23;
+    color: #fff;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.ol-control button{
+    display: inline-block;
+}
+
+.ol-attribution.ol-uncollapsible{
+    display: none !important;
+}

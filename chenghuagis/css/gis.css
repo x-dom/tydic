@@ -1,0 +1,6 @@
+#map > div > div.ol-overlaycontainer-stopevent > div.ol-zoom.ol-unselectable.ol-control {
+    left: auto;
+    right: 5px;
+    bottom: 20px;
+    top:auto;
+}

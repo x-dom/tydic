@@ -1,0 +1,264 @@
+[{
+    "trans_flag": "0",
+    "name": "科学城",
+    "station_id": "1",
+    "spell": "ke xue cheng",
+    "lon": 104.072328,
+    "lat": 30.391243
+}, 
+{
+    "trans_flag": "0",
+    "name": "兴隆湖",
+    "station_id": "2",
+    "spell": "xing long hu",
+    "lon": 104.076412,
+    "lat": 30.405196
+}, 
+{
+    "trans_flag": "0",
+    "name": "广州路",
+    "station_id": "3",
+    "spell": "guang zhou lu",
+    "lon": 104.077269,
+    "lat": 30.419021
+}, 
+{
+    "trans_flag": "0",
+    "name": "西博城",
+    "station_id": "4",
+    "spell": "xi bo cheng",
+    "lon": 104.077289,
+    "lat": 30.425059
+}, 
+{
+    "trans_flag": "0",
+    "name": "天府公园",
+    "station_id": "5",
+    "spell": "tian fu gong yuan",
+    "lon": 104.077748,
+    "lat": 30.432976
+}, 
+{
+    "trans_flag": "0",
+    "name": "武汉路",
+    "station_id": "6",
+    "spell": "wu han lu",
+    "lon": 104.07291,
+    "lat": 30.441619
+}, 
+{
+    "trans_flag": "0",
+    "name": "麓湖",
+    "station_id": "7",
+    "spell": "lu hu",
+    "lon": 104.073293,
+    "lat": 30.454527
+}, 
+{
+    "trans_flag": "0",
+    "name": "红石公园",
+    "station_id": "8",
+    "spell": "hong shi gong yuan",
+    "lon": 104.073007,
+    "lat": 30.464257
+}, 
+{
+    "trans_flag": "0",
+    "name": "广福",
+    "station_id": "9",
+    "spell": "guang fu",
+    "lon": 104.069325,
+    "lat": 30.478693
+}, 
+{
+    "trans_flag": "0",
+    "name": "海昌路",
+    "station_id": "10",
+    "spell": "hai chang lu",
+    "lon": 104.070832,
+    "lat": 30.492415
+}, 
+{
+    "trans_flag": "0",
+    "name": "华阳",
+    "station_id": "11",
+    "spell": "hua yang",
+    "lon": 104.070521,
+    "lat": 30.503167
+}, 
+{
+    "trans_flag": "1",
+    "name": "四河",
+    "station_id": "12",
+    "spell": "si he",
+    "lon": 104.070125,
+    "lat": 30.516133
+}, 
+{
+    "trans_flag": "0",
+    "name": "华府大道",
+    "station_id": "13",
+    "spell": "hua fu da dao",
+    "lon": 104.069836,
+    "lat": 30.525746
+}, 
+{
+    "trans_flag": "0",
+    "name": "天府五街",
+    "station_id": "14",
+    "spell": "tian fu wu jie",
+    "lon": 104.06951,
+    "lat": 30.537107
+}, 
+{
+    "trans_flag": "0",
+    "name": "天府三街",
+    "station_id": "15",
+    "spell": "tian fu san jie",
+    "lon": 104.069204,
+    "lat": 30.546203
+}, 
+{
+    "trans_flag": "0",
+    "name": "世纪城",
+    "station_id": "16",
+    "spell": "shi ji cheng",
+    "lon": 104.06893,
+    "lat": 30.55487
+}, 
+{
+    "trans_flag": "0",
+    "name": "锦城广场",
+    "station_id": "17",
+    "spell": "jin cheng guang chang",
+    "lon": 104.066528,
+    "lat": 30.567722
+}, 
+{
+    "trans_flag": "0",
+    "name": "孵化园",
+    "station_id": "18",
+    "spell": "fu hua yuan",
+    "lon": 104.064313,
+    "lat": 30.575873
+}, 
+{
+    "trans_flag": "0",
+    "name": "金融城",
+    "station_id": "19",
+    "spell": "jin rong cheng",
+    "lon": 104.064147,
+    "lat": 30.582579
+}, 
+{
+    "trans_flag": "0",
+    "name": "高新",
+    "station_id": "20",
+    "spell": "gao xin",
+    "lon": 104.063847,
+    "lat": 30.594368
+}, 
+{
+    "trans_flag": "1",
+    "name": "火车南站",
+    "station_id": "21",
+    "spell": "huo che nan zhan",
+    "lon": 104.067393,
+    "lat": 30.605459
+}, 
+{
+    "trans_flag": "0",
+    "name": "桐梓林",
+    "station_id": "22",
+    "spell": "tong zi lin",
+    "lon": 104.067115,
+    "lat": 30.61531
+}, 
+{
+    "trans_flag": "0",
+    "name": "倪家桥",
+    "station_id": "23",
+    "spell": "ni jia qiao",
+    "lon": 104.066885,
+    "lat": 30.624773
+}, 
+{
+    "trans_flag": "1",
+    "name": "省体育馆",
+    "station_id": "24",
+    "spell": "sheng ti yu guan",
+    "lon": 104.066606,
+    "lat": 30.633361
+}, 
+{
+    "trans_flag": "0",
+    "name": "华西坝",
+    "station_id": "25",
+    "spell": "hua xi ba",
+    "lon": 104.066279,
+    "lat": 30.642821
+}, 
+{
+    "trans_flag": "0",
+    "name": "锦江宾馆",
+    "station_id": "26",
+    "spell": "jin jiang bin guan",
+    "lon": 104.066053,
+    "lat": 30.650046
+}, 
+{
+    "trans_flag": "1",
+    "name": "天府广场",
+    "station_id": "27",
+    "spell": "tian fu guang chang",
+    "lon": 104.065751,
+    "lat": 30.657453
+}, 
+{
+    "trans_flag": "1",
+    "name": "骡马市",
+    "station_id": "28",
+    "spell": "luo ma shi",
+    "lon": 104.065617,
+    "lat": 30.666514
+}, 
+{
+    "trans_flag": "0",
+    "name": "文殊院",
+    "station_id": "29",
+    "spell": "wen shu yuan",
+    "lon": 104.068036,
+    "lat": 30.672535
+}, 
+{
+    "trans_flag": "0",
+    "name": "人民北路",
+    "station_id": "30",
+    "spell": "ren min bei lu",
+    "lon": 104.073056,
+    "lat": 30.684833
+}, 
+{
+    "trans_flag": "1",
+    "name": "火车北站",
+    "station_id": "31",
+    "spell": "huo che bei zhan",
+    "lon": 104.074056,
+    "lat": 30.695517
+}, 
+{
+    "trans_flag": "0",
+    "name": "升仙湖",
+    "station_id": "32",
+    "spell": "sheng xian hu",
+    "lon": 104.083474,
+    "lat": 30.704625
+}, 
+{
+    "trans_flag": "0",
+    "name": "韦家碾",
+    "station_id": "33",
+    "spell": "wei jia nian",
+    "lon": 104.08686,
+    "lat": 30.717644
+}]

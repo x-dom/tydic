@@ -1,0 +1,71 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+img {
+    border: none;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    color: #333333; font: 12px/1.5em 'Microsoft Yahei', Arial, sans-serif;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #00438a;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #00438a;
+    text-decoration: underline;
+}

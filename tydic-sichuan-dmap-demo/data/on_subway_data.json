@@ -1,0 +1,11 @@
+{
+"station_id": 15,
+"on_cnt": 950,
+"avg_on_take_time": 15.3,
+"male_cnt": 429,
+"female_cnt": 521,
+"cnt_18_25": 252,
+"cnt_25_35": 255,
+"cnt_35_45": 234,
+"cnt_45_": 245
+}

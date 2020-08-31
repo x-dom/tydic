@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>天府三街出站OD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- <link rel="stylesheet" href="./public/base.css"> -->
+    <link rel="stylesheet" href="./plugins/layui-v2.5.5/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body>
+    <h1 id='title'>天府三街出站OD</h1>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="timerbar"> <input type="text" class="layui-input" id="time" placeholder="yyyy-MM-dd">》</div>
+    <div class="container" id="cont">
+      <div class="beginBtn">
+        <img class="start" src="image/begin.png" alt="">
+        <img class="choose " src="image/replay.png" alt="">
+      </div>
+      <ul>
+        <li>
+          <i class="icon off"></i>
+            <span class=" off">天府三街</span>
+        </li>
+        <li><i class="icon on"></i><span>世纪城</span></li>
+        <li><i class="icon on"></i><span>锦城广场</span></li>
+        <li><i class="icon on"></i><span>孵化园</span></li>
+        <li><i class="icon on"></i><span>金融城</span></li>
+        <li><i class="icon on"></i><span>高新</span></li>
+        <li><i class="icon on"></i><span>火车南站</span></li>
+        <li><i class="icon on"></i><span>桐梓林</span></li>
+        <li><i class="icon on"></i><span>倪家桥</span></li>
+        <li><i class="icon on"></i><span>省体育馆</span></li>
+        <li><i class="icon on"></i><span>华西坝</span></li>
+        <li><i class="icon on"></i><span>锦江宾馆</span></li>
+        <li><i class="icon on"></i><span>天府广场</span></li>
+        <li><i class="icon on"></i><span>骡马市</span></li>
+        <li><i class="icon on"></i><span>文殊院</span></li>
+        <li><i class="icon on"></i><span>人民北路</span></li>
+        <li><i class="icon on"></i><span>火车北站</span></li>
+        <li><i class="icon on"></i><span>升仙湖</span></li>
+        <li><i class="icon on"></i><span>韦家碾</span></li>
+      </ul>
+    </div>
+    <div class="rightContent">
+      <div class="textCon">
+          <p>
+              上下车总人数为：<span class="off_cnt"></span>,平均回家时间为：<span class="take_time"></span>分钟,平均使用流量为：<span class="avg_flux"></span>MB,平均网页首包时延：<span class="avg_op_delay"></span>ms
+              ,平均网页打开时延: <span class="avg_fp_delay"></span>ms,平均视频下载速率: <span class="avg_vd_speed"></span>KBps,分钟平均视频下载次数: <span class="avg_stutter_times"></span>次
+          </p>
+      </div>
+      
+      <div id="pie1"></div>
+      <div id="pie2"></div>
+      <div id="pie3"></div>
+    </div>
+</body>
+<script type="text/javascript" src="./plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./plugins/layui-v2.5.5/layui/layui.all.js"></script>
+<script type="text/javascript" src="./plugins/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="./js/off_subway_data.js"></script>
+<script type="text/javascript" src="./cesium/Cesium.js"></script>
+<script type="text/javascript" src="./plugins/PolylineTrailLinkMaterial/PolylineTrailLinkMaterial-extend.js"></script>
+<script type="text/javascript" src="./cesium/DMap.js"></script>
+<script type="text/javascript" src="./js/data.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/indexGIS.js"></script>
+<script type="text/javascript" src="./js/indexLineGIS.js"></script>
+<script>
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth()+1;
+  var day = date.getDate();
+  month = month<10?'0'+month:month;
+  day = day<10?'0'+day:day;
+  var value = year + '-' + month + '-' +day;
+  layui.use('laydate', function(){
+    var laydate = layui.laydate;
+    //常规用法
+    laydate.render({
+      elem: '#time',
+      value: value
+    });
+  });
+</script>
+</html>

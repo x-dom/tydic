@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>智慧商业管理平台|登录</title>
+    <link rel="shortcut icon" href="../image/favicon.ico">
+    <link rel="stylesheet" href="../plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/drag.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="../plugins/md5/md5.js"></script>
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <script src="../plugins/jquery/jquery.cookie.js"></script>
+    <script src="../plugins/layui/layui.all.js"></script>
+    <script src="../plugins/common/common_config.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="js/login.js"></script>
+    <script type="text/javascript">
+        //判断是否顶层窗口
+        if(window.top!==window.self){
+            window.top.location=window.location
+        };
+    </script>
+</head>
+<body>
+<div class="page-box-wrap">
+    <div class="title-logo">
+        <img src="image/icon_logo.png">
+    </div>
+    <form class="login-info-box">
+        <div class="bg_left" style="left: -28px;"></div>
+        <div class="login-info-rows user-row">
+            <div class="login-names left"><i class="login-icon user-icon"></i></div>
+            <div class="login-value left"><input id="user-name" type="text" name="user_name" placeholder="账号"></div>
+        </div>
+        <p class="login-rows-err user-err-info"></p>
+        <div class="login-info-rows pas-row">
+            <div class="login-names left"><i class="login-icon pas-icon"></i></div>
+            <div class="login-value left"><input id="user-pas" type="password" name="user_password" placeholder="密码"></div>
+        </div>
+        <p class="login-rows-err pas-err-info"></p>
+        <div class="login-info-rows">
+            <input type="hidden" id="dragCheck" value="1">
+            <div id="drag" style="color: rgb(255, 255, 255);">
+                <div class="drag_bg" style="width: 255px;"></div>
+                <div class="drag_text" onselectstart="return false;" unselectable="on">验证通过</div>
+                <div class="handler handler_ok_bg borderRB start" style="left: 255px;" data-login="0"></div>
+            </div>
+        </div>
+        <p class="drag-rows-err login-rows-err"></p>
+        <div class="login-info-rows">
+            <div id="submit-button"  class="submit-button left">登录</div>
+            <!-- <div id="submit-button" class="submit-button left"></div> -->
+            <!-- <div id="pas-button" class="pas-button left"></div> -->
+        </div>
+        <div class="bg_right"></div>
+    </form>
+</div>
+</body>
+</html>

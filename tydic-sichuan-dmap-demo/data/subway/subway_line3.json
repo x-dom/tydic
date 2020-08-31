@@ -1,0 +1,298 @@
+[{
+        "trans_flag": "0",
+        "name": "成都医学院",
+        "station_id": "1",
+        "spell": "cheng du yi xue yuan",
+        "lon": 104.194681,
+        "lat": 30.816912
+    },
+    {
+        "trans_flag": "0",
+        "name": "石油大学",
+        "station_id": "2",
+        "spell": "shi you da xue",
+        "lon": 104.1866,
+        "lat": 30.818753
+    },
+    {
+        "trans_flag": "0",
+        "name": "钟楼",
+        "station_id": "3",
+        "spell": "zhong lou",
+        "lon": 104.175313,
+        "lat": 30.820962
+    },
+    {
+        "trans_flag": "0",
+        "name": "马超西路",
+        "station_id": "4",
+        "spell": "ma chao xi lu",
+        "lon": 104.164715,
+        "lat": 30.813145
+    },
+    {
+        "trans_flag": "0",
+        "name": "团结新区",
+        "station_id": "5",
+        "spell": "tuan jie xin qu",
+        "lon": 104.158768,
+        "lat": 30.804386
+    },
+    {
+        "trans_flag": "0",
+        "name": "锦水河",
+        "station_id": "6",
+        "spell": "jin shui he",
+        "lon": 104.15331,
+        "lat": 30.797452
+    },
+    {
+        "trans_flag": "0",
+        "name": "三河场",
+        "station_id": "7",
+        "spell": "san he chang",
+        "lon": 104.138911,
+        "lat": 30.784689
+    },
+    {
+        "trans_flag": "0",
+        "name": "金华寺东路",
+        "station_id": "8",
+        "spell": "jin hua si dong lu",
+        "lon": 104.125448,
+        "lat": 30.770408
+    },
+    {
+        "trans_flag": "0",
+        "name": "植物园",
+        "station_id": "9",
+        "spell": "zhi wu yuan",
+        "lon": 104.1213,
+        "lat": 30.763356
+    },
+    {
+        "trans_flag": "0",
+        "name": "军区总医院",
+        "station_id": "10",
+        "spell": "jun qu zong yi yuan",
+        "lon": 104.114167,
+        "lat": 30.744748
+    },
+    {
+        "trans_flag": "0",
+        "name": "熊猫大道",
+        "station_id": "11",
+        "spell": "xiong mao da dao",
+        "lon": 104.108002,
+        "lat": 30.725447
+    },
+    {
+        "trans_flag": "0",
+        "name": "动物园",
+        "station_id": "12",
+        "spell": "dong wu yuan",
+        "lon": 104.103142,
+        "lat": 30.713648
+    },
+    {
+        "trans_flag": "0",
+        "name": "昭觉寺南路",
+        "station_id": "13",
+        "spell": "zhao jue si nan lu",
+        "lon": 104.096821,
+        "lat": 30.702922
+    },
+    {
+        "trans_flag": "1",
+        "name": "驷马桥",
+        "station_id": "14",
+        "spell": "si ma qiao",
+        "lon": 104.093329,
+        "lat": 30.695502
+    },
+    {
+        "trans_flag": "0",
+        "name": "李家沱",
+        "station_id": "15",
+        "spell": "li jia tuo",
+        "lon": 104.094528,
+        "lat": 30.689393
+    },
+    {
+        "trans_flag": "0",
+        "name": "前锋路",
+        "station_id": "16",
+        "spell": "qian feng lu",
+        "lon": 104.092124,
+        "lat": 30.679037
+    },
+    {
+        "trans_flag": "0",
+        "name": "红星桥",
+        "station_id": "17",
+        "spell": "hong xing qiao",
+        "lon": 104.090526,
+        "lat": 30.671208
+    },
+    {
+        "trans_flag": "1",
+        "name": "市二医院",
+        "station_id": "18",
+        "spell": "shi er yi yuan",
+        "lon": 104.083909,
+        "lat": 30.660814
+    },
+    {
+        "trans_flag": "1",
+        "name": "春熙路",
+        "station_id": "19",
+        "spell": "chun xi lu",
+        "lon": 104.078966,
+        "lat": 30.653249
+    },
+    {
+        "trans_flag": "0",
+        "name": "新南门",
+        "station_id": "20",
+        "spell": "xin nan men",
+        "lon": 104.075161,
+        "lat": 30.644361
+    },
+    {
+        "trans_flag": "0",
+        "name": "磨子桥",
+        "station_id": "21",
+        "spell": "mo zi qiao",
+        "lon": 104.075933,
+        "lat": 30.637421
+    },
+    {
+        "trans_flag": "1",
+        "name": "省体育馆",
+        "station_id": "22",
+        "spell": "sheng ti yu guan",
+        "lon": 104.065677,
+        "lat": 30.633531
+    },
+    {
+        "trans_flag": "0",
+        "name": "衣冠庙",
+        "station_id": "23",
+        "spell": "yi guan miao",
+        "lon": 104.052144,
+        "lat": 30.634486
+    },
+    {
+        "trans_flag": "0",
+        "name": "高升桥",
+        "station_id": "24",
+        "spell": "gao sheng qiao",
+        "lon": 104.042545,
+        "lat": 30.640044
+    },
+    {
+        "trans_flag": "0",
+        "name": "红牌楼",
+        "station_id": "25",
+        "spell": "hong pai lou",
+        "lon": 104.029878,
+        "lat": 30.634704
+    },
+    {
+        "trans_flag": "1",
+        "name": "太平园",
+        "station_id": "26",
+        "spell": "tai ping yuan",
+        "lon": 104.02158,
+        "lat": 30.625381
+    },
+    {
+        "trans_flag": "0",
+        "name": "川藏立交",
+        "station_id": "27",
+        "spell": "chuan cang li jiao",
+        "lon": 104.006465,
+        "lat": 30.622935
+    },
+    {
+        "trans_flag": "0",
+        "name": "武侯立交",
+        "station_id": "28",
+        "spell": "wu hou li jiao",
+        "lon": 103.99342,
+        "lat": 30.62696
+    },
+    {
+        "trans_flag": "0",
+        "name": "武青南路",
+        "station_id": "29",
+        "spell": "wu qing nan lu",
+        "lon": 103.98508,
+        "lat": 30.623124
+    },
+    {
+        "trans_flag": "0",
+        "name": "双凤桥",
+        "station_id": "30",
+        "spell": "shuang feng qiao",
+        "lon": 103.969203,
+        "lat": 30.615958
+    },
+    {
+        "trans_flag": "0",
+        "name": "龙桥路",
+        "station_id": "31",
+        "spell": "long qiao lu",
+        "lon": 103.943744,
+        "lat": 30.604427
+    },
+    {
+        "trans_flag": "0",
+        "name": "航都大街",
+        "station_id": "32",
+        "spell": "hang du da jie",
+        "lon": 103.936874,
+        "lat": 30.591323
+    },
+    {
+        "trans_flag": "0",
+        "name": "迎春桥",
+        "station_id": "33",
+        "spell": "ying chun qiao",
+        "lon": 103.93492,
+        "lat": 30.580647
+    },
+    {
+        "trans_flag": "0",
+        "name": "东升",
+        "station_id": "34",
+        "spell": "dong sheng",
+        "lon": 103.925316,
+        "lat": 30.571218
+    },
+    {
+        "trans_flag": "0",
+        "name": "双流广场",
+        "station_id": "35",
+        "spell": "shuang liu guang chang",
+        "lon": 103.920196,
+        "lat": 30.564269
+    },
+    {
+        "trans_flag": "0",
+        "name": "三里坝",
+        "station_id": "36",
+        "spell": "san li ba",
+        "lon": 103.914567,
+        "lat": 30.553562
+    },
+    {
+        "trans_flag": "0",
+        "name": "双流西站",
+        "station_id": "37",
+        "spell": "shuang liu xi zhan",
+        "lon": 103.917258,
+        "lat": 30.543286
+    }
+
+]

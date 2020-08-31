@@ -1,0 +1,46 @@
+.ol3-search-control {
+    position: absolute;
+    z-index: 10;
+    /* top: 3.5%; */
+    top: calc(74px + 10px);
+    left: calc(25% + 152px);
+    padding: 3px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid #6d799a;
+    border-radius: 5px;
+    color: #d5d6d8;
+    box-shadow: 1px 1px 10px rgba(255,255,255, .3);
+}
+
+.ol3-search-control-content {
+    background: #02064c80;
+    transition: display 0.5s;
+}
+
+.ol3-search-control-content svg{
+    width: 18px;
+    height: 18px;
+}
+
+.ol3-search-control-circle {
+    display: inline-block;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.ol3-search-control-rectangle {
+    display: inline-block;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.ol3-search-control-polygon {
+    display: inline-block;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.ol3-search-control-content .activate {
+    background: #80808080;
+}
+

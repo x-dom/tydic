@@ -1,0 +1,44 @@
+.cesium-search-control {
+    position: absolute;
+    z-index: 10;
+    top: 3.5%;
+    left: calc(25% + 152px);
+    padding: 3px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid #6d799a;
+    border-radius: 5px;
+    color: #d5d6d8;
+}
+
+.cesium-search-control-content {
+    background: #02064c80;
+    transition: display 0.5s;
+}
+
+.cesium-search-control-content svg{
+    width: 18px;
+    height: 18px;
+}
+
+.cesium-search-control-circle {
+    display: inline-block;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.cesium-search-control-rectangle {
+    display: inline-block;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.cesium-search-control-polygon {
+    display: inline-block;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.cesium-search-control-content .activate {
+    background: #80808080;
+}
+

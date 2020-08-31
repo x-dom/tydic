@@ -1,0 +1,257 @@
+[{
+        "trans_flag": "0",
+        "name": "犀浦",
+        "station_id": "1",
+        "spell": "xi pu",
+        "lon": 103.971433,
+        "lat": 30.758172
+    },
+    {
+        "trans_flag": "0",
+        "name": "天河路",
+        "station_id": "2",
+        "spell": "tian he lu",
+        "lon": 103.976163,
+        "lat": 30.745883
+    },
+    {
+        "trans_flag": "0",
+        "name": "百草路",
+        "station_id": "3",
+        "spell": "bai cao lu",
+        "lon": 103.979327,
+        "lat": 30.733062
+    },
+    {
+        "trans_flag": "0",
+        "name": "金周路",
+        "station_id": "4",
+        "spell": "jin zhou lu",
+        "lon": 103.996175,
+        "lat": 30.721638
+    },
+    {
+        "trans_flag": "0",
+        "name": "金科北路",
+        "station_id": "5",
+        "spell": "jin ke bei lu",
+        "lon": 104.006635,
+        "lat": 30.720762
+    },
+    {
+        "trans_flag": "0",
+        "name": "迎宾大道",
+        "station_id": "6",
+        "spell": "ying bin da dao",
+        "lon": 104.013528,
+        "lat": 30.713168
+    },
+    {
+        "trans_flag": "0",
+        "name": "茶店子客运站",
+        "station_id": "7",
+        "spell": "cha dian zi ke yun zhan",
+        "lon": 104.013692,
+        "lat": 30.705986
+    },
+    {
+        "trans_flag": "0",
+        "name": "羊犀立交",
+        "station_id": "8",
+        "spell": "yang xi li jiao",
+        "lon": 104.012655,
+        "lat": 30.693913
+    },
+    {
+        "trans_flag": "1",
+        "name": "一品天下",
+        "station_id": "9",
+        "spell": "yi pin tian xia",
+        "lon": 104.01963,
+        "lat": 30.688942
+    },
+    {
+        "trans_flag": "0",
+        "name": "蜀汉路东",
+        "station_id": "10",
+        "spell": "shu han lu dong",
+        "lon": 104.029048,
+        "lat": 30.682868
+    },
+    {
+        "trans_flag": "0",
+        "name": "白果林",
+        "station_id": "11",
+        "spell": "bai guo lin",
+        "lon": 104.033278,
+        "lat": 30.673851
+    },
+    {
+        "trans_flag": "1",
+        "name": "中医大省医院",
+        "station_id": "12",
+        "spell": "zhong yi da sheng yi yuan",
+        "lon": 104.040973,
+        "lat": 30.665911
+    },
+    {
+        "trans_flag": "0",
+        "name": "通惠门",
+        "station_id": "13",
+        "spell": "tong hui men",
+        "lon": 104.048523,
+        "lat": 30.662088
+    },
+    {
+        "trans_flag": "0",
+        "name": "人民公园",
+        "station_id": "14",
+        "spell": "ren min gong yuan",
+        "lon": 104.056779,
+        "lat": 30.659324
+    },
+    {
+        "trans_flag": "1",
+        "name": "天府广场",
+        "station_id": "15",
+        "spell": "tian fu guang chang",
+        "lon": 104.066764,
+        "lat": 30.657453
+    },
+    {
+        "trans_flag": "1",
+        "name": "春熙路",
+        "station_id": "16",
+        "spell": "chun xi lu",
+        "lon": 104.080019,
+        "lat": 30.653389
+    },
+    {
+        "trans_flag": "0",
+        "name": "东门大桥",
+        "station_id": "17",
+        "spell": "dong men da qiao",
+        "lon": 104.087308,
+        "lat": 30.648192
+    },
+    {
+        "trans_flag": "0",
+        "name": "牛王庙",
+        "station_id": "18",
+        "spell": "niu wang miao",
+        "lon": 104.094483,
+        "lat": 30.644976
+    },
+    {
+        "trans_flag": "0",
+        "name": "牛市口",
+        "station_id": "19",
+        "spell": "niu shi kou",
+        "lon": 104.107662,
+        "lat": 30.637912
+    },
+    {
+        "trans_flag": "0",
+        "name": "东大路",
+        "station_id": "20",
+        "spell": "dong da lu",
+        "lon": 104.112758,
+        "lat": 30.633295
+    },
+    {
+        "trans_flag": "0",
+        "name": "塔子山公园",
+        "station_id": "21",
+        "spell": "ta zi shan gong yuan",
+        "lon": 104.122922,
+        "lat": 30.629465
+    },
+    {
+        "trans_flag": "1",
+        "name": "成都东客站",
+        "station_id": "22",
+        "spell": "cheng du dong ke zhan",
+        "lon": 104.13995,
+        "lat": 30.629329
+    },
+    {
+        "trans_flag": "0",
+        "name": "成渝立交",
+        "station_id": "23",
+        "spell": "cheng yu li jiao",
+        "lon": 104.147432,
+        "lat": 30.624822
+    },
+    {
+        "trans_flag": "0",
+        "name": "惠王陵",
+        "station_id": "24",
+        "spell": "hui wang ling",
+        "lon": 104.152086,
+        "lat": 30.612075
+    },
+    {
+        "trans_flag": "0",
+        "name": "洪河",
+        "station_id": "25",
+        "spell": "hong he",
+        "lon": 104.15751,
+        "lat": 30.605015
+    },
+    {
+        "trans_flag": "0",
+        "name": "成都行政学院",
+        "station_id": "26",
+        "spell": "cheng du xing zheng xue yuan",
+        "lon": 104.170954,
+        "lat": 30.596975
+    },
+    {
+        "trans_flag": "0",
+        "name": "大面铺",
+        "station_id": "27",
+        "spell": "da mian pu",
+        "lon": 104.201298,
+        "lat": 30.5924
+    },
+    {
+        "trans_flag": "0",
+        "name": "连山坡",
+        "station_id": "28",
+        "spell": "lian shan po",
+        "lon": 104.212757,
+        "lat": 30.58758
+    },
+    {
+        "trans_flag": "0",
+        "name": "界牌",
+        "station_id": "29",
+        "spell": "jie pai",
+        "lon": 104.225134,
+        "lat": 30.582802
+    },
+    {
+        "trans_flag": "0",
+        "name": "书房",
+        "station_id": "30",
+        "spell": "shu fang",
+        "lon": 104.242134,
+        "lat": 30.575626
+    },
+    {
+        "trans_flag": "0",
+        "name": "龙平路",
+        "station_id": "31",
+        "spell": "long ping lu",
+        "lon": 104.258988,
+        "lat": 30.572923
+    },
+    {
+        "trans_flag": "0",
+        "name": "龙泉驿",
+        "station_id": "32",
+        "spell": "long quan yi",
+        "lon": 104.267966,
+        "lat": 30.560111
+    }
+]
