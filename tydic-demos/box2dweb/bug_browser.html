@@ -1,0 +1,542 @@
+<html>
+  <head>
+    <title>Box2dWeb 3Dsimulation Demo</title>
+  </head>
+  <body onload="init();">
+    <canvas id="canvas" width="1200" height="500" style="background-color:#333333;" ></canvas>
+    <div id="cc" style="position:absolute; right:0; top:100px; width:500px; height:50px; margin:0;"></div>
+  </body>
+  <script type="text/javascript" src="Box2d.min.js"></script>
+  <script type="text/javascript" src="whcoord.js"></script>
+  <script type="text/javascript" src="list.js"></script>
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    var INTERSECTION_STATION = {
+        NORMAL: 1, // 正常情况
+        MULTI_POINT: 2 // 多点重合
+    };
+    var count = 0;
+
+    function getElementPosition(element) {
+        var elem=element, tagname="", x=0, y=0;
+
+        while((typeof(elem) == "object") && (typeof(elem.tagName) != "undefined")) {
+            y += elem.offsetTop;
+            x += elem.offsetLeft;
+            tagname = elem.tagName.toUpperCase();
+
+            if(tagname == "BODY")
+                elem=0;
+
+            if(typeof(elem) == "object") {
+                if(typeof(elem.offsetParent) == "object")
+                    elem = elem.offsetParent;
+            }
+        }
+
+        return {x: x, y: y};
+    }
+    function init() {
+      var b2Vec2 = Box2D.Common.Math.b2Vec2
+        , b2BodyDef = Box2D.Dynamics.b2BodyDef
+        , b2Body = Box2D.Dynamics.b2Body
+        , b2FixtureDef = Box2D.Dynamics.b2FixtureDef
+        , b2World = Box2D.Dynamics.b2World
+        , b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape
+        , b2CircleShape = Box2D.Collision.Shapes.b2CircleShape
+        , b2EdgeShape = Box2D.Collision.Shapes.b2EdgeShape    
+        , b2ContactFilter = Box2D.Dynamics.b2ContactFilter
+        , b2MouseJointDef =  Box2D.Dynamics.Joints.b2MouseJointDef
+        , b2DebugDraw = Box2D.Dynamics.b2DebugDraw
+        , b2Fixture = Box2D.Dynamics.b2Fixture
+        , b2AABB = Box2D.Collision.b2AABB
+        , b2WorldManifold = Box2D.Collision.b2WorldManifold
+        , b2ManifoldPoint = Box2D.Collision.b2ManifoldPoint
+        , b2RayCastInput = Box2D.Collision.b2RayCastInput
+        , b2RayCastOutput = Box2D.Collision.b2RayCastOutput
+        , b2Color = Box2D.Common.b2Color;
+
+        var world = new b2World(new b2Vec2(0,10), true);
+      
+        var canvas = $('#canvas');
+        var context = canvas.get(0).getContext('2d');
+        
+            
+        // var bodyDef = new b2BodyDef;
+
+        // //create ground
+        // bodyDef.type = b2Body.b2_staticBody;
+        // bodyDef.position.x = 9;
+        // bodyDef.position.y = 13;
+        // bodyDef.userData = 'ground';
+        // fixDef.shape = new b2PolygonShape;
+        // fixDef.shape.SetAsBox(10, 0.5);
+        // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+        // fixture definition
+        var fixDef = new b2FixtureDef;
+        fixDef.filter.categoryBits = 2;
+        fixDef.filter.maskBits = 13;
+        fixDef.density = 1.0;     // 密度
+        fixDef.friction = 0.5;    // 摩擦
+        fixDef.restitution = 0.2; // 弹性
+
+        var bodyDef = new b2BodyDef;
+        bodyDef.type = b2Body.b2_staticBody;
+        for (var i = 0;i < 20;i++){
+        fixDef.shape = new b2PolygonShape;
+        var fx = Math.random() + 0.1, fy = Math.random() + 0.1
+        fixDef.shape.SetAsBox(
+            fx //half width
+           , fy //half height
+         );
+        var bx = Math.random(0,4) * 30, by = Math.random(0,2) * 20;
+        bodyDef.position.x = bx;
+        bodyDef.position.y = by;
+        bodyDef.userData = 'house';
+        console.log("fx = " + fx + ", fy = " + fy + ", bx = " + bx + ", by = " + by);
+        // console.log(fixDef.shape);
+        // console.log(bodyDef.position);
+        world.CreateBody(bodyDef).CreateFixture(fixDef);}
+        /*fixDef.shape = new b2PolygonShape;
+        fixDef.shape.SetAsBox(
+            1.0206539848160658 //half width
+           , 0.9858545990645521 //half height
+        );
+        bodyDef.position.x = 2.7997343603785585;
+        bodyDef.position.y = 3.888518797714582;
+        bodyDef.userData = 'house';
+        world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+        fixDef.shape = new b2PolygonShape;
+        fixDef.shape.SetAsBox(
+            0.9373018750098031 //half width
+           , 0.9029020259632622 //half height
+        );
+        bodyDef.position.x = 8.58885164040245;
+        bodyDef.position.y = 3.2751625462809097;
+        bodyDef.userData = 'house';
+        world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+        fixDef.shape = new b2PolygonShape;
+        fixDef.shape.SetAsBox(
+            0.7384454733631297 //half width
+           , 0.17006010490061776 //half height
+        );
+        bodyDef.position.x = 9.359703649204443;
+        bodyDef.position.y = 7.084802268344051;
+        bodyDef.userData = 'house';
+        world.CreateBody(bodyDef).CreateFixture(fixDef);*/
+
+        // bodyDef.position.Set(0,8);
+        // fixDef.shape = new b2PolygonShape;
+        // fixDef.shape.SetAsBox(2,2);
+        // for(var i=0;i<5;++i){
+        //     world.CreateBody(bodyDef).CreateFixture(fixDef);
+        // }
+
+        // bodyDef.position.Set(23,5);
+        // fixDef.shape = new b2CircleShape(2);
+        // for(var i=0;i<5;++i){
+        //     world.CreateBody(bodyDef).CreateFixture(fixDef);
+        // }
+
+        var bl = new b2Vec2(0,0);
+        var br = new b2Vec2(38,0);
+        var tl = new b2Vec2(0,16);
+        var tr = new b2Vec2(38,16);
+
+        // 上边界
+        bodyDef.position.Set(0,0.25);
+        fixDef.shape = new b2PolygonShape;
+        fixDef.shape.SetAsEdge(bl,br);
+        world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+        // 下边界
+        bodyDef.position.Set(0,0.25);   
+        fixDef.shape = new b2PolygonShape;
+        fixDef.shape.SetAsEdge(tl,tr);
+        world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+        // 左边界
+        bodyDef.position.Set(0,0.25);   
+        fixDef.shape = new b2PolygonShape;
+        fixDef.shape.SetAsEdge(bl,tl);
+        world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+        // 右边界
+        bodyDef.position.Set(0,0.25);   
+        fixDef.shape = new b2PolygonShape;
+        fixDef.shape.SetAsEdge(br,tr);
+        world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+
+        var c=0;
+        $(window).keydown(function(e) {
+            $('#aa').html(++c);
+            code = e.keyCode;
+            if(c==1)   {
+            if(code == 38 && onground)
+                wheel.SetLinearVelocity(new b2Vec2(0,-10));
+            if(code == 39)
+                wheel.ApplyForce(new b2Vec2(1000,0), box1.GetWorldPoint(new b2Vec2(0,0)));
+            if(code == 37)
+                wheel.ApplyForce(new b2Vec2(-1000,0), box1.GetWorldPoint(new b2Vec2(0,0)));
+            }
+        });
+        $(window).keyup(function(e) {
+            c=0;
+        });
+
+        var listener = new Box2D.Dynamics.b2ContactListener;
+        listener.BeginContact = function(contact) {
+            if(contact.GetFixtureA().GetBody().GetUserData()== 'house' || contact.GetFixtureB().GetBody().GetUserData()== 'obj' ) // think about why we don't use fixture's userData directly.
+                onground = true;// don't put 'var' here!
+            fxA=contact.GetFixtureA();
+            fxB=contact.GetFixtureB();
+            sA=fxA.IsSensor();
+            sB=fxB.IsSensor();
+            if((sA && !sB) || (sB && !sA)) {
+                if(sA) {
+                    $('#cc').prepend(contact.GetFixtureB().GetBody().GetUserData() + ' is in the viscinity of body '+contact.GetFixtureA().GetBody().GetUserData()+'<br>');
+                }
+                else   {
+                    $('#cc').prepend(contact.GetFixtureA().GetBody().GetUserData() + ' is in the viscinity of body '+contact.GetFixtureB().GetBody().GetUserData()+'<br>');
+                }
+            }
+        }       
+        listener.EndContact = function(contact) {
+        if (contact.GetFixtureA().GetBody().GetUserData()== 'house' || contact.GetFixtureB().GetBody().GetUserData()== 'obj' )
+            onground = false;
+        }
+
+        var debugDraw = new b2DebugDraw();
+        debugDraw.SetSprite ( document.getElementById ("canvas").getContext ("2d"));
+        debugDraw.SetDrawScale(30);     //define scale
+        debugDraw.SetAlpha(1);
+        debugDraw.SetFillAlpha(.3);    //define transparency
+        debugDraw.SetLineThickness(1.0);
+        debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
+        world.SetDebugDraw(debugDraw);
+
+        var mouseX, mouseY, mousePVec, isMouseDown, selectedBody, mouseJoint;
+        var canvasPosition = getElementPosition(document.getElementById("canvas"));
+
+        document.addEventListener("mousedown", function(e) {
+            isMouseDown = true;
+            handleMouseMove(e);
+            document.addEventListener("mousemove", handleMouseMove, true);
+        }, true);
+
+        document.addEventListener("mouseup", function() {
+            document.removeEventListener("mousemove", handleMouseMove, true);
+            isMouseDown = false;
+            mouseX = undefined;
+            mouseY = undefined;
+        }, true);
+
+        function handleMouseMove(e) {
+            mouseX = (e.clientX - canvasPosition.x) / 30;
+            mouseY = (e.clientY - canvasPosition.y) / 30;
+        };
+
+        function getBodyAtMouse() {
+            mousePVec = new b2Vec2(mouseX, mouseY);
+            var aabb = new b2AABB();
+            aabb.lowerBound.Set(mouseX - 0.001, mouseY - 0.001);
+            aabb.upperBound.Set(mouseX + 0.001, mouseY + 0.001);
+
+            // Query the world for overlapping shapes.
+
+            selectedBody = null;
+            world.QueryAABB(getBodyCB, aabb);
+            return selectedBody;
+        }
+
+        function getBodyCB(fixture) {
+            if(fixture.GetBody().GetType() != b2Body.b2_staticBody) {
+                if(fixture.GetShape().TestPoint(fixture.GetBody().GetTransform(), mousePVec)) {
+                    selectedBody = fixture.GetBody();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function drawRayMain(x, y) {
+        //in Step() function
+        // var k = 360/20;
+        // var t = k/60;
+        // var DEGTORAD = Math.PI/180;
+        // currentRayAngle += t * DEGTORAD; //one revolution every 20 seconds
+        //console.log(currentRayAngle*(180/Math.PI));
+        //at global scope
+        
+            var p1 = new b2Vec2(x, y); //center of scene
+            var p2 = new b2Vec2();
+            
+            var rayLength = 25;
+            
+            // RayCastRender(p1,p2);
+            var reflectionPoint = RayCastRender(p1,p2, rayLength);
+            if (reflectionPoint) {
+                rayLength = rayLength - Math.sqrt(Math.pow(reflectionPoint[0].x - p1.x, 2) + Math.pow(reflectionPoint[0].y - p1.y, 2));
+                RayCastReflectRender(reflectionPoint[0],reflectionPoint[1], rayLength - 1);
+            }
+        }
+
+        world.Step(1 / 60, 10, 10);
+        world.DrawDebugData();
+        world.ClearForces();
+        world.SetContactListener(listener);
+        var direction = Math.PI * 2 - Math.PI / 4;
+        var currentRayAngle = 0;
+        // 间隔20°绘制一条射线
+        var x = Math.random() * 36, y = Math.random() * 14 + 1;
+        for(var i=0;i<36;i++) {
+            // var i = 1;
+            currentRayAngle = i* Math.PI/18 + direction;
+            // console.log("i = " + i + ", angle = " + currentRayAngle);
+            drawRayMain(x, y);
+        }
+
+        function RayCastRender(p1,p2, rayLength)  {
+            // //at global scope
+            // var currentRayAngle = Math.PI / 3 * 4;
+            var input = new b2RayCastInput();
+            var output = new b2RayCastOutput();
+
+            // var rayLength = 25; //long enough to hit the walls
+            var intersectionPoint = new b2Vec2();// 碰撞点
+            var normalEnd = new b2Vec2(); 
+
+            //in Step() function
+            var k = 360/20;
+            var t = k/120;
+            var DEGTORAD = Math.PI/180;
+            // currentRayAngle += t * DEGTORAD; //one revolution every 20 seconds
+            //console.log(currentRayAngle*(180/Math.PI));
+            
+            //calculate points of ray
+            p2.x = p1.x + rayLength * Math.sin(currentRayAngle);
+            p2.y = p1.y + rayLength * Math.cos(currentRayAngle);
+
+            //set up input
+            input.p1 = p1;
+            input.p2 = p2;
+            input.maxFraction = 1;
+            var closestFraction = 1;
+            var minDistance = -1;
+            var intersectionNormal = new b2Vec2(0,0);// 碰撞点处平面法向量
+
+            //check every fixture of every body to find closest
+            var b = new b2BodyDef();
+            var f = new b2FixtureDef();
+            var station = INTERSECTION_STATION.NORMAL;
+            for(b = world.GetBodyList(); b; b = b.GetNext())    {           
+                for(f = b.GetFixtureList(); f; f = f.GetNext()) {
+                    if(!f.RayCast(output, input))
+                        continue;
+                    else {
+                        intersectionPoint.x = p1.x + output.fraction * (p2.x - p1.x);
+                        intersectionPoint.y = p1.y + output.fraction * (p2.y - p1.y);
+                        var nowDistance = Math.sqrt(Math.pow(p1.x - intersectionPoint.x, 2) + Math.pow(p1.y - intersectionPoint.y, 2));
+                        // if(output.fraction < closestFraction)  {
+                        console.log("minDistance = " + minDistance, " nowDistance = " + nowDistance, output, Math.abs(minDistance - nowDistance));
+                        if (minDistance == -1 || minDistance - nowDistance > 1e-10) {
+                            closestFraction = output.fraction;
+                            intersectionNormal = output.normal;
+                            minDistance = nowDistance;
+                            station = INTERSECTION_STATION.NORMAL;
+                            output = new b2RayCastOutput();
+                        }
+                    }
+                }
+            }
+
+            // 求入射线和法线夹角
+            // var patternAB = Math.abs(closestFraction * (p2.x - p1.x) * intersectionNormal.x + closestFraction * (p2.y - p1.y) * intersectionNormal.y);
+            // var patternA = Math.sqrt(Math.pow(closestFraction * (p2.x - p1.x), 2)+Math.pow(closestFraction * (p2.y - p1.y), 2));
+            // var patternB = Math.sqrt(Math.pow(intersectionNormal.x, 2)+Math.pow(intersectionNormal.y, 2));
+            // // angle = Math.acos(patternAB / (patternA * patternB))  * (180 /Math.PI);
+            // angle = Math.acos(patternAB / (patternA * patternB));
+
+            // context.strokeStyle = "rgb(255, 0, 0)";
+            // context.strokeStyle = "#FF6347";
+
+            var distance = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+            if(closestFraction == 1 ) {
+                count = 0;
+                return; //ray hit nothing so we can finish here
+            }
+            else if(closestFraction == 0 ) {
+                count = 0;
+                return;
+            } else if (closestFraction * distance > rayLength) {
+                closestFraction = rayLength / distance
+            }
+
+            intersectionPoint.x = p1.x + closestFraction * (p2.x - p1.x);
+            intersectionPoint.y = p1.y + closestFraction * (p2.y - p1.y);
+
+            normalEnd.x = intersectionPoint.x + intersectionNormal.x;
+            normalEnd.y = intersectionPoint.y + intersectionNormal.y;
+
+            // console.log("intersectionPoint = (" + intersectionPoint.x + ", " + intersectionPoint.y + ")");
+            // console.log("closestFraction = " + closestFraction + " p1 = (" + p1.x + ", " + p1.y + ")" + " p2 = (" + p2.x + ", " + p2.y + ")");
+
+            var linearGradient = context.createLinearGradient(p1.x*30,p1.y*30,intersectionPoint.x*30,intersectionPoint.y*30);	
+            linearGradient.addColorStop(0,"red");
+            linearGradient.addColorStop(0.16,"orange");
+            linearGradient.addColorStop(0.32,"yellow");
+            linearGradient.addColorStop(0.5,"green");
+            linearGradient.addColorStop(0.66,"gray");
+            linearGradient.addColorStop(0.82,"blue");
+            linearGradient.addColorStop(1,"purple");
+
+            context.fillStyle = linearGradient;
+
+            // 绘制入射线
+            context.beginPath(); // Start the path
+            context.moveTo(p1.x*30,p1.y*30); // Set the path origin
+            context.lineTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path destination
+            context.closePath(); // Close the path
+            context.stroke();
+
+
+
+            // lineDef = new b2BodyDef;
+            // lineDef.type = b2Body.b2_staticBody;
+            // lineDef.position.Set(0,0.25);
+
+            // lineFixDef = new b2FixtureDef;
+            // lineFixDef.shape = new b2PolygonShape;
+            // lineFixDef.shape.SetAsEdge(p1, intersectionPoint);
+            
+            // world.CreateBody(lineDef).CreateFixture(lineFixDef);
+            
+
+            // 绘制法线
+            // context.beginPath(); // Start the path
+            // context.moveTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path origin
+            // context.lineTo(normalEnd.x*30, normalEnd.y*30); // Set the path destination
+            // context.closePath(); // Close the path
+            // context.stroke(); // Outline the path
+            
+            var remainingRay = new b2Vec2();
+            var projectedOntoNormal = new b2Vec2();
+            var nextp2 = new b2Vec2();
+
+            remainingRay.x = (p2.x - intersectionPoint.x);
+            remainingRay.y = (p2.y - intersectionPoint.y);
+
+            // projectedOntoNormal = b2Dot(remainingRay, intersectionNormal) * intersectionNormal;
+            // 求取向量点积
+            var dot =  remainingRay.x * intersectionNormal.x + remainingRay.y * intersectionNormal.y;
+            projectedOntoNormal.x = dot * intersectionNormal.x;
+            projectedOntoNormal.y = dot * intersectionNormal.y;
+
+            nextp2.x = p2.x - 2 * projectedOntoNormal.x;
+            nextp2.y = p2.y - 2 * projectedOntoNormal.y;
+            console.log("进行第", ++count, "次反射");
+
+            return [intersectionPoint, nextp2];        
+      }
+
+      function RayCastReflectRender(p1,p2, rayLength)  {
+        if (rayLength <= 0) {
+            count = 0;
+            return;
+        }
+        console.log("起点\t(" + p1.x + ", " + p1.y + ") 终点\t（" + p2.x + ", " + p2.y + ") 距离\t" + rayLength);
+        //at global scope
+        var input = new b2RayCastInput();
+        var output = new b2RayCastOutput();
+
+        // var rayLength = 20; //long enough to hit the walls
+        var intersectionPoint = new b2Vec2();// 碰撞点
+        var normalEnd = new b2Vec2(); 
+        
+
+        //set up input
+        input.p1 = p1;
+        input.p2 = p2;
+        input.maxFraction = 1;
+        var closestFraction = 1;
+        var minDistance = -1;
+        var intersectionNormal = new b2Vec2();// 碰撞点处平面法向量
+
+        //check every fixture of every body to find closest
+        var b = new b2BodyDef();
+        var f = new b2FixtureDef();
+        for(b = world.GetBodyList(); b; b = b.GetNext())    {           
+          for(f = b.GetFixtureList(); f; f = f.GetNext()) {
+            if(!f.RayCast(output, input))
+                continue;
+            else {
+                intersectionPoint.x = p1.x + output.fraction * (p2.x - p1.x);
+                intersectionPoint.y = p1.y + output.fraction * (p2.y - p1.y);
+                var nowDistance = Math.sqrt(Math.pow(p1.x - intersectionPoint.x, 2) + Math.pow(p1.y - intersectionPoint.y, 2));
+                // if(output.fraction < closestFraction)  {
+                console.log("minDistance = " + minDistance, " nowDistance = " + nowDistance, output, Math.abs(minDistance - nowDistance));
+                if (minDistance == -1 || minDistance - nowDistance > 1e-10) {
+                    closestFraction = output.fraction;
+                    intersectionNormal = output.normal;
+                    minDistance = nowDistance;
+                    output = new b2RayCastOutput();
+                } 
+            }
+          }
+        }
+
+        intersectionPoint.x = p1.x + closestFraction * (p2.x - p1.x);
+        intersectionPoint.y = p1.y + closestFraction * (p2.y - p1.y);
+
+        normalEnd.x = intersectionPoint.x + intersectionNormal.x;
+        normalEnd.y = intersectionPoint.y + intersectionNormal.y;
+        // console.log("intersectionNormal = (" + intersectionNormal.x + ", " + intersectionNormal.y + ")");
+
+        context.strokeStyle = "rgb(255, 255, 255)";
+
+        // 绘制入射线
+        context.beginPath(); // Start the path
+        context.moveTo(p1.x*30,p1.y*30); // Set the path origin
+        context.lineTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path destination
+        context.closePath(); // Close the path
+        context.stroke();
+
+        var distance = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+        if(closestFraction == 1 ) {
+            count = 0;
+          return; //ray hit nothing so we can finish here
+        }
+        else if(closestFraction == 0 ) {
+            count = 0;
+          return;
+        } else if (closestFraction * distance > rayLength) {
+          closestFraction = rayLength / distance;
+        }
+
+        rayLength = rayLength - closestFraction * distance;
+        var remainingRay = new b2Vec2();
+        var projectedOntoNormal = new b2Vec2();
+        var nextp2 = new b2Vec2();
+
+        remainingRay.x = (p2.x - intersectionPoint.x);
+        remainingRay.y = (p2.y - intersectionPoint.y);
+        console.log("进行第", ++count, "次反射");
+        // 求取向量点积
+        var dot =  remainingRay.x * intersectionNormal.x + remainingRay.y * intersectionNormal.y;
+        projectedOntoNormal.x = dot * intersectionNormal.x;
+        projectedOntoNormal.y = dot * intersectionNormal.y;
+
+        nextp2.x = p2.x - 2 * projectedOntoNormal.x;
+        nextp2.y = p2.y - 2 * projectedOntoNormal.y;
+
+        // callback
+        RayCastReflectRender(intersectionPoint, nextp2, rayLength - 1);
+
+      }
+    }
+    </script>
+</html>

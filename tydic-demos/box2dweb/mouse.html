@@ -1,0 +1,94 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-17 15:39:05
+ * @LastEditTime: 2020-03-17 15:39:07
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \box2dweb\mouse.html
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <title>鼠标控制刚体移动</title>
+ <script type="text/javascript" src="http://lufylegend.com/js/Box2dWeb-2.1.a.3.min.js"></script> 
+ <script type="text/javascript" src="http://lufylegend.com/js/lufylegend-1.5.1.min.js"></script>
+ </head>
+ <body>
+ <div id="mylegend">loading……</div>
+ <script type="text/javascript">
+ init(10,"mylegend",800,480,main);
+ var backLayer,wallLayer,ctrlBox;
+ var KEY = {LEFT:37,RIGHT:39};
+ var imgData = [
+         {name:"face",path:"http://lufylegend.com/images/html5/lufylegend/ps/face.jpg"}
+ ];
+ function main(){
+         LLoadManage.load(imgData, null, gameInit);
+ }
+ function gameInit(result){
+         LGlobal.box2d = new LBox2d();
+         backLayer = new LSprite();        
+         addChild(backLayer);
+ 
+         //添加一个框子
+         wallLayer = new LSprite();
+         wallLayer.x = 400;
+         wallLayer.y = 0;
+         backLayer.addChild(wallLayer);
+         wallLayer.addBodyPolygon(800,10,0);
+         wallLayer = new LSprite();
+         wallLayer.x = 0;
+         wallLayer.y = 240;
+         backLayer.addChild(wallLayer);
+         wallLayer.addBodyPolygon(10,480,0);
+         wallLayer = new LSprite();
+         wallLayer.x = 400;
+         wallLayer.y = 480;
+         backLayer.addChild(wallLayer);
+         wallLayer.addBodyPolygon(800,10,0);
+         wallLayer = new LSprite();
+         wallLayer.x = 800;
+         wallLayer.y = 240;
+         backLayer.addChild(wallLayer);
+         wallLayer.addBodyPolygon(10,480,0);
+ 
+         backLayer.graphics.drawRect(1,"#ffffff",[0, 0, 800, 5],true,"#000000");
+         backLayer.graphics.drawRect(1,"#ffffff",[0, 475, 800, 5],true,"#000000");
+         backLayer.graphics.drawRect(1,"#ffffff",[0, 0, 5, 480],true,"#000000");
+         backLayer.graphics.drawRect(1,"#ffffff",[795,0, 5, 480],true,"#000000");
+         
+         //添加刚体，键盘控制的就是这个刚体
+         ctrlBox = new LSprite();
+         var faceBitmap = new LBitmap(new LBitmapData(result["face"]));
+         ctrlBox.addChild(faceBitmap);
+         ctrlBox.x = 250;
+         ctrlBox.y = 200;
+         ctrlBox.addBodyPolygon(faceBitmap.getWidth(),faceBitmap.getHeight(), 1, 2, .4, .2);
+         backLayer.addChild(ctrlBox);
+ 
+         //添加其他刚体
+         for (var i = 0; i < 5; i++) {
+                 var box = new LSprite();
+                 faceBitmap = new LBitmap(new LBitmapData(result["face"],130*Math.random(),130*Math.random(),100,100));
+                 box.addChild(faceBitmap);
+                 box.x = 50 + 700*Math.random();
+                 box.y = 100*Math.random();
+                 box.addBodyPolygon(faceBitmap.getWidth(),faceBitmap.getHeight(), 1, 2, .4, .2);
+                 backLayer.addChild(box);
+         }
+ 
+         LEvent.addEventListener(LGlobal.window,LKeyboardEvent.KEY_UP,onkeyup);
+ }
+ function onkeyup(e){
+         if(e.keyCode == KEY.LEFT){
+                 ctrlBox.box2dBody.SetPosition(new LGlobal.box2d.b2Vec2(ctrlBox.box2dBody.GetPosition().x-1,ctrlBox.box2dBody.GetPosition().y));
+         }else if(e.keyCode == KEY.RIGHT){
+                 ctrlBox.box2dBody.SetPosition(new LGlobal.box2d.b2Vec2(ctrlBox.box2dBody.GetPosition().x+1,ctrlBox.box2dBody.GetPosition().y));
+         }
+         //唤醒刚体
+         ctrlBox.box2dBody.SetAwake(true);
+ }
+ </script> 
+ </body>
+ </html>

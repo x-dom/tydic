@@ -1,0 +1,1138 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-12 11:29:56
+ * @LastEditTime: 2020-03-20 11:18:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \box2dweb\3Dsimulation.html
+ -->
+ <html>
+  <head>
+    <title>Box2dWeb 3Dsimulation Demo</title>
+    <style type="text/css">
+      .jianju
+      {
+        text-align:left;
+        text-justify: auto;
+      }
+      body
+      {
+        font-size:70%;
+        font-family:verdana,helvetica,arial,sans-serif;
+      }
+    </style>
+  </head>
+  <body onload="init();" onmousemove="getCoordinates(event)" onmouseout="clearCoordinates(event)">
+    <canvas id="canvas" width="1200" height="500" style="border: 1px solid #333333; float: left;" ></canvas>
+    <br />
+    <div id="cc" style="position:absolute; right:0; top:100px; width:500px; height:50px; margin:0;"></div>
+    <div id="xycoordinates" style="float:left; width:199px; height: 99px; border: 1px; text-align: left;"></div>
+    <p class="jianju">打开网页后任意位置，弹出屏幕坐标X和Y</p>
+    <div id="xyfieldStrength" style="float:left; width:199px; height: 99px; border: 1px; text-align: left;"></div>
+  </body>
+  <script type="text/javascript">
+    function getCoordinates(event) {
+      x = (event.offsetX == undefined ? event.layerX : event.offsetX) / 30;
+      y = (event.offsetY == undefined ? event.layerY : event.offsetY) / 30;
+      // x = event.screenX / 30;
+      // y = event.screenY / 30;
+      x = x.toFixed(2);
+      y = y.toFixed(2);
+      var strength = gridFieldLength.get(x, y);
+      document.getElementById("xycoordinates").innerHTML="box2d坐标: (" + x + "," + y + ")";
+      if (strength != null) {
+        document.getElementById("xyfieldStrength").innerHTML = "场强 " + gridFieldLength.get(x, y);
+      } else {
+        document.getElementById("xyfieldStrength").innerHTML = "";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function clearCoordinates(event) {
+      document.getElementById("xycoordinates").innerHTML="";
+      document.getElementById("xyfieldStrength").innerHTML = "";
+    }
+  </script>
+  <script type="text/javascript" src="Box2d.js"></script>
+  <script type="text/javascript" src="whcoord.js"></script>
+  <script type="text/javascript" src="list.js"></script>
+  <script type="text/javascript" src="mapl.js"></script>
+  <script type="text/javascript" src="grid.js"></script>
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.7.0/echarts.js"></script>
+
+  <script type="text/javascript">
+    var gridFieldLength = new GridFieldStrength();
+    var canvas = $('#canvas');
+    function init() {
+      var b2Vec2 = Box2D.Common.Math.b2Vec2
+        , b2BodyDef = Box2D.Dynamics.b2BodyDef
+        , b2Body = Box2D.Dynamics.b2Body
+        , b2FixtureDef = Box2D.Dynamics.b2FixtureDef
+        , b2World = Box2D.Dynamics.b2World
+        , b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape
+        , b2CircleShape = Box2D.Collision.Shapes.b2CircleShape
+        , b2EdgeShape = Box2D.Collision.Shapes.b2EdgeShape    
+        , b2ContactFilter = Box2D.Dynamics.b2ContactFilter
+        , b2MouseJointDef =  Box2D.Dynamics.Joints.b2MouseJointDef
+        , b2DebugDraw = Box2D.Dynamics.b2DebugDraw
+        , b2Fixture = Box2D.Dynamics.b2Fixture
+        , b2AABB = Box2D.Collision.b2AABB
+        , b2WorldManifold = Box2D.Collision.b2WorldManifold
+        , b2ManifoldPoint = Box2D.Collision.b2ManifoldPoint
+        , b2RayCastInput = Box2D.Collision.b2RayCastInput
+        , b2RayCastOutput = Box2D.Collision.b2RayCastOutput
+        , b2Color = Box2D.Common.b2Color;
+        
+      var world = new b2World(new b2Vec2(0,10), true);
+      
+      var context = canvas.get(0).getContext('2d');
+      
+         
+      // var bodyDef = new b2BodyDef;
+
+      // //create ground
+      // bodyDef.type = b2Body.b2_staticBody;
+      // bodyDef.position.x = 9;
+      // bodyDef.position.y = 13;
+      // bodyDef.userData = 'ground';
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsBox(10, 0.5);
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // fixture definition
+      var fixDef = new b2FixtureDef;
+      fixDef.filter.categoryBits = 2;
+      fixDef.filter.maskBits = 13;
+      fixDef.density = 1.0;     // 密度
+      fixDef.friction = 0.5;    // 摩擦
+      fixDef.restitution = 0.2; // 弹性
+
+      var bodyDef = new b2BodyDef();
+      bodyDef.type = b2Body.b2_staticBody;
+
+      for (var i = 0;i < 20;i++){
+      fixDef.shape = new b2PolygonShape();
+      var fx = Math.random() + 0.1, fy = Math.random() + 0.1
+      fixDef.shape.SetAsBox(
+          fx //half width
+          , fy //half height
+      );
+      // fixDef.shape.SetAsBox(
+      //   0.27039072235979933 //half width
+      //   , 0.5905922510900571 //half height
+      // );
+      // fixDef.shape.SetAsEdge(fx, fy);
+      var bx = Math.random() * 36, by = Math.random() * 18;
+      bodyDef.position.x = bx;
+      bodyDef.position.y = by;
+      // bodyDef.position.x = 16.704337818110844;
+      // bodyDef.position.y = 11.878292033494096;
+      bodyDef.userData = 'house';
+      // console.log("fx = " + fx + ", fy = " + fy + ", bx = " + bx + ", by = " + by);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);}
+
+      // for (var j = 0;j < 5;j++) {
+      //   bodyDef.position.Set(Math.random() * 30, Math.random() * 20);
+      //   // bodyDef.type = b2Body.b2_kinematicBody;
+      //   fixDef.shape = new b2CircleShape(Math.random() * 5 + 0.1);
+      //   world.CreateBody(bodyDef).CreateFixture(fixDef);
+      // }
+
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsBox(
+      //   0.34036006907403904 //half width
+      //     , 0.9232382797542188 //half height
+      //   );
+      // bodyDef.position.x = 22.62404004120284;
+      // bodyDef.position.y = 9.288419458931113;
+      // bodyDef.userData = 'house';
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // add four walls to the static body
+      var bl = new b2Vec2(0,0);
+      var br = new b2Vec2(38,0);
+      var tl = new b2Vec2(0,16);
+      var tr = new b2Vec2(38,16);
+
+      // 上边界
+      bodyDef.position.Set(0,0.25);
+      fixDef.shape = new b2PolygonShape;
+      fixDef.shape.SetAsEdge(bl,br);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // 下边界
+      bodyDef.position.Set(0,0.25);   
+      fixDef.shape = new b2PolygonShape;
+      fixDef.shape.SetAsEdge(tl,tr);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // 左边界
+      bodyDef.position.Set(0,0.25);   
+      fixDef.shape = new b2PolygonShape;
+      fixDef.shape.SetAsEdge(bl,tl);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // 右边界
+      bodyDef.position.Set(0,0.25);   
+      fixDef.shape = new b2PolygonShape;
+      fixDef.shape.SetAsEdge(br,tr);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+
+      var c=0;
+      $(window).keydown(function(e) {
+          $('#aa').html(++c);
+          code = e.keyCode;
+          if(c==1)   {
+          if(code == 38 && onground)
+              wheel.SetLinearVelocity(new b2Vec2(0,-10));
+          if(code == 39)
+            wheel.ApplyForce(new b2Vec2(1000,0), box1.GetWorldPoint(new b2Vec2(0,0)));
+          if(code == 37)
+            wheel.ApplyForce(new b2Vec2(-1000,0), box1.GetWorldPoint(new b2Vec2(0,0)));
+          }
+      });
+      $(window).keyup(function(e) {
+        c=0;
+      });
+
+      var listener = new Box2D.Dynamics.b2ContactListener;
+      listener = function(contact) {
+          if(contact.GetFixtureA().GetBody().GetUserData()== 'house' || contact.GetFixtureB().GetBody().GetUserData()== 'obj' ) // think about why we don't use fixture's userData directly.
+            onground = true;// don't put 'var' here!
+          fxA=contact.GetFixtureA();
+          fxB=contact.GetFixtureB();
+          sA=fxA.IsSensor();
+          sB=fxB.IsSensor();
+          if((sA && !sB) || (sB && !sA)) {
+              if(sA) {
+                  $('#cc').prepend(contact.GetFixtureB().GetBody().GetUserData() + ' is in the viscinity of body '+contact.GetFixtureA().GetBody().GetUserData()+'<br>');
+              }
+              else   {
+                  $('#cc').prepend(contact.GetFixtureA().GetBody().GetUserData() + ' is in the viscinity of body '+contact.GetFixtureB().GetBody().GetUserData()+'<br>');
+              }
+          }
+      }       
+      listener.EndContact = function(contact) {
+      if (contact.GetFixtureA().GetBody().GetUserData()== 'house' || contact.GetFixtureB().GetBody().GetUserData()== 'obj' )
+          onground = false;
+      }   
+
+
+      var debugDraw = new b2DebugDraw();
+      debugDraw.SetSprite ( document.getElementById ("canvas").getContext ("2d"));
+      debugDraw.SetDrawScale(30);     //define scale
+      debugDraw.SetAlpha(1);
+      debugDraw.SetFillAlpha(.3);    //define transparency
+      debugDraw.SetLineThickness(1.0);
+      debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
+      world.SetDebugDraw(debugDraw);
+
+      // window.setInterval(update,1000/60);
+
+      //mouse
+
+      var mouseX, mouseY, mousePVec, isMouseDown, selectedBody, mouseJoint;
+      var canvasPosition = getElementPosition(document.getElementById("canvas"));
+
+      document.addEventListener("mousedown", function(e) {
+          isMouseDown = true;
+          handleMouseMove(e);
+          document.addEventListener("mousemove", handleMouseMove, true);
+      }, true);
+
+      document.addEventListener("mouseup", function() {
+          document.removeEventListener("mousemove", handleMouseMove, true);
+          isMouseDown = false;
+          mouseX = undefined;
+          mouseY = undefined;
+      }, true);
+
+      function handleMouseMove(e) {
+          mouseX = (e.clientX - canvasPosition.x) / 30;
+          mouseY = (e.clientY - canvasPosition.y) / 30;
+      };
+
+      function getBodyAtMouse() {
+          mousePVec = new b2Vec2(mouseX, mouseY);
+          var aabb = new b2AABB();
+          aabb.lowerBound.Set(mouseX - 0.001, mouseY - 0.001);
+          aabb.upperBound.Set(mouseX + 0.001, mouseY + 0.001);
+
+          // Query the world for overlapping shapes.
+
+          selectedBody = null;
+          world.QueryAABB(getBodyCB, aabb);
+          return selectedBody;
+      }
+
+      function getBodyCB(fixture) {
+          if(fixture.GetBody().GetType() != b2Body.b2_staticBody) {
+            if(fixture.GetShape().TestPoint(fixture.GetBody().GetTransform(), mousePVec)) {
+                selectedBody = fixture.GetBody();
+                return false;
+            }
+          }
+          return true;
+      }
+
+      //at global scope
+      // var currentRayAngle = Math.PI / 3 * 4;
+      var currentRayAngle = 0;
+      // var input = new b2RayCastInput();
+      // var output = new b2RayCastOutput();
+
+      // var rayLength = 25; //long enough to hit the walls
+      // var intersectionPoint = new b2Vec2();// 碰撞点
+      // var normalEnd = new b2Vec2(); 
+      function update() {
+
+          if(isMouseDown && (!mouseJoint)) {
+            var body = getBodyAtMouse();
+            if(body) {
+                var md = new b2MouseJointDef();
+                md.bodyA = world.GetGroundBody();
+                md.bodyB = body;
+                md.target.Set(mouseX, mouseY);
+                md.collideConnected = true;
+                md.maxForce = 300.0 * body.GetMass();
+                mouseJoint = world.CreateJoint(md);
+                body.SetAwake(true);
+            }
+          }
+
+          if(mouseJoint) {
+            if(isMouseDown) {
+                mouseJoint.SetTarget(new b2Vec2(mouseX, mouseY));
+            } else {
+                world.DestroyJoint(mouseJoint);
+                mouseJoint = null;
+            }
+          }
+
+          world.Step(1 / 60, 10, 10);
+          world.DrawDebugData();
+          world.ClearForces();
+          world.SetContactListener(listener);
+          function drawRayMain() {
+            //in Step() function
+            // var k = 360/20;
+            // var t = k/60;
+            // var DEGTORAD = Math.PI/180;
+            // currentRayAngle += t * DEGTORAD; //one revolution every 20 seconds
+            //console.log(currentRayAngle*(180/Math.PI));
+            //at global scope
+            var rayLength = 25;
+            
+            var p1 = new b2Vec2(18, 8); //center of scene
+            var p2 = new b2Vec2();
+            var Tx = 46; // 发射功率46dBm
+            // RayCastRender(p1,p2);
+            
+            var reflectionPoint = RayCastRender(p1,p2, Tx, currentRayAngle);
+            if (reflectionPoint) {
+              var d = Math.sqrt(Math.pow(reflectionPoint[0].x - p1.x, 2) + Math.pow(reflectionPoint[0].y - p1.y, 2));
+              Tx = fieldStrength.perpendicular(Tx, d);
+              RayCastReflectRender(reflectionPoint[0],reflectionPoint[1], Tx - 30);
+            }
+          }
+          
+          // 间隔20°绘制一条射线
+          for(var i=0;i<180*2;i++) {
+            currentRayAngle = i* Math.PI/(90*2);
+            drawRayMain();
+          }
+          // var i = 4;
+          // currentRayAngle = i* Math.PI/9;
+          // drawRayMain();
+
+          // drawRayMain();
+          // drawRayInter(new b2Vec2(13.53212091215958, 1.7786300889579096), 0, Math.PI / 2 * 2, 18.049214047515292);
+          
+          // 自由空间电磁波功率衰减：Pr = Pt·Gr·Gt·pow(lamda/(4·π·r),2)
+          // 自由空间信号强度： RSS = Pt + Gr + Gt -Lc - Lbf; Lbf = 32.5+20lgF+20lgD 发射频率和发射距离
+          // 链路系统裕量: SFM = RSS - Rs；Rs为接收灵敏度
+          // 虽然系统裕量大于5dB系统可以工作，但通常系统裕量大于15-20dB
+
+          // drawRayInter(new b2Vec2(14, 4), 0, Math.PI * 2, 46);
+      }
+
+      function drawRayInter(center, angle1, angle2, Tx) {
+        // console.log("center = ", PointStr(center) , "angle1 = ", angle1, ", angle2 = ", angle2, ", Tx = ", Tx);
+        if (Tx < -78) {
+          return;
+        }
+        // var rayLength = fieldStrength.distanceForMaplCost231Hata(Tx + 78);
+        var p2 = new b2Vec2();
+        // RayCastRender(p1,p2);
+        for (var angle = angle1; angle < angle2;angle+=(Math.PI / 180)) {
+          var c_Tx = Tx;
+          var reflectionPoint = RayCastRender(center, p2, c_Tx, angle);
+          if (reflectionPoint) {
+            c_Tx = fieldStrength.perpendicular(c_Tx, Math.sqrt(Math.pow(reflectionPoint[0].x - center.x, 2) + Math.pow(reflectionPoint[0].y - center.y, 2)));
+            RayCastReflectRender(reflectionPoint[0],reflectionPoint[1], c_Tx-30); // 减去外立面损耗
+          }
+        }
+      }
+
+      function RayCastRender(p1,p2, Tx, rayAngle)  {
+        if (Tx < -78) {
+          return false;
+        }
+        
+        // rayAngle = rayAngle || currentRayAngle;        
+        // //at global scope
+        // var currentRayAngle = Math.PI / 3 * 4;
+        var input = new b2RayCastInput();
+        var output = new b2RayCastOutput();
+
+        var rayLength = fieldStrength.distanceForMaplCost231Hata(Tx + 78); //long enough to hit the walls
+        // console.log("length = ", rayLength);
+        var intersectionPoint = new b2Vec2();// 碰撞点
+        var normalEnd = new b2Vec2(); 
+
+        //in Step() function
+        // var k = 360/20;
+        // var t = k/120;
+        // var DEGTORAD = Math.PI/180;
+        // currentRayAngle += t * DEGTORAD; //one revolution every 20 seconds
+        //console.log(currentRayAngle*(180/Math.PI));
+        
+        //calculate points of ray
+        p2.x = p1.x + rayLength * Math.sin(rayAngle);
+        p2.y = p1.y + rayLength * Math.cos(rayAngle);
+        // p2.x = p1.x + rayLength * Math.cos(rayAngle);
+        // p2.y = p1.y - rayLength * Math.sin(rayAngle);
+        // console.log(PointStr(p1), " 角度为 ", rayAngle, ", 长度为", rayLength, ", ", PointStr(p2));
+        // if (rayAngle > Math.PI / 4 && rayAngle < Math.PI && p1.x == 18 && p1.y == 8 && rayAngle == Math.PI / 2) {
+        //   console.log(PointStr(p1), " -> ", PointStr(p2));
+        // } 
+        //set up input
+        input.p1 = p1;
+        input.p2 = p2;
+        input.maxFraction = 1;
+        var closestFraction = 1;
+        var intersectionNormal = new b2Vec2(0,0);// 碰撞点处平面法向量
+
+        //check every fixture of every body to find closest
+        var b = new b2BodyDef();
+        var f = new b2FixtureDef();
+        for(var i = world.GetBodyList(); i; i = i.GetNext()) {
+          for(var j = i.GetFixtureList(); j; j = j.GetNext()) {
+            // console.log("m_centroid  = (" + (f.m_shape.m_centroid.x) + ", " + (f.m_shape.m_centroid.y) + ")");
+            // var ver = "获取到实体 ";
+            // for (var i = 0;i < f.m_shape.m_vertexCount;i++) {
+            //   if (i > 0) {
+            //     ver = ver + " -> ";
+            //   }
+            //   ver = ver + "(" + (/*f.m_shape.m_centroid.x + */f.m_shape.m_vertices[i].x) + ", " + (/*f.m_shape.m_centroid.y + */f.m_shape.m_vertices[i].y) + ")";
+            // }
+            // console.log(ver);
+            if(!j.RayCast(output, input))
+                continue;
+            else if(output.fraction < closestFraction && output.fraction > 0.01)  { // 绕射时防止失败
+              f = j;
+              closestFraction = output.fraction;
+              intersectionNormal = output.normal;
+              // console.log("closestFraction = " + output.fraction);
+              output = new b2RayCastOutput();
+            }
+          }
+        }
+        
+        intersectionPoint.x = p1.x + closestFraction * (p2.x - p1.x);
+        intersectionPoint.y = p1.y + closestFraction * (p2.y - p1.y);
+
+        normalEnd.x = intersectionPoint.x + intersectionNormal.x;
+        normalEnd.y = intersectionPoint.y + intersectionNormal.y;
+
+        // 求入射线和法线夹角
+        // var patternAB = Math.abs(closestFraction * (p2.x - p1.x) * intersectionNormal.x + closestFraction * (p2.y - p1.y) * intersectionNormal.y);
+        // var patternA = Math.sqrt(Math.pow(closestFraction * (p2.x - p1.x), 2)+Math.pow(closestFraction * (p2.y - p1.y), 2));
+        // var patternB = Math.sqrt(Math.pow(intersectionNormal.x, 2)+Math.pow(intersectionNormal.y, 2));
+        // // angle = Math.acos(patternAB / (patternA * patternB))  * (180 /Math.PI);
+        // angle = Math.acos(patternAB / (patternA * patternB));
+
+        // context.strokeStyle = "rgb(255, 0, 0)";
+        // context.strokeStyle = "#FF6347";
+
+        // var linearGradient = context.createLinearGradient(p1.x*30,p1.y*30,intersectionPoint.x*30,intersectionPoint.y*30);
+        // linearGradient.addColorStop(0,"red");
+        // linearGradient.addColorStop(0.5,"orange");
+        // linearGradient.addColorStop(0.8,"yellow");
+        // linearGradient.addColorStop(1,"green");
+
+        // context.strokeStyle = linearGradient;
+
+        context.strokeStyle = "rgb(0, 255, 255)";
+
+        // 绘制入射线
+        // context.beginPath(); // Start the path
+        // context.moveTo(p1.x*30,p1.y*30); // Set the path origin
+        // context.lineTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path destination
+        // context.closePath(); // Close the path
+        // context.stroke();
+
+
+
+        // lineDef = new b2BodyDef;
+        // lineDef.type = b2Body.b2_staticBody;
+        // lineDef.position.Set(0,0.25);
+
+        // lineFixDef = new b2FixtureDef;
+        // lineFixDef.shape = new b2PolygonShape;
+        // lineFixDef.shape.SetAsEdge(p1, intersectionPoint);
+        
+        // world.CreateBody(lineDef).CreateFixture(lineFixDef);
+
+        // 绘制法线
+        // context.beginPath(); // Start the path
+        // context.moveTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path origin
+        // context.lineTo(normalEnd.x*30, normalEnd.y*30); // Set the path destination
+        // context.closePath(); // Close the path
+        // context.stroke(); // Outline the path
+
+        if(closestFraction == 1 ) {
+          applyGrid(gridFieldLength, p1, p2, Tx);
+          return; //ray hit nothing so we can finish here
+        }
+        else if(closestFraction == 0 ) {
+          return;
+        }
+
+        // 开始绕射
+        var xd = find(f, intersectionPoint);
+        if (xd) {
+          var ld1 = xd[0].lowestAndBiggest();
+          var ld2 = xd[1].lowestAndBiggest();
+          drawRayInter(xd[0].getPoint(), ld1[0], ld1[1], diffractFieldStrength(world, p1, xd[0].getPoint(), Tx));
+          drawRayInter(xd[1].getPoint(), ld2[0], ld2[1], diffractFieldStrength(world, p1, xd[1].getPoint(), Tx));
+        }
+        
+        var remainingRay = new b2Vec2();
+        var projectedOntoNormal = new b2Vec2();
+        var nextp2 = new b2Vec2();
+
+        remainingRay.x = (p2.x - intersectionPoint.x);
+        remainingRay.y = (p2.y - intersectionPoint.y);
+
+        // projectedOntoNormal = b2Dot(remainingRay, intersectionNormal) * intersectionNormal;
+        // 求取向量点积
+        var dot =  remainingRay.x * intersectionNormal.x + remainingRay.y * intersectionNormal.y;
+        projectedOntoNormal.x = dot * intersectionNormal.x;
+        projectedOntoNormal.y = dot * intersectionNormal.y;
+
+        nextp2.x = p2.x - 2 * projectedOntoNormal.x;
+        nextp2.y = p2.y - 2 * projectedOntoNormal.y;
+
+        // RayCastReflectRender(intersectionPoint, refracing(p1, intersectionPoint, intersectionNormal, 0.8), rayLength * 0.2);
+        applyGrid(gridFieldLength, p1, intersectionPoint, Tx);
+
+        return [intersectionPoint, nextp2];
+        // RayCastRender(intersectionPoint, nextp2);
+
+        // lineFixDef.shape.SetAsEdge(intersectionPoint, nextp2);
+        // world.CreateBody(lineDef).CreateFixture(lineFixDef);
+
+        // 与C++中采用GL库绘图不一致，canvas回归调用，并未直接生成，所以选择返回坐标
+        // RayCastRender(intersectionPoint, nextp2);
+
+        // 绘制反射线
+        // context.beginPath(); // Start the path
+        // context.moveTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path origin
+        // context.lineTo(nextp2.x*30, nextp2.y*30); // Set the path destination
+        // context.closePath(); // Close the path
+        // context.stroke(); // Outline the path  
+        
+      }
+
+      function RayCastReflectRender(p1,p2, Tx)  {
+        if (Tx < -78) {
+          return;
+        }
+        
+        //at global scope
+        var input = new b2RayCastInput();
+        var output = new b2RayCastOutput();
+
+        // var rayLength = 20; //long enough to hit the walls
+        var intersectionPoint = new b2Vec2();// 碰撞点
+        var normalEnd = new b2Vec2(); 
+        
+
+        //set up input
+        input.p1 = p1;
+        input.p2 = p2;
+        input.maxFraction = 1;
+        var closestFraction = 1;
+        var intersectionNormal = new b2Vec2(0,0);// 碰撞点处平面法向量
+
+        //check every fixture of every body to find closest
+        var b = new b2BodyDef();
+        var f = new b2FixtureDef();
+        for(var i = world.GetBodyList(); i; i = i.GetNext()) {
+          for(var j = i.GetFixtureList(); j; j = j.GetNext()) {
+            // console.log("m_centroid  = (" + (f.m_shape.m_centroid.x) + ", " + (f.m_shape.m_centroid.y) + ")");
+            // var ver = "获取到实体 ";
+            // for (var i = 0;i < f.m_shape.m_vertexCount;i++) {
+            //   if (i > 0) {
+            //     ver = ver + " -> ";
+            //   }
+            //   ver = ver + "(" + (/*f.m_shape.m_centroid.x + */f.m_shape.m_vertices[i].x) + ", " + (/*f.m_shape.m_centroid.y + */f.m_shape.m_vertices[i].y) + ")";
+            // }
+            // console.log(ver);
+            if(!j.RayCast(output, input))
+                continue;
+            else if(output.fraction < closestFraction && output.fraction > 0.01)  {
+              f = j;
+              closestFraction = output.fraction;
+              intersectionNormal = output.normal;
+              output = new b2RayCastOutput();
+            }
+          }
+        }
+
+        intersectionPoint.x = p1.x + closestFraction * (p2.x - p1.x);
+        intersectionPoint.y = p1.y + closestFraction * (p2.y - p1.y);
+
+        normalEnd.x = intersectionPoint.x + intersectionNormal.x;
+        normalEnd.y = intersectionPoint.y + intersectionNormal.y;
+
+        context.strokeStyle = "rgb(0, 255, 255)";
+
+        // // 绘制入射线
+        // context.beginPath(); // Start the path
+        // context.moveTo(p1.x*30,p1.y*30); // Set the path origin
+        // context.lineTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path destination
+        // context.closePath(); // Close the path
+        // context.stroke();
+
+
+        if(closestFraction == 1 ) {
+          applyGrid(gridFieldLength, p1, p2, Tx);
+          return; //ray hit nothing so we can finish here
+        }
+        else if(closestFraction == 0 ) {
+          return;
+        }
+
+        var remainingRay = new b2Vec2();
+        var projectedOntoNormal = new b2Vec2();
+        var nextp2 = new b2Vec2();
+
+        // still some ray left to reflect
+        remainingRay.x = (p2.x - intersectionPoint.x);
+        remainingRay.y = (p2.y - intersectionPoint.y);
+
+        // 求取向量点积，点积的结果与两向量直接的角度相关
+        var dot =  remainingRay.x * intersectionNormal.x + remainingRay.y * intersectionNormal.y;
+        projectedOntoNormal.x = dot * intersectionNormal.x;
+        projectedOntoNormal.y = dot * intersectionNormal.y;
+
+        nextp2.x = p2.x - 2 * projectedOntoNormal.x;
+        nextp2.y = p2.y - 2 * projectedOntoNormal.y;
+        applyGrid(gridFieldLength, p1, intersectionPoint, Tx);
+
+        // 开始绕射
+        var xd = find(f, intersectionPoint);
+        if (xd) {
+          var ld1 = xd[0].lowestAndBiggest();
+          var ld2 = xd[1].lowestAndBiggest();
+          drawRayInter(xd[0].getPoint(), ld1[0], ld1[1], diffractFieldStrength(world, p1, xd[0].getPoint(), Tx));
+          drawRayInter(xd[1].getPoint(), ld2[0], ld2[1], diffractFieldStrength(world, p1, xd[1].getPoint(), Tx));
+        }
+
+        // 折射调用
+        // RayCastReflectRender(intersectionPoint, refracing(p1, intersectionPoint, intersectionNormal, 0.8), rayLength * 0.2);
+
+        // callback
+        // 注意：递归调用结束时刻位置以预定的射线总长度来表示，并未考虑传播过程中的衰减
+        // console.log("反射调用");
+        Tx = fieldStrength.perpendicular(Tx, Math.sqrt(Math.pow(p2.x - intersectionPoint.x, 2) + Math.pow(p2.y - intersectionPoint.y, 2)));
+        RayCastReflectRender(intersectionPoint, nextp2, Tx-30);
+      }
+      // function trampoline(f) {
+      //   while (f && f instanceof Function) {
+      //     f = f();
+      //   }
+      //   return f;
+      // }
+      //helpers
+
+      //http://js-tut.aardon.de/js-tut/tutorial/position.html
+      function getElementPosition(element) {
+        var elem=element, tagname="", x=0, y=0;
+
+        while((typeof(elem) == "object") && (typeof(elem.tagName) != "undefined")) {
+            y += elem.offsetTop;
+            x += elem.offsetLeft;
+            tagname = elem.tagName.toUpperCase();
+
+            if(tagname == "BODY")
+              elem=0;
+
+            if(typeof(elem) == "object") {
+              if(typeof(elem.offsetParent) == "object")
+                  elem = elem.offsetParent;
+            }
+        }
+
+        return {x: x, y: y};
+      }
+
+
+      function bodyCoordGet() {
+        // 屏幕经纬度
+        var scminp=new whpoint(0, 0);
+        var scmaxp=new whpoint(10, 14);
+        var screct=new whrect(scminp,scmaxp);
+
+        // 地图投影
+        var mminp=new whpoint(11586917.36191,3589973.11670);
+        var mmaxp=new whpoint(11586993.22675,3590041.88709);    
+        var mrect=new whrect(mminp,mmaxp);
+
+        // 转换映射
+        var mycoordchange=new whcoordchange(screct,mrect);
+        var mapoint1=new whpoint(11586956.38138,3590060.13813);
+        var mapoint2=new whpoint(11586956.38138,3590055.56107);
+        var mapoint3=new whpoint(11586973.54537,3590048.58105);
+
+        var scmapoint1=mycoordchange.maptoscreen(mapoint1);
+        var scmapoint2=mycoordchange.maptoscreen(mapoint2);
+        var scmapoint3=mycoordchange.maptoscreen(mapoint3);
+
+        console.log(scmapoint1, scmapoint2, scmapoint3);
+
+        // var list = new List();
+        // list.append(scmapoint1, scmapoint2, scmapoint3);
+        // console.log(list);
+
+        // 3.000692, 0.289297    3.000692, 0.293138    3.012279, 0.298885
+
+        // return list;
+      }
+
+      
+      function refracing(p1, intersectionPoint, normal, refractivity) {
+        // @param p1 光源
+        // @param intersectionPoint 折射点
+        // @param normal 折射面法向量
+        // @param refractivity 折射率
+        // @return 折射线上一点
+        refractivity = refractivity || 0.2;
+        var cosa = (p1.x - intersectionPoint.x) * normal.x + (p1.y - intersectionPoint.y) * normal.y;
+        var sina = Math.sqrt(1 - Math.pow(cosa, 2));
+        var sinb = refractivity * sina;
+        var cosb = Math.sqrt(1 - Math.pow(sinb, 2));
+        var anti_normal = anti(normal);
+        var v = perpendicular(anti_normal);
+        if (v.x * (p1.x - intersectionPoint.x) + v.y * (p1.y - intersectionPoint.y) > 0) {
+          v = anti(v);
+        }
+        return new b2Vec2(intersectionPoint.x + anti_normal.x + v.x, intersectionPoint.y + anti_normal.y + v.y);
+      }
+
+      function perpendicular(normal) {
+        /**
+         * @return normal的法向量
+        **/
+        var result = new b2Vec2();
+        result.x = normal.y;
+        result.y = normal.x;
+        return result;
+      }
+
+      function anti(normal) {
+        /**
+         * @return normal的反向量
+        **/
+        return new b2Vec2(-normal.x, -normal.y);
+      }
+
+      update();
+
+      function drawHeatCartesian() {
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('canvas'));
+
+        // 指定图表的配置项和数据
+        var X = ['1', '2', '3', '4', '5', '6', '7',
+        '8', '9', '10','11','12', '13', '14', '15',
+        '16', '17', '18', '19', '20', '21', '22', '23',
+        '24', '25', '26', '27', '28', '29', '30', '31', 
+        '32', '33', '34', '35', '36', '37', '38'];
+        
+        var Y = ['0', '1', '2', '3', '4', '5', '6', '7',
+        '8', '9', '10','11','12', '13', '14', '15',
+        '16'];
+        // var data = [[0,0,5],[0,1,1],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0],[0,7,0],[0,8,0],[0,9,0],[0,10,0],[0,11,2],[0,12,4],[0,13,1],[0,14,1],[0,15,3],[0,16,4],[0,17,6],[0,18,4],[0,19,4],[0,20,3],[0,21,3],[0,22,2],[0,23,5],[1,0,7],[1,1,0],[1,2,0],[1,3,0],[1,4,0],[1,5,0],[1,6,0],[1,7,0],[1,8,0],[1,9,0],[1,10,5],[1,11,2],[1,12,2],[1,13,6],[1,14,9],[1,15,11],[1,16,6],[1,17,7],[1,18,8],[1,19,12],[1,20,5],[1,21,5],[1,22,7],[1,23,2],[2,0,1],[2,1,1],[2,2,0],[2,3,0],[2,4,0],[2,5,0],[2,6,0],[2,7,0],[2,8,0],[2,9,0],[2,10,3],[2,11,2],[2,12,1],[2,13,9],[2,14,8],[2,15,10],[2,16,6],[2,17,5],[2,18,5],[2,19,5],[2,20,7],[2,21,4],[2,22,2],[2,23,4],[3,0,7],[3,1,3],[3,2,0],[3,3,0],[3,4,0],[3,5,0],[3,6,0],[3,7,0],[3,8,1],[3,9,0],[3,10,5],[3,11,4],[3,12,7],[3,13,14],[3,14,13],[3,15,12],[3,16,9],[3,17,5],[3,18,5],[3,19,10],[3,20,6],[3,21,4],[3,22,4],[3,23,1],[4,0,1],[4,1,3],[4,2,0],[4,3,0],[4,4,0],[4,5,1],[4,6,0],[4,7,0],[4,8,0],[4,9,2],[4,10,4],[4,11,4],[4,12,2],[4,13,4],[4,14,4],[4,15,14],[4,16,12],[4,17,1],[4,18,8],[4,19,5],[4,20,3],[4,21,7],[4,22,3],[4,23,0],[5,0,2],[5,1,1],[5,2,0],[5,3,3],[5,4,0],[5,5,0],[5,6,0],[5,7,0],[5,8,2],[5,9,0],[5,10,4],[5,11,1],[5,12,5],[5,13,10],[5,14,5],[5,15,7],[5,16,11],[5,17,6],[5,18,0],[5,19,5],[5,20,3],[5,21,4],[5,22,2],[5,23,0],[6,0,1],[6,1,0],[6,2,0],[6,3,0],[6,4,0],[6,5,0],[6,6,0],[6,7,0],[6,8,0],[6,9,0],[6,10,1],[6,11,0],[6,12,2],[6,13,1],[6,14,3],[6,15,4],[6,16,0],[6,17,0],[6,18,0],[6,19,0],[6,20,1],[6,21,2],[6,22,2],[6,23,6]];
+
+        var data = gridFieldLength.heatMap();
+
+        var option = {
+            tooltip: {
+                position: 'bottom'
+            },
+            animation: false,
+            // grid: {
+            //     height: '50%',
+            //     top: '10%'
+            // },
+            xAxis: {
+                type: 'category',
+                data: X,
+                splitArea: {
+                    show: true
+                }
+            },
+            yAxis: {
+                type: 'category',
+                data: Y,
+                splitArea: {
+                    show: true
+                }
+            },
+            visualMap: {
+                // min: 0,
+                // max: 10,
+                calculable: true,
+                orient: 'horizontal',
+                left: 'center',
+                bottom: '15%'
+            },
+            series: [{
+                name: '边缘场强',
+                type: 'heatmap',
+                data: data,
+                label: {
+                    show: false
+                },
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+      };
+      // drawHeatCartesian();
+      // draw(canvas, context, gridFieldLength);
+      draw1(gridFieldLength);
+    }
+
+    function visual(world, p1, p2) {
+      var input = new b2RayCastInput();
+      var output = new b2RayCastOutput();
+
+      var closestFraction = 1;
+      input.p1 = p1;
+      input.p2 = p2;
+      input.maxFraction = 1;
+
+      for(var i = world.GetBodyList(); i; i = i.GetNext()) {
+        for(var j = i.GetFixtureList(); j; j = j.GetNext()) {
+          // console.log("m_centroid  = (" + (f.m_shape.m_centroid.x) + ", " + (f.m_shape.m_centroid.y) + ")");
+          // var ver = "获取到实体 ";
+          // for (var i = 0;i < f.m_shape.m_vertexCount;i++) {
+          //   if (i > 0) {
+          //     ver = ver + " -> ";
+          //   }
+          //   ver = ver + "(" + (/*f.m_shape.m_centroid.x + */f.m_shape.m_vertices[i].x) + ", " + (/*f.m_shape.m_centroid.y + */f.m_shape.m_vertices[i].y) + ")";
+          // }
+          // console.log(ver);
+          if(!j.RayCast(output, input))
+              continue;
+          else if(output.fraction < closestFraction && output.fraction > 0.01)  {
+            closestFraction = output.fraction;
+            intersectionNormal = output.normal;
+          }
+        }
+      }
+
+
+      return Math.abs(closestFraction - 1) < 1e-10;
+    }
+
+    function diffractFieldStrength(world, p1, p2, Tx) {
+      if (visual(world, p1, p2)) {
+        // console.log(Tx, PointStr(p1), PointStr(p2), Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)), fieldStrength.perpendicular(Tx, Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2))));
+        return fieldStrength.perpendicular(Tx, Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)));
+      } else {
+        return -1000;
+      }
+    }
+
+    function applyGrid(gridFieldLength, p1, p2, Tx) {
+      // 在 gridFieldLength 中 p1 -> p2 的路径上的各个栅格加入相应场强 Tx为发射点场强
+      if (Tx < -78) {
+        return;
+      }
+      var p = path(p1, p2);
+      for (var i = 0; i < p.length;i++) {
+        var distance = Math.sqrt(Math.pow(p[i].x - p1.x, 2) + Math.pow(p[i].y - p1.y, 2));
+        gridFieldLength.add(p1.x + ", " + p1.y, p[i].x, p[i].y, fieldStrength.perpendicular(Tx, distance));
+      }
+    }
+
+    function path(p1, p2) {
+      // p1 -> p2 路径走过的栅格
+      var len = Math.max(Math.abs(p1.x - p2.x), Math.abs(p1.y - p2.y));
+
+      var deltaX = (p2.x - p1.x) / len;
+      var deltaY = (p2.y - p1.y) / len;
+      var result = new Array();
+
+      for (var i = 0;i <= len; i++) {
+        var x = p1.x + deltaX * i;
+        var y = p1.y + deltaY * i;
+        result.push(new b2Vec2(x, y));
+      }
+
+      return result;
+    }
+
+    // function draw(canvas, context, gridFieldLength) {
+    //   // var canvas = document.getElementById('canvas');
+    //   // if (canvas.getContext) {
+    //   //     var context = canvas.getContext("2d");
+    //   // } else {
+    //   //     alert('浏览器不支持canvas!');
+    //   // }
+    //   // context.clearRect(0, 0, 1200, 500);
+    //   /*
+    //     * radius: 绘制半径，请自行设置
+    //     * min, max: 强弱阈值，可自行设置，也可取数据最小最大值
+    //     */
+    //   const radius = 30;
+    //   // const min = 14, max = 97;
+    //   let [min, max] = gridFieldLength.threshold();
+    //   // console.log("min = ", min, "max = ", max, gridFieldLength.threshold());
+
+    //   gridFieldLength.heatMap().forEach(point => {
+    //       // console.log(point);
+    //       // let x = point[0];
+    //       // let y = point[1];
+    //       // let value = point[2];
+    //       let {
+    //           x,
+    //           y,
+    //           value
+    //       } = point;
+    //       x = x * 30;
+    //       y = y * 30;
+    //       // console.log("x = ", x, ", y = ", y, ", value = ", value);
+    //       context.beginPath();
+    //       context.arc(x, y, radius, 0, 2 * Math.PI);
+          
+          
+    //       // 创建渐变色: r,g,b取值比较自由，我们只关注alpha的数值
+    //       let radialGradient = context.createRadialGradient(x, y, 0, x, y, radius);
+    //       radialGradient.addColorStop(0, "rgba(0,0,0,1)");
+    //       radialGradient.addColorStop(1, "rgba(0,0,0,0)");
+    //       context.fillStyle = radialGradient;
+    //       // 设置globalAlpha: 需注意取值需规范在0-1之间
+    //       let globalAlpha = (value - min) / (max - min);
+    //       // console.log(min, max, globalAlpha);
+    //       context.globalAlpha = Math.max(Math.min(globalAlpha, 1), 0);
+    //       context.closePath();
+
+    //       // 填充颜色
+    //       context.fill();
+    //   });
+    //   // const defaultColorStops = {
+    //   //     0: "#0ff",
+    //   //     0.2: "#0f0",
+    //   //     0.4: "#ff0",
+    //   //     1: "#f00",
+    //   // };
+    //   const defaultColorStops = {
+    //     '0.2': 'rgba(0, 0, 255, 0.2)',
+    //     '0.3': 'rgba(43, 111, 231, 0.3)',
+    //     '0.4': 'rgba(2, 192, 241, 0.4)',
+    //     '0.6': 'rgba(44, 222, 148, 0.6)',
+    //     '0.8': 'rgba(254, 237, 83, 0.8)',
+    //     '0.9': 'rgba(255, 118, 50, 0.9)',
+    //     '1.0': 'rgba(255, 0, 0, 1)'
+    //   };
+    //   const width = 1200,
+    //       height = 500;
+    //   // const width = 256, height = 1;
+
+    //   function Palette(opts) {
+    //       Object.assign(this, opts);
+    //       this.init();
+    //   }
+
+    //   Palette.prototype.init = function() {
+    //       let colorStops = this.colorStops || defaultColorStops;
+    //       console.log(colorStops);
+
+    //       // 创建canvas
+    //       let canvas1 = document.createElement("canvas");
+    //       // let canvas = document.getElementById("canvas");
+    //       canvas1.width = 20;
+    //       canvas1.height = 256;
+    //       let ctx = canvas1.getContext("2d");
+
+    //       // 创建线性渐变色
+    //       let linearGradient = ctx.createLinearGradient(0, 0, 0, 256);
+    //       for (const key in colorStops) {
+    //           linearGradient.addColorStop(key, colorStops[key]);
+    //       }
+
+    //       // 绘制渐变色条
+    //       ctx.fillStyle = linearGradient;
+    //       ctx.fillRect(0, 0, 20, 256);
+
+    //       // 读取像素数据
+    //       this.imageData = ctx.getImageData(0, 0, 256, 1).data;
+    //       this.canvas = canvas1;
+    //   };
+
+    //   /**
+    //     * 取色器
+    //     * @param {Number} position 像素位置
+    //     * @return {Array.<Number>} [r, g, b]
+    //     */
+    //   Palette.prototype.colorPicker = function(position) {
+    //       return this.imageData.slice(position * 4, position * 4 + 3);
+    //   };
+    //   // 像素着色
+    //   let imageData = context.getImageData(0, 0, width, height);
+    //   let data = imageData.data;
+    //   let palette = new Palette(this.context);
+    //   console.log(data);
+    //   for (var i = 3; i < data.length; i += 4) {
+    //       let alpha = data[i];
+    //       let color = palette.colorPicker(alpha);
+          
+    //       data[i - 3] = color[0];
+    //       data[i - 2] = color[1];
+    //       data[i - 1] = color[2];
+    //   }
+    //   context.putImageData(imageData, 0, 0, 0, 0, width, height);
+    // }
+
+    function draw1(gridFieldLength) {
+      var pointsdata = gridFieldLength.heatMap();
+      var canvas = document.getElementById('canvas');
+      if (canvas.getContext) {
+          var context = canvas.getContext("2d");
+      } else {
+          alert('浏览器不支持canvas!');
+      }
+      // context.clearRect(0, 0, 1200, 500);
+      /*
+        * radius: 绘制半径，请自行设置
+        * min, max: 强弱阈值，可自行设置，也可取数据最小最大值
+        */
+      var radius = 56;
+      let [min, max] = gridFieldLength.threshold();
+      // min = min - 50;
+      pointsdata.forEach(point => {
+          let {
+              x,
+              y,
+              value
+          } = point;
+          x = x * 30;
+          y = y * 30;
+          context.beginPath();
+          context.arc(x, y, radius, 0, 2 * Math.PI);
+          context.closePath();
+
+          // 创建渐变色: r,g,b取值比较自由，我们只关注alpha的数值
+          let radialGradient = context.createRadialGradient(x, y, 0, x, y, radius);
+          radialGradient.addColorStop(0.0, "rgba(0,0,0,1)");
+          radialGradient.addColorStop(1.0, "rgba(0,0,0,0)");
+          context.fillStyle = radialGradient;
+          
+          // 设置globalAlpha: 需注意取值需规范在0-1之间
+          let globalAlpha = (value - min) / (max - min);
+          context.globalAlpha = Math.max(Math.min(globalAlpha, 1), 0);
+
+          // 填充颜色
+          context.fill();
+      });
+      // const defaultColorStops = {
+      //     0: "#f00",
+      //     0.2: "#0f0",
+      //     0.4: "#00f",
+      //     1: "#0ff",
+      // };
+      // const defaultColorStops = {
+      //   '0.2': 'rgba(0, 0, 255, 0.2)',
+      //   '0.3': 'rgba(43, 111, 231, 0.3)',
+      //   '0.4': 'rgba(2, 192, 241, 0.4)',
+      //   '0.6': 'rgba(44, 222, 148, 0.6)',
+      //   '0.8': 'rgba(254, 237, 83, 0.8)',
+      //   '0.9': 'rgba(255, 118, 50, 0.9)',
+      //   '1.0': 'rgba(255, 0, 0, 1)'
+      // };
+      const defaultColorStops = {
+        '0.0': 'rgba(255, 0, 0, 0.1)',
+        '0.1': 'rgba(254, 0, 0, 0.3)',
+        '0.8': 'rgba(144, 238, 144, 1)',
+        '1.0': 'rgba(0, 100, 0, 1)'
+      };
+      const width = 500,
+          height = 1200;
+
+      function Palette(opts) {
+          Object.assign(this, opts);
+          this.init();
+      }
+
+      Palette.prototype.init = function() {
+          let colorStops = this.colorStops || defaultColorStops;
+
+          // 创建canvas
+          let canvas = document.createElement("canvas");
+          canvas.width = 1;
+          canvas.height = 256;
+          let ctx = canvas.getContext("2d");
+
+          // 创建线性渐变色
+          let linearGradient = ctx.createLinearGradient(0, 0, 1, 256);
+          for (const key in colorStops) {
+              linearGradient.addColorStop(key, colorStops[key]);
+          }
+
+          // 绘制渐变色条
+          ctx.fillStyle = linearGradient;
+          ctx.fillRect(0, 0, 20, 256);
+
+          // 读取像素数据
+          this.imageData = ctx.getImageData(0, 0, 1, 256).data;
+          this.canvas = canvas;
+      };
+
+      /**
+       * 取色器
+       * @param {Number} position 像素位置
+       * @return {Array.<Number>} [r, g, b]
+       */
+      Palette.prototype.colorPicker = function(position) {
+          return this.imageData.slice(position * 4, position * 4 + 3);
+      };
+      // 像素着色
+      let imageData = context.getImageData(0, 0, height, width);
+      let data = imageData.data;
+      // console.log(imageData);
+      let palette = new Palette(this.context);
+      for (var i = 3; i < data.length; i += 4) {
+          let alpha = data[i];
+          let color = palette.colorPicker(alpha);
+          data[i - 3] = color[0];
+          data[i - 2] = color[1];
+          data[i - 1] = color[2];
+      }
+      context.putImageData(imageData, 0, 0);
+    }
+  </script>
+</html>

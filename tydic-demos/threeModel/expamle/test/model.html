@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - materials - TGA texture</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/model.css">
+    <script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="info">
+			<a >岳西店前杏花站址库</a>
+		</div>
+    <div class="infoBox">
+      <span class="colsebtn"></span>
+      <div></div>
+    </div>
+    <div class="btnInfo">
+      <span data-label="xinhaota">信号塔</span>
+      <span data-label="rru">rru</span>
+      <span data-label="bbu">bbu</span>
+      <span data-label="jixiang">机箱</span>
+      <span data-label="jijia">机架</span>
+      <span data-label="xudian">蓄电池</span>
+      <span data-label="chuanshu">传输设备</span>
+      <span data-label="miehuoqi">灭火器</span>
+      <span data-label="kongtiao">空调</span>
+      <span data-label="kaiguan">开关</span>
+    </div>
+		<script type="module">
+      import {ThreeBSP} from './js/threebsp.js'
+			import * as THREE from '../../build/three.module.js';
+      import { GLTFLoader } from '../jsm/loaders/GLTFLoader.js';
+      import { OrbitControls } from '../jsm/controls/OrbitControls.js';
+      import { Line2 } from '../jsm/lines/Line2.js';
+			import { LineMaterial } from '../jsm/lines/LineMaterial.js';
+      import { LineGeometry } from '../jsm/lines/LineGeometry.js';
+      import { RenderPass } from '../jsm/postprocessing/RenderPass.js';
+      import { ShaderPass } from '../jsm/postprocessing/ShaderPass.js';
+      import { EffectComposer } from '../jsm/postprocessing/EffectComposer.js';
+      import { OutlinePass } from '../jsm/postprocessing/OutlinePass.js';
+      import { FXAAShader } from '../jsm/shaders/FXAAShader.js';
+      import { FBXLoader } from '../jsm/loaders/FBXLoader.js';
+
+      import {loadObj,loadFbx} from './js/model.js';
+      var composer, effectFXAA, outlinePass;
+      var camera, scene, renderer, stats,qqq,matLine,matLine1,matLine2,controls,svgrender,
+      towerline,towerline1,towerline2,
+      object=[],
+      selectedObjects,
+      raycaster = new THREE.Raycaster(),
+      mouse = new THREE.Vector2();
+      init();
+      loadFbx(scene);
+      loadObj(scene);
+      drawsourceLine();
+      towerAnimtion()
+      animate();
+      initevent();
+      var rrudata = [
+        {
+          name:"怀远电信局",
+          id:"440592",
+          BUSINESS_CENTER:"",
+          type:"RRU3632",
+          state:"直流",
+          RRU_LOCATION:"涡河三桥与北大坝交口",
+          ENB_LEVEL:"A"
+        },
+        {
+          name:"红庙",
+          id:"440639",
+          BUSINESS_CENTER:"禹王城市营业部",
+          type:"RRU3632",
+          state:"直流",
+          RRU_LOCATION:"粮库",
+          ENB_LEVEL:"B"
+        },
+        {
+          name:"涡河三桥与北大坝交口",
+          id:"440632",
+          BUSINESS_CENTER:"",
+          type:"RRU3632",
+          state:"直流",
+          RRU_LOCATION:"怀远中医院",
+          ENB_LEVEL:"C"
+        },
+      ]  
+      function init(){
+        
+        raycaster.linePrecision = 3;
+        var container = document.createElement( 'div' );
+        document.body.appendChild( container );
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setClearColor( 0x000000, 0.0 );
+				renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        container.appendChild( renderer.domElement );
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x041334);
+        //载入相机
+				camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 1, 8000 );
+        camera.position.set( 80, 50, 600 );
+        scene.add( camera );
+        //载入地面
+        var groundTexture = new THREE.TextureLoader().load( '../textures/terrain/grasslight-big.jpg' );
+        groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
+				groundTexture.repeat.set( 25, 25 );
+				groundTexture.anisotropy = 16;
+        var plane = new THREE.Mesh(
+					new THREE.PlaneBufferGeometry( 2000, 2000 ),
+					new THREE.MeshPhongMaterial( {  map: groundTexture, side: THREE.FrontSide } )
+        );
+        plane.receiveShadow = true;
+				plane.rotation.x = - Math.PI / 2;
+				plane.position.y = - 0.5;
+        scene.add( plane );
+        plane.receiveShadow = true;
+        //载入灯光
+        var ambientLight = new THREE.AmbientLight( 0xaaaaaa);
+				scene.add( ambientLight );
+        var dirLight = new THREE.DirectionalLight( 0x333333);
+				dirLight.position.set( 1000, 200, 1000 ).normalize();
+
+				camera.add( dirLight );
+        camera.add( dirLight.target );
+        //载入房间模型以及铁塔
+        loadGltfModel();
+        loadHouse();
+        window.addEventListener( 'resize', onWindowResize, false );
+        composer = new EffectComposer( renderer );
+        var renderPass = new RenderPass( scene, camera );
+        composer.addPass( renderPass );
+
+        outlinePass = new OutlinePass( new THREE.Vector2( window.innerWidth, window.innerHeight ), scene, camera );
+        composer.addPass( outlinePass );
+
+        var onLoad = function ( texture ) {
+
+        outlinePass.patternTexture = texture;
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+
+        };
+
+        var loader = new THREE.TextureLoader();
+
+        loader.load( '../textures/tri_pattern.jpg', onLoad );
+
+        effectFXAA = new ShaderPass( FXAAShader );
+        effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
+        effectFXAA.renderToScreen = true;
+        composer.addPass( effectFXAA );
+
+        controls = new OrbitControls( camera, renderer.domElement );
+      }
+      //示例模型加载
+      function loadGltfModel(){
+        var loader = new GLTFLoader();
+        var loaderfbx = new FBXLoader();
+        loaderfbx.load('testglb/building.fbx',(obj) => {
+          obj.children[2].position.set(-100,60,-100);
+          obj.children[2].scale.multiplyScalar(0.5);
+          for(var i=0;i<3;i++){
+            var model =  obj.children[2].clone();
+            model.position.x += i*300;
+            scene.add(model);
+          }
+        })
+        loaderfbx.load('testglb/buildingtwo/build.fbx',(obj) => {
+          obj.scale.multiplyScalar(0.4);
+          obj.rotation.y +=-1.2;
+          obj.position.set(-200,5,500);
+            scene.add(obj);
+        })
+        //加载信号塔
+        loader.load('testglb/pole_ring.glb',(gltf) => {
+          var model = gltf.scene;
+          model.scale.setScalar(10);
+          model.position.set(70,0,300);
+          model.name = "xinhaota";
+          scene.add(model);
+        })
+        //加载rru
+        loader.load('testglb/ant1.glb',(gltf) => {
+          for(var i=0;i<3;i++){
+            var val = gltf.scene.clone();
+            if(i == 0){
+              val.position.set(80,330,300);
+              val.rotation.z += -0.05;
+            }else if(i == 1){
+              val.position.set(68,330,292);
+              val.rotation.y += 2.14;
+              val.rotation.z += -0.05;
+            }else if(i == 2){
+              val.position.set(63,330,306);
+              val.rotation.z += -0.05;
+              val.rotation.y +=-1.8;
+            }
+            for(var j=0;j<val.children.length;j++){
+              val.children[j].positionData = val.position;
+            }
+            val.scale.multiplyScalar(12);
+            val.rrudata = rrudata[i];
+            val.name="rru";
+            var point = val.position;
+            var pointArr = [
+                  point.x-2.5,point.y,point.z,
+                  70,point.y-10,300,
+                  70,2,300,
+                  380,2,300,
+                  380,2,390,
+                  377,16+i*10,400
+                ];
+            var pointArr1 = [
+              point.x+0.5,point.y,point.z+0.5,
+              70,point.y-10,300,
+              70,2,300,
+              380,2,300,
+              380,2,390,
+              375,16+i*10,400
+            ];
+            var pointArr2 = [
+              385,16+i*10,400,
+              385-i*1,8,400,
+            ];
+            var options = {
+              pointArr:pointArr,
+              pointArr1:pointArr1,
+              pointArr2:pointArr2,
+            }
+            drawLine(options);
+            scene.add( val);
+          }
+        })
+        loader.load('testglb/5g_ant.glb',(gltf) => {
+          for(var i=0;i<3;i++){
+            var val = gltf.scene.clone();
+            if(i == 0){
+              val.position.set(80,380,300);
+              val.rotation.z += -0.05;
+            }else if(i == 1){
+              val.position.set(68,380,292);
+              val.rotation.y += 2.14;
+              val.rotation.z += -0.05;
+            }else if(i == 2){
+              val.position.set(63,380,306);
+              val.rotation.z += -0.05;
+              val.rotation.y +=-1.8;
+            }
+            for(var j=0;j<val.children.length;j++){
+              val.children[j].positionData = val.position;
+            }
+            val.scale.multiplyScalar(3);
+            val.name="rru_antenna";
+            var point = val.position;
+            var pointArr = [
+              point.x-2.5,point.y,point.z,
+              point.x,point.y-20,point.z,
+            ];
+            var pointArr1 = [
+              point.x,point.y,point.z,
+              point.x+0.5,point.y-20,point.z+0.5,
+            ];
+            var options = {
+              pointArr:pointArr,
+              pointArr1:pointArr1,
+            }
+            drawLine(options);
+            scene.add( val);
+          }
+        })
+      }
+      //铁塔动画
+      function towerAnimtion(){
+        var geometry = new THREE.CircleGeometry( 50, 60 );
+        var geometry1 = new THREE.CircleGeometry( 30, 60 );
+        var geometry2 = new THREE.CircleGeometry( 10, 60 );
+        geometry.vertices.shift();
+        geometry1.vertices.shift();
+        geometry2.vertices.shift();
+        var lineMaterial = new THREE.LineBasicMaterial({
+             color: '#ff0000'
+         });
+         towerline = new THREE.LineLoop(geometry, lineMaterial);
+         towerline1 = new THREE.LineLoop(geometry1, lineMaterial);
+         towerline2 = new THREE.LineLoop(geometry2, lineMaterial);
+         towerline.position.set(70,400,300);
+         towerline.rotateX(Math.PI/2);
+         towerline1.rotateX(Math.PI/2);
+         towerline2.rotateX(Math.PI/2);
+         towerline1.position.set(70,400,300);
+         towerline2.position.set(70,400,300);
+      }
+      //铁塔连接线
+      function drawLine({pointArr,pointArr1,pointArr2,color1=0xffffff,color2=0x111111,linewidth=2} = {}){
+        // var color1 = color1 || 0xffffff ;
+        // var color2 = color2 || 0x111111 ;
+        // var linewidth = linewidth || 2;
+        var geometry = new LineGeometry();
+        var geometry1 = new LineGeometry();
+        geometry1.setPositions( pointArr1 );
+        geometry.setPositions( pointArr );
+        matLine = new LineMaterial( {
+          color: color1,
+          linewidth: linewidth, // in pixels
+          dashed: false
+        } );
+        matLine1 = new LineMaterial( {
+          color: color2,
+          linewidth: linewidth, // in pixels
+          dashed: false
+        } );
+        matLine2 = new LineMaterial( {
+          color: color2,
+          linewidth: linewidth+2, // in pixels
+          dashed: false
+        } );
+        matLine.resolution.set( window.innerWidth, window.innerHeight );
+        matLine1.resolution.set( window.innerWidth, window.innerHeight );
+        matLine2.resolution.set( window.innerWidth, window.innerHeight );
+        var line = new Line2( geometry, matLine );
+        line.name="line2";
+        var line1 = new Line2( geometry1, matLine1 );
+        line1.name="line2";
+        scene.add( line );
+        scene.add( line1 );
+        if(pointArr2){
+          var geometry2 = new LineGeometry();
+          geometry2.setPositions( pointArr2 );
+          var line2 = new Line2( geometry2, matLine2 );
+          line2.name="line2";
+          scene.add( line2);
+        }
+      }
+      //加载电源线以及开关线
+      function drawsourceLine(){
+        var pointArr = [
+          355,2,435,
+          355,2,390,
+          383,2,390,
+          383,6,400,
+        ];
+        var pointArr1= [
+          350,2,435,
+          350,2,395,
+          380,2,395,
+          380,6,400,
+        ];
+        var options = {
+          pointArr:pointArr,
+          pointArr1:pointArr1,
+          color1:0x111111,
+          color2:0xe4393c
+        }
+        //电源线
+        drawLine(options);
+        var line1 = [
+          445,50,400,
+          445,50,353,
+          330,50,353,
+          330,2,353,
+          330,2,370
+        ];
+        var line2= [
+          445,50,405,
+          445,50,430,
+          445,2,430,
+          410,2,430,
+        ];
+        //开关线
+        var options1 = {
+          pointArr:line1,
+          pointArr1:line2,
+          color1:0x111111,
+          color2:0x111111
+        }
+        drawLine(options1);
+      }
+      //加载房间、
+      function loadHouse(){
+        var material = new THREE.MeshLambertMaterial( { color:0x411813} );
+        //左边的墙
+        var geometry = new THREE.BoxBufferGeometry( 5, 100, 100 );
+        var mesh = new THREE.Mesh( geometry, material );
+        mesh.position.set(300,50,400);
+        scene.add(mesh);
+        //后边的墙
+        var geometry1 = new THREE.BoxBufferGeometry( 150, 100, 5 );
+        var mesh1 = new THREE.Mesh( geometry1, material );
+        mesh1.position.set(375,50,350);
+        scene.add(mesh1);
+        //右边的墙
+        var geometry2 = new THREE.BoxBufferGeometry( 5, 100, 100 );
+        var mesh2 = new THREE.Mesh( geometry2, material );
+        mesh2.position.set(450,50,400);
+        scene.add(mesh2);
+        //顶部的墙
+        // var geometryTop = new THREE.BoxBufferGeometry( 150, 5, 100 );
+        // var materialTop = new THREE.MeshLambertMaterial( { color:0x111111} );
+        // var meshTop = new THREE.Mesh( geometryTop, materialTop );
+        // meshTop.position.set(375,100,400);
+        // scene.add(meshTop);
+        //底部的墙
+        var groundTexture = new THREE.TextureLoader().load( 'testglb/wallBottom.png' );
+        groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
+				groundTexture.repeat.set( 25, 25 );
+				groundTexture.anisotropy = 16;
+        var geometryTop = new THREE.BoxBufferGeometry( 150, 1, 100 );
+        var materialTop = new THREE.MeshLambertMaterial( {  map: groundTexture, side: THREE.BackSide } );
+        var meshTop = new THREE.Mesh( geometryTop, materialTop );
+        meshTop.position.set(375,1,400);
+        meshTop.rotateZ(Math.PI);
+        scene.add(meshTop);
+        //前面的墙
+        // var geometry3 = new THREE.BoxGeometry( 150, 100, 5 );
+        // var mesh3 = new THREE.Mesh( geometry3, material );
+        // mesh3.position.set(375,50,450);
+        // var door = new THREE.BoxGeometry(80, 80, 5);
+        // var door_cube = new THREE.Mesh( door);
+        // door_cube.position.set(370,50,450);
+        // var sphere1BSP = new ThreeBSP(mesh3);
+        // var cube2BSP = new ThreeBSP(door_cube);
+
+        // var resultBSP = sphere1BSP.subtract(cube2BSP);
+        // var result = resultBSP.toMesh();
+        // result.geometry.computeFaceNormals();
+        // result.geometry.computeVertexNormals();
+        // result.material = material;
+        //scene.add(result);
+      }
+      //交互事件
+      function initevent(){
+        document.addEventListener("click",(event) => {
+          event.preventDefault();
+          mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
+  　　    mouse.y = - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
+          raycaster.setFromCamera(mouse, camera);
+          object = [];
+          scene.children.forEach(child => {
+   　　　　  if (child.name == 'bbu' ||child.name == 'rru' || child.type == "Line2") {//根据需求判断哪些加入objects,也可以在生成object的时候push进objects
+    　　　　　　object.push(child)
+     　　　　}
+          })
+          var intersects = raycaster.intersectObjects(object,true);
+          if(intersects.length>0){
+            addSelectedObject( intersects[0].object );
+            outlinePass.visibleEdgeColor.set( "#0081cf" );
+            outlinePass.hiddenEdgeColor.set( "#0081cf" );
+            outlinePass.edgeStrength = Number( 6 );
+            outlinePass.selectedObjects = selectedObjects;
+            if(intersects[0].object.name == 'line2'){
+              intersects[0].object.material.color.set("#ff7200");
+            }
+            if(intersects[0].object.name == 'bbu'){
+              loadbbuInfo(intersects[0].object.bbudata,"bbu");
+              $(".infoBox").show();
+              if(intersects[0].object.position.z == 405){
+                intersects[0].object.position.z += 10; 
+              }else{
+                intersects[0].object.position.z -= 10; 
+              }
+            }
+            if(intersects[0].object.parent.name == 'rru'){
+              loadbbuInfo(intersects[0].object.parent.rrudata,"rru");
+              $(".infoBox").show();
+            }
+          }
+        })
+        $(".btnInfo span").on('click',function(){
+         var label = $(this)[0].dataset.label;
+         for(var i=0;i<scene.children.length;i++){
+          if(scene.children[i].name == label){
+            addSelectedObject( scene.children[i] );
+            outlinePass.visibleEdgeColor.set( "#0081cf" );
+            outlinePass.hiddenEdgeColor.set( "#0081cf" );
+            outlinePass.edgeStrength = Number( 6 );
+            outlinePass.selectedObjects = selectedObjects;
+            controls.target = scene.children[i].position;
+            if(scene.children[i].name == "xinhaota"){
+              scene.add(towerline);
+              scene.add(towerline1);
+              scene.add(towerline2);
+            }
+          }
+         }
+        })
+        $(".colsebtn").on("click",function(){
+          $(".infoBox").hide();
+        })
+      }
+      //加载bbu信息
+      function loadbbuInfo(data,type){
+        var info = `
+        <p><span class='label'>name：</span>${data.name}！</p>
+        <p><span class='label'>EQUIPMENT_COMPANY：</span>${data.EQUIPMENT_COMPANY}！</p>
+        <p><span class='label'>BUSINESS_CENTER：</span>${data.BUSINESS_CENTER}</p>
+        <p><span class='label'>type：</span>${data.type}</p>
+        <p><span class='label'>status：</span>${data.status}</p>
+        <p><span class='label'>ENB_TYPE：</span>${data.ENB_TYPE}</p>
+        <p><span class='label'>ENB_LEVEL：</span>${data.ENB_LEVEL}</p>
+        `;
+        var rruinfo =
+        `
+          <p><span class='label'>name：</span>${data.name}！</p>
+          <p><span class='label'>id：</span>${data.id}！</p>
+          <p><span class='label'>BUSINESS_CENTER：</span>${data.BUSINESS_CENTER}</p>
+          <p><span class='label'>type：</span>${data.type}</p>
+          <p><span class='label'>state：</span>${data.state}</p>
+          <p><span class='label'>RRU_LOCATION：</span>${data.RRU_LOCATION}</p>
+          <p><span class='label'>ENB_LEVEL：</span>${data.ENB_LEVEL}</p>
+        `;
+        if(type = "rru"){
+          $(".infoBox div").html(rruinfo);
+        }else{
+          $(".infoBox div").html(info);
+        }
+       
+      }
+      function addSelectedObject( object ) {
+        selectedObjects = [];
+        selectedObjects.push( object );
+      }
+      function animate() {
+        if(towerline.scale.x>10){
+          towerline.scale.x = 1;
+          towerline.scale.y = 1;
+        }else{
+          towerline.scale.x += 0.05;
+          towerline.scale.y += 0.05;
+        }
+        if(towerline1.scale.x>10){
+          towerline1.scale.x = 1;
+          towerline1.scale.y = 1;
+        }else{
+          towerline1.scale.x += 0.05;
+          towerline1.scale.y += 0.05;
+        }
+        if(towerline2.scale.x>10){
+          towerline2.scale.x = 1;
+          towerline2.scale.y = 1;
+        }else{
+          towerline2.scale.x += 0.05;
+          towerline2.scale.y += 0.05;
+        }
+        requestAnimationFrame( animate );
+        controls.update();
+        renderer.render( scene, camera );
+        composer.render();
+      }
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        composer.setSize( window.innerWidth, window.innerHeight );
+        effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
+      }
+
+    </script>
+	</body>
+</html>

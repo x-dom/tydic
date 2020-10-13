@@ -1,0 +1,6 @@
+.DS_Store
+
+threeModel/node_modules
+threeModel/dist
+.history
+.vscode

@@ -1,0 +1,586 @@
+ <html>
+  <head>
+    <title>Box2dWeb 3Dsimulation Demo</title>
+    <style type="text/css">
+      .jianju
+      {
+        text-align:left;
+        text-justify: auto;
+      }
+      body
+      {
+        font-size:70%;
+        font-family:verdana,helvetica,arial,sans-serif;
+      }
+    </style>
+  </head>
+  <body onload="init();" onmousemove="getCoordinates(event)" onmouseout="clearCoordinates(event)">
+    <canvas id="canvas" width="1200" height="500" style="background-color:#333333;" ></canvas>
+    <div id="cc" style="position:absolute; right:0; top:100px; width:500px; height:50px; margin:0;"></div>
+    <div id="xycoordinates" style="float:left; width:199px; height: 99px; border: 1px; text-align: left;"></div>
+    <p class="jianju">打开网页后任意位置，弹出屏幕坐标X和Y</p>
+  </body>
+  <script type="text/javascript">
+    function getCoordinates(event) {
+      x = event.screenX / 30;
+      y = event.screenY / 30;
+      x = x.toFixed(2);
+      y = y.toFixed(2);
+      document.getElementById("xycoordinates").innerHTML="box2d坐标: (" + x + "," + y + ")";
+    }
+  </script>
+  <script type="text/javascript">
+    function clearCoordinates(event) {
+      document.getElementById("xycoordinates").innerHTML="";
+    }
+  </script>
+  <script type="text/javascript" src="Box2d.min.js"></script>
+  <script type="text/javascript" src="whcoord.js"></script>
+  <script type="text/javascript" src="list.js"></script>
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    function init() {
+      var b2Vec2 = Box2D.Common.Math.b2Vec2
+        , b2BodyDef = Box2D.Dynamics.b2BodyDef
+        , b2Body = Box2D.Dynamics.b2Body
+        , b2FixtureDef = Box2D.Dynamics.b2FixtureDef
+        , b2World = Box2D.Dynamics.b2World
+        , b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape
+        , b2CircleShape = Box2D.Collision.Shapes.b2CircleShape
+        , b2EdgeShape = Box2D.Collision.Shapes.b2EdgeShape    
+        , b2ContactFilter = Box2D.Dynamics.b2ContactFilter
+        , b2MouseJointDef =  Box2D.Dynamics.Joints.b2MouseJointDef
+        , b2DebugDraw = Box2D.Dynamics.b2DebugDraw
+        , b2Fixture = Box2D.Dynamics.b2Fixture
+        , b2AABB = Box2D.Collision.b2AABB
+        , b2WorldManifold = Box2D.Collision.b2WorldManifold
+        , b2ManifoldPoint = Box2D.Collision.b2ManifoldPoint
+        , b2RayCastInput = Box2D.Collision.b2RayCastInput
+        , b2RayCastOutput = Box2D.Collision.b2RayCastOutput
+        , b2Color = Box2D.Common.b2Color;
+
+        
+      var world = new b2World(new b2Vec2(0,10), true);
+      
+      var canvas = $('#canvas');
+      var context = canvas.get(0).getContext('2d');
+      
+         
+      // var bodyDef = new b2BodyDef;
+
+      // //create ground
+      // bodyDef.type = b2Body.b2_staticBody;
+      // bodyDef.position.x = 9;
+      // bodyDef.position.y = 13;
+      // bodyDef.userData = 'ground';
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsBox(10, 0.5);
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // fixture definition
+      var fixDef = new b2FixtureDef;
+      fixDef.filter.categoryBits = 2;
+      fixDef.filter.maskBits = 13;
+      fixDef.density = 1.0;     // 密度
+      fixDef.friction = 0.5;    // 摩擦
+      fixDef.restitution = 0.2; // 弹性
+
+      var bodyDef = new b2BodyDef;
+      bodyDef.type = b2Body.b2_staticBody;
+
+      // bodyDef.type = b2Body.b2_kinematicBody;
+      // bodyDef.position.Set(6,3);s
+      // 3.000692, 0.289297    3.000692, 0.293138    3.012279, 0.298885
+      // fixDef.shape = new b2PolygonShape;
+      // bodyDef.position.Set(0,0);
+      // 绘制多边形，但此法存在缺陷，最多绘制八边形
+      // fixDef.shape.SetAsArray([
+      //   new b2Vec2(5, 8),
+      //   new b2Vec2(4, 10),
+      //   new b2Vec2(7,7),
+      //   new b2Vec2(3,6)],4);
+      // bodyDef2.type = b2Body.b2_dynamicBody;
+      // bodyDef.position.Set(6,3);
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsBox(8, 1);
+      // bodyDef.userData = 'house';
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // for(var i = 0; i < 10; ++i) {
+      //   // if(Math.random() > 0.5) {
+      //   //     fixDef.shape = new b2PolygonShape;//SetArrayList
+      //   //     fixDef.shape.SetAsBox( 
+      //   //         Math.random() + 0.1 //half width
+      //   //       , Math.random() + 0.1 //half height
+      //   //     );
+      //   // } else {
+      //   //     fixDef.shape = new b2CircleShape(
+      //   //       Math.random() + 0.1 //radius
+      //   //     );
+      //   // }
+      //   fixDef.shape = new b2PolygonShape;
+      //   fixDef.shape.SetAsBox(
+      //        Math.random() + 0.1 //half width
+      //      , Math.random() + 0.1 //half height
+      //    );
+      //   bodyDef.position.x = Math.random(0,4) * 10;
+      //   bodyDef.position.y = Math.random(0,2) * 10;
+      //   bodyDef.userData = 'house';
+      //   world.CreateBody(bodyDef).CreateFixture(fixDef);
+      // }
+
+      // bodyDef.type = b2Body.b2_staticBody;
+      // buildDef.type = b2Body.b2_dynamicBody;
+      
+      fixDef.shape = new b2PolygonShape;
+      fixDef.shape.SetAsBox(1,0.5);
+
+      bodyDef.position.Set(28,3);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      bodyDef.position.Set(20,11);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      bodyDef.position.Set(30,14);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      bodyDef.position.Set(6,6);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      bodyDef.position.Set(10,5);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+      
+      bodyDef.position.Set(8,10);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      bodyDef.position.Set(4,2);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      bodyDef.position.Set(0,8);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      bodyDef.position.Set(23,5);
+      // bodyDef.type = b2Body.b2_kinematicBody;
+      fixDef.shape = new b2CircleShape(2);
+      world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+
+      //box
+
+      // var bodyDef = new b2BodyDef;
+      // // bodyDef.type = b2Body.b2_dynamicBody;
+      // bodyDef.type = b2Body.b2_staticBody;
+      // bodyDef.position.Set(9,7);
+      // bodyDef.userData = 'box';
+
+      // var fixDef = new b2FixtureDef;
+      // fixDef.filter.categoryBits = 1;
+      // fixDef.density = 10.0;
+      // fixDef.friction = 0.5;
+      // fixDef.restitution = .5;
+
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsBox(1,5);
+
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      //circle
+
+      // var bodyDef2 = new b2BodyDef;
+      // bodyDef2.type = b2Body.b2_dynamicBody;
+      // bodyDef2.position.Set(4,8);
+      // bodyDef2.userData = 'obj';
+
+      // var fixDef2 = new b2FixtureDef;
+      // fixDef2.filter.categoryBits = 2;
+      // fixDef2.filter.maskBits = 13;
+      // fixDef2.density = 10.0;
+      // fixDef2.friction = 0.5;
+      // fixDef2.restitution = .2; 
+      // fixDef2.shape = new b2CircleShape(1);
+      // // circlesensor
+      // var cc = new b2FixtureDef;
+      // cc.shape = new b2CircleShape(2);
+      // cc.shape.SetLocalPosition(new b2Vec2(0 ,0));
+      // cc.density = 0;
+      // cc.isSensor = true;
+      // cc.filter.categoryBits = 8;
+
+      // world.CreateBody(bodyDef2).CreateFixture(fixDef2);
+      // world.CreateBody(bodyDef2).CreateFixture(cc);
+
+      // //
+      // var holderDef = new b2BodyDef;
+      // holderDef.type = b2Body.b2_staticBody;
+      // holderDef.userData = "ground";
+      // holderDef.position.Set(10, 14);
+
+      // world.CreateBody(holderDef).CreateFixture(floorFixture);
+
+      // add four walls to the static body
+      // var bl = new b2Vec2(0,0);
+      // var br = new b2Vec2(38,0);
+      // var tl = new b2Vec2(0,16);
+      // var tr = new b2Vec2(38,16);
+
+      // // 上边界
+      // bodyDef.position.Set(0,0.25);
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsEdge(bl,br);
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // // 下边界
+      // bodyDef.position.Set(0,0.25);   
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsEdge(tl,tr);
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // // 左边界
+      // bodyDef.position.Set(0,0.25);   
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsEdge(bl,tl);
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+      // // 右边界
+      // bodyDef.position.Set(0,0.25);   
+      // fixDef.shape = new b2PolygonShape;
+      // fixDef.shape.SetAsEdge(br,tr);
+      // world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+
+      var c=0;
+      $(window).keydown(function(e) {
+          $('#aa').html(++c);
+          code = e.keyCode;
+          if(c==1)   {
+          if(code == 38 && onground)
+              wheel.SetLinearVelocity(new b2Vec2(0,-10));
+          if(code == 39)
+            wheel.ApplyForce(new b2Vec2(1000,0), box1.GetWorldPoint(new b2Vec2(0,0)));
+          if(code == 37)
+            wheel.ApplyForce(new b2Vec2(-1000,0), box1.GetWorldPoint(new b2Vec2(0,0)));
+          }
+      });
+      $(window).keyup(function(e) {
+        c=0;
+      });
+
+      var listener = new Box2D.Dynamics.b2ContactListener;
+      listener.BeginContact = function(contact) {
+          if(contact.GetFixtureA().GetBody().GetUserData()== 'house' || contact.GetFixtureB().GetBody().GetUserData()== 'obj' ) // think about why we don't use fixture's userData directly.
+            onground = true;// don't put 'var' here!
+          fxA=contact.GetFixtureA();
+          fxB=contact.GetFixtureB();
+          sA=fxA.IsSensor();
+          sB=fxB.IsSensor();
+          if((sA && !sB) || (sB && !sA)) {
+              if(sA) {
+                  $('#cc').prepend(contact.GetFixtureB().GetBody().GetUserData() + ' is in the viscinity of body '+contact.GetFixtureA().GetBody().GetUserData()+'<br>');
+              }
+              else   {
+                  $('#cc').prepend(contact.GetFixtureA().GetBody().GetUserData() + ' is in the viscinity of body '+contact.GetFixtureB().GetBody().GetUserData()+'<br>');
+              }
+          }
+      }       
+      listener.EndContact = function(contact) {
+      if (contact.GetFixtureA().GetBody().GetUserData()== 'house' || contact.GetFixtureB().GetBody().GetUserData()== 'obj' )
+          onground = false;
+      }   
+
+
+      var debugDraw = new b2DebugDraw();
+      debugDraw.SetSprite ( document.getElementById ("canvas").getContext ("2d"));
+      debugDraw.SetDrawScale(30);     //define scale
+      debugDraw.SetAlpha(1);
+      debugDraw.SetFillAlpha(.3);    //define transparency
+      debugDraw.SetLineThickness(1.0);
+      debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
+      world.SetDebugDraw(debugDraw);
+
+      window.setInterval(update,1000/60);
+
+      //mouse
+
+      var mouseX, mouseY, mousePVec, isMouseDown, selectedBody, mouseJoint;
+      var canvasPosition = getElementPosition(document.getElementById("canvas"));
+
+      document.addEventListener("mousedown", function(e) {
+          isMouseDown = true;
+          handleMouseMove(e);
+          document.addEventListener("mousemove", handleMouseMove, true);
+      }, true);
+
+      document.addEventListener("mouseup", function() {
+          document.removeEventListener("mousemove", handleMouseMove, true);
+          isMouseDown = false;
+          mouseX = undefined;
+          mouseY = undefined;
+      }, true);
+
+      function handleMouseMove(e) {
+          mouseX = (e.clientX - canvasPosition.x) / 30;
+          mouseY = (e.clientY - canvasPosition.y) / 30;
+      };
+
+      function getBodyAtMouse() {
+          mousePVec = new b2Vec2(mouseX, mouseY);
+          var aabb = new b2AABB();
+          aabb.lowerBound.Set(mouseX - 0.001, mouseY - 0.001);
+          aabb.upperBound.Set(mouseX + 0.001, mouseY + 0.001);
+
+          // Query the world for overlapping shapes.
+
+          selectedBody = null;
+          world.QueryAABB(getBodyCB, aabb);
+          return selectedBody;
+      }
+
+      function getBodyCB(fixture) {
+          if(fixture.GetBody().GetType() != b2Body.b2_staticBody) {
+            if(fixture.GetShape().TestPoint(fixture.GetBody().GetTransform(), mousePVec)) {
+                selectedBody = fixture.GetBody();
+                return false;
+            }
+          }
+          return true;
+      }
+
+      //at global scope
+      var currentRayAngle = 0;
+      function update() {
+
+          if(isMouseDown && (!mouseJoint)) {
+                      var body = getBodyAtMouse();
+                      if(body) {
+                          var md = new b2MouseJointDef();
+                          md.bodyA = world.GetGroundBody();
+                          md.bodyB = body;
+                          md.target.Set(mouseX, mouseY);
+                          md.collideConnected = true;
+                          md.maxForce = 300.0 * body.GetMass();
+                          mouseJoint = world.CreateJoint(md);
+                          body.SetAwake(true);
+                      }
+                    }
+
+                    if(mouseJoint) {
+                      if(isMouseDown) {
+                          mouseJoint.SetTarget(new b2Vec2(mouseX, mouseY));
+                      } else {
+                          world.DestroyJoint(mouseJoint);
+                          mouseJoint = null;
+                      }
+                    }
+
+          world.Step(1 / 60, 10, 10);
+          world.DrawDebugData();
+          world.ClearForces();
+          world.SetContactListener(listener);
+          function drawRayMain() {
+            //in Step() function
+            // var k = 360/20;
+            // var t = k/60;
+            // var DEGTORAD = Math.PI/180;
+            // currentRayAngle += t * DEGTORAD; //one revolution every 20 seconds
+            //console.log(currentRayAngle*(180/Math.PI));
+            //at global scope
+            
+            var p1 = new b2Vec2(18, 8); //center of scene
+            var p2 = new b2Vec2();
+            RayCastRender(p1,p2);
+          }
+          
+          // 间隔20°绘制一条射线
+          for(var i=0;i<18;i++) {
+            currentRayAngle = i* Math.PI/9;
+            drawRayMain();
+          }
+
+          // drawRayMain();
+          
+      }
+
+      function RayCastRender(p1,p2)  {
+        // //at global scope
+        // var currentRayAngle = Math.PI / 3 * 4;
+        var input = new b2RayCastInput();
+        var output = new b2RayCastOutput();
+
+        var rayLength = 25; //long enough to hit the walls
+        var intersectionPoint = new b2Vec2();// 碰撞点
+        var normalEnd = new b2Vec2(); 
+
+        //in Step() function
+        var k = 360/20;
+        var t = k/120;
+        var DEGTORAD = Math.PI/180;
+        // currentRayAngle += t * DEGTORAD; //one revolution every 20 seconds
+        //console.log(currentRayAngle*(180/Math.PI));
+        
+        //calculate points of ray
+        p2.x = p1.x + rayLength * Math.sin(currentRayAngle);
+        p2.y = p1.y + rayLength * Math.cos(currentRayAngle);
+
+        //set up input
+        input.p1 = p1;
+        input.p2 = p2;
+        input.maxFraction = 1;
+        var closestFraction = 1;
+        var intersectionNormal = new b2Vec2(0,0);// 碰撞点处平面法向量
+        var results;
+        var Normals;
+
+        //check every fixture of every body to find closest
+        results = world.RayCastAll(input.p1, input.p2);
+        for(i=0;i<length(results);i++) {
+          closestFraction = results[i].m_friction;
+          Normals = results[i].m_shape.m_normals;
+          for(j=0;j<length(Normals);j++){
+            intersectionNormal = Normals[j];
+          }
+        }
+        
+        
+        intersectionPoint.x = p1.x + closestFraction * (p2.x - p1.x);
+        intersectionPoint.y = p1.y + closestFraction * (p2.y - p1.y);
+
+        // normalEnd.x = intersectionPoint.x + intersectionNormal.x;
+        // normalEnd.y = intersectionPoint.y + intersectionNormal.y;
+
+        // context.strokeStyle = "rgb(255, 0, 0)";
+        // context.strokeStyle = "#FF6347";
+        distance1 = Math.sqrt(Math.pow(intersectionPoint.x - p1.x, 2) + Math.pow(intersectionPoint.y - p1.y, 2));
+
+        // var linearGradient = context.createLinearGradient(p1.x*30,p1.y*30,intersectionPoint.x*30,intersectionPoint.y*30);	
+        // linearGradient.addColorStop(0,"red");
+        // linearGradient.addColorStop(0.5,"orange");
+        // linearGradient.addColorStop(0.8,"yellow");
+        // linearGradient.addColorStop(1,"green");
+
+        // context.strokeStyle = linearGradient;
+
+        // // 绘制入射线
+        // context.beginPath(); // Start the path
+        // context.moveTo(p1.x*30,p1.y*30); // Set the path origin
+        // context.lineTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path destination
+        // context.closePath(); // Close the path
+        // context.stroke();
+
+
+
+        lineDef = new b2BodyDef;
+        lineDef.type = b2Body.b2_staticBody;
+        lineDef.position.Set(0,0.25);
+
+        lineFixDef = new b2FixtureDef;
+        lineFixDef.shape = new b2PolygonShape;
+        lineFixDef.shape.SetAsEdge(p1, intersectionPoint);
+        
+        world.CreateBody(lineDef).CreateFixture(lineFixDef);
+        
+
+        // 绘制法线
+        // context.beginPath(); // Start the path
+        // context.moveTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path origin
+        // context.lineTo(normalEnd.x*30, normalEnd.y*30); // Set the path destination
+        // context.closePath(); // Close the path
+        // context.stroke(); // Outline the path
+
+        if(closestFraction == 1 ) {
+          return; //ray hit nothing so we can finish here
+        }
+        else if(closestFraction == 0 ) {
+          return;
+        }
+
+        var remainingRay = new b2Vec2();
+        var projectedOntoNormal = new b2Vec2();
+        var nextp2 = new b2Vec2();
+
+        remainingRay.x = (p2.x - intersectionPoint.x);
+        remainingRay.y = (p2.y - intersectionPoint.y);
+
+        // projectedOntoNormal = b2Dot(remainingRay, intersectionNormal) * intersectionNormal;
+        // 求取向量点积
+        var dot =  remainingRay.x * intersectionNormal.x + remainingRay.y * intersectionNormal.y;
+        projectedOntoNormal.x = dot * intersectionNormal.x;
+        projectedOntoNormal.y = dot * intersectionNormal.y;
+
+        nextp2.x = p2.x - 2 * projectedOntoNormal.x;
+        nextp2.y = p2.y - 2 * projectedOntoNormal.y;
+
+        return [intersectionPoint, nextp2];
+        // RayCastRender(intersectionPoint, nextp2);
+
+        // lineFixDef.shape.SetAsEdge(intersectionPoint, nextp2);
+        // world.CreateBody(lineDef).CreateFixture(lineFixDef);
+
+        // 与C++中采用GL库绘图不一致，canvas回归调用，并未直接生成，所以选择返回坐标
+        // RayCastRender(intersectionPoint, nextp2);
+
+        // 绘制反射线
+        // context.beginPath(); // Start the path
+        // context.moveTo(intersectionPoint.x*30, intersectionPoint.y*30); // Set the path origin
+        // context.lineTo(nextp2.x*30, nextp2.y*30); // Set the path destination
+        // context.closePath(); // Close the path
+        // context.stroke(); // Outline the path  
+                
+      }
+
+      //http://js-tut.aardon.de/js-tut/tutorial/position.html
+      function getElementPosition(element) {
+        var elem=element, tagname="", x=0, y=0;
+
+        while((typeof(elem) == "object") && (typeof(elem.tagName) != "undefined")) {
+            y += elem.offsetTop;
+            x += elem.offsetLeft;
+            tagname = elem.tagName.toUpperCase();
+
+            if(tagname == "BODY")
+              elem=0;
+
+            if(typeof(elem) == "object") {
+              if(typeof(elem.offsetParent) == "object")
+                  elem = elem.offsetParent;
+            }
+        }
+
+        return {x: x, y: y};
+      }
+
+
+      function bodyCoordGet() {
+        // 屏幕经纬度
+        var scminp=new whpoint(0, 0);
+        var scmaxp=new whpoint(10, 14);
+        var screct=new whrect(scminp,scmaxp);
+
+        // 地图投影
+        var mminp=new whpoint(11586917.36191,3589973.11670);
+        var mmaxp=new whpoint(11586993.22675,3590041.88709);    
+        var mrect=new whrect(mminp,mmaxp);
+
+        // 转换映射
+        var mycoordchange=new whcoordchange(screct,mrect);
+        var mapoint1=new whpoint(11586956.38138,3590060.13813);
+        var mapoint2=new whpoint(11586956.38138,3590055.56107);
+        var mapoint3=new whpoint(11586973.54537,3590048.58105);
+
+        var scmapoint1=mycoordchange.maptoscreen(mapoint1);
+        var scmapoint2=mycoordchange.maptoscreen(mapoint2);
+        var scmapoint3=mycoordchange.maptoscreen(mapoint3);
+
+        console.log(scmapoint1, scmapoint2, scmapoint3);
+
+        // var list = new List();
+        // list.append(scmapoint1, scmapoint2, scmapoint3);
+        // console.log(list);
+
+        // 3.000692, 0.289297    3.000692, 0.293138    3.012279, 0.298885
+
+        // return list;
+      }
+
+    }
+  </script>
+</html>

@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>拆闲补忙</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./gismap/cesium/Widgets/widgets.css"/>
+    <link type="text/css" rel="stylesheet" href="expamle/test/css/main.css">
+    <link type="text/css" rel="stylesheet" href="expamle/test/css/model.css">
+    <link type="text/css" rel="stylesheet" href="expamle/test/css/progress.css">
+    <link type="text/css" rel="stylesheet" href="./gismap/css/cesium.css">
+    <script src="expamle/test/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./gismap/cesium/Cesium.js"></script>
+    <script type="text/javascript" src="./gismap/cesium/PolylineTrailLinkMaterial-extends.js"></script>
+    <script type="text/javascript" src="./gismap/js/TelSignalSimulationPrimitive.js"></script>
+    <script type="text/javascript" src="./gismap/js/ComposeSymbolPoint.js"></script>
+    <script type="text/javascript" src="./expamle/test/js/jquery.slider.js"></script>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+	</head>
+	<body>
+    <div class="main">
+      <div class="top">
+        <img src="expamle/test/image/logo.png" alt="">
+        <div class="opcenter">
+          <div>
+            <span>场景中心</span>
+            <ul class="evlist">
+              <li>
+                <span class="open">移动</span>
+                <div>
+                  <ul class="label_ul">
+                    <li>零底小区</li>
+                    <li>超忙小区</li>
+                    <li>质差小区</li>
+                    <li>故障</li>
+                  </ul>
+                  <ul class="value_ul">
+                    <li>
+                      <span>零流量小区</span>
+                      <span><a href="index.html">超闲小区</a></span>
+                    </li>
+                    <li>
+                      <span>超忙负载均衡</span>
+                      <span>超忙扩容</span>
+                      <span>预测扩容</span>
+                      <span>新建站</span>
+                    </li>
+                    <li>
+                      <span>质差定位</span>
+                      <span>参数自动调整</span>
+                      <span>问题评估</span>
+                    </li>
+                    <li>
+                      <span><a href="problem.html">故障预测</a></span>
+                      <span>故障自动处理</span>
+                      <span>问题评估</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="left">
+        <div class="chart_one">
+          <p>
+            <b>场景列表-拆闲补忙</b>
+          </p>
+          <div class="title">
+            <span>工单列表</span>
+            <span class="on">工单信息</span>
+          </div>
+          <div class="content">
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>工单类型</th>
+                    <th>工单编号</th>
+                    <th>基站编码</th>
+                    <th>基站编码</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>超闲小区</td>
+                    <td>20191010123</td>
+                    <td>1043985</td>
+                    <td>已派发</td>
+                  </tr>
+                  <tr>
+                    <td>弱覆盖</td>
+                    <td>2016030201</td>
+                    <td>1043985</td>
+                    <td>已结单</td>
+                  </tr>
+                  <tr>
+                    <td>故障工单</td>
+                    <td>2016030201</td>
+                    <td>1043985</td>
+                    <td>已结单</td>
+                  </tr>
+                  <tr>
+                    <td>超闲小区</td>
+                    <td>20191010123</td>
+                    <td>1043985</td>
+                    <td>已派发</td>
+                  </tr>
+                  <tr>
+                    <td>弱覆盖</td>
+                    <td>20191010123</td>
+                    <td>1043985</td>
+                    <td>已结单</td>
+                  </tr>
+                  <tr>
+                    <td>故障工单</td>
+                    <td>2016030201</td>
+                    <td>1043985</td>
+                    <td>已结单</td>
+                  </tr>
+                  <tr>
+                    <td>超闲小区</td>
+                    <td>20191010123</td>
+                    <td>1043985</td>
+                    <td>已派发</td>
+                  </tr>
+                  <tr>
+                    <td>弱覆盖</td>
+                    <td>20191010123</td>
+                    <td>1043985</td>
+                    <td>已结单</td>
+                  </tr>
+                  <tr>
+                    <td>故障工单</td>
+                    <td>2016030201</td>
+                    <td>1043985</td>
+                    <td>已结单</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="on">
+              <li>
+                <span class="label">工单编号：</span>
+                <span class="value">20191010123 </span>
+              </li>
+              <li>
+                <span class="label">工单类型：</span>
+                <span class="value">超闲小区 </span>
+              </li>
+              <li>
+                <span class="label">派发时间：</span>
+                <span class="value">2019-10-10 10：00 </span>
+              </li>
+              <li>
+                <span class="label">工单状态：</span>
+                <span class="value">已派发 </span>
+              </li>
+              <li>
+                <span class="label">是否超时：</span>
+                <span class="value">否 </span>
+              </li>
+              <li>
+                <span class="label">当前环节：</span>
+                <span class="value">评估拆站结果 </span>
+              </li>
+              <li>
+                <span class="label">小区名称：</span>
+                <span class="value">WLMQ_XBL0_西城康居苑南D_ZSCPI_SGT2C_1 </span>
+              </li>
+              <li>
+                <span class="label">RRU SN码：</span>
+                <span class="value">RRUU1234567890 </span>
+              </li>
+            </ul>
+          </div>
+          <div class="btn">
+            <span><i></i> 督办</span>
+            <span class="meeting"><i></i> 视频会议</span>
+            <span><i></i> 转派</span>
+            <span><i></i> 专家经验</span>
+            <span><i></i> 案例</span>
+          </div>
+        </div>
+        <div class="chart_two">
+          <p>
+            <b>小区信息</b>
+          </p>
+          <div class="title">
+            <span class="on">设备信息</span>
+            <span>工参信息</span>
+            <span>站址信息</span>
+          </div>
+          <div class="content">
+            <ul class="on">
+              <li>
+                <span class="label">RRU SN码：</span>
+                <span class="value">RRU123456789 </span>
+              </li>
+              <li>
+                <span class="label">RRU型号：</span>
+                <span class="value">3959-1800 </span>
+              </li>
+              <li>
+                <span class="label">小区名称：</span>
+                <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_2 </span>
+              </li>
+              <li>
+                <span class="label">生产厂家：</span>
+                <span class="value">华为 </span>
+              </li>
+              <li>
+                <span class="label">额定功率：</span>
+                <span class="value">430W </span>
+              </li>
+              <li>
+                <span class="label">典型功耗：</span>
+                <span class="value">300W </span>
+              </li>
+              <li>
+                <span class="label">RRU生产日期：</span>
+                <span class="value">2010-2-1</span>
+              </li>
+              <li>
+                <span class="label">入网日期：</span>
+                <span class="value">2011-9-1</span>
+              </li>
+              <li>
+                <span class="label">上联BBU SN码：</span>
+                <span class="value">BBU123456789</span>
+              </li>
+              <li>
+                <span class="label">BBU型号：</span>
+                <span class="value">BBU3900</span>
+              </li>
+              <li>
+                <span class="label">BBU额定功率：</span>
+                <span class="value">460W</span>
+              </li>
+              <li>
+                <span class="label">BBU生产日期：</span>
+                <span class="value">2010-2-1</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="label">小区名称：</span>
+                <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_2</span>
+              </li>
+              <li>
+                <span class="label">所属基站：</span>
+                <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C</span>
+              </li>
+              <li>
+                <span class="label">区县：</span>
+                <span class="value">西北路分局</span>
+              </li>
+              <li>
+                <span class="label">支局：</span>
+                <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_2</span>
+              </li>
+              <li>
+                <span class="label">小区名称：</span>
+                <span class="value">红庙子城区</span>
+              </li>
+              <li>
+                <span class="label">ENBID：</span>
+                <span class="value">1043985</span>
+              </li>
+              <li>
+                <span class="label">CELLID：</span>
+                <span class="value">18</span>
+              </li>
+              <li>
+                <span class="label">城市/农村：</span>
+                <span class="value">城市</span>
+              </li>
+              <li>
+                <span class="label">站点类型：</span>
+                <span class="value">室外站</span>
+              </li>
+              <li>
+                <span class="label">方向角：</span>
+                <span class="value">200</span>
+              </li>
+              <li>
+                <span class="label">仰角：</span>
+                <span class="value">5</span>
+              </li>
+              <li>
+                <span class="label">站高：</span>
+                <span class="value">60</span>
+              </li>
+              <li>
+                <span class="label">常驻用户：</span>
+                <span class="value">0</span>
+              </li>
+              <li>
+                <span class="label">场景：</span>
+                <span class="value">室外</span>
+              </li>
+              <li>
+                <span class="label">五高一地：</span>
+                <span class="value">风景区</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="label">站址编码：</span>
+                <span class="value">西城康居苑</span>
+              </li>
+              <li>
+                <span class="label">铁塔类型：</span>
+                <span class="value">景观站</span>
+              </li>
+              <li>
+                <span class="label">共享方式：</span>
+                <span class="value">独享</span>
+              </li>
+              <li>
+                <span class="label">起租日期：</span>
+                <span class="value">2011-6-1</span>
+              </li>
+              <li>
+                <span class="label">累计租费：</span>
+                <span class="value">200万元</span>
+              </li>
+              <li>
+                <span class="label">经度：</span>
+                <span class="value">87.52802</span>
+              </li>
+              <li>
+                <span class="label">纬度：</span>
+                <span class="value">43.810708</span>
+              </li>
+              <li>
+                <span class="label">详细地址：</span>
+                <span class="value">乌鲁木齐市西北路西城康居苑2栋2单元6楼</span>
+              </li>
+            </ul>
+          </div>
+          <div class="btn">
+            <span class="removeModel"><i></i> 拆除模拟</span>
+            <span class="showModel"><i></i> 扩容模拟</span>
+            <span><i></i> 参数调整</span>
+            <span><i></i> 设备关停</span>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="chart_two">
+          <p>
+            <b>场景评估-超闲小区</b>
+          </p>
+          <div class="title">
+            <span class="on">评估</span>
+            <span>运行</span>
+            <span>成本</span>
+          </div>
+          <div class="content">
+            <!-- <ul class="on">
+              <li>
+                <span class="label">是否异常：</span>
+                <span class="value">否 </span>
+              </li>
+              <li>
+                <span class="label">是否故障：</span>
+                <span class="value">否 </span>
+              </li>
+              <li>
+                <span class="label">是否高负荷小区：</span>
+                <span class="value">否</span>
+              </li>
+              <li>
+                <span class="label">是否超闲小区：</span>
+                <span class="value">是 </span>
+              </li>
+              <li>
+                <span class="label">覆盖用户数：</span>
+                <span class="value">0 </span>
+              </li>
+              <li>
+                <span class="label">最大RRC连接用户数：</span>
+                <span class="value">1 </span>
+              </li>
+              <li>
+                <span class="label">PRB利用率：</span>
+                <span class="value">3.52</span>
+              </li>
+            </ul> -->
+            <div class="on">
+              <div>
+                <span>1.当前小区连续7天,每日流量下去0.5G</span>
+              </div>
+              <div>
+                <span>2.共站址小区XXXA-DFDF-AD3D-FAFA-3的PRB资源利用率16%(共小于20%),无需进行负载均衡</span>
+              </div>
+              <div>
+                <a class="issumbtn">结论:当前小区为超闲小区，建议进行拆除</a>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <span class="label">总流量：</span>
+                <span class="value">200T</span>
+              </li>
+              <li>
+                <span class="label">平均月流量：</span>
+                <span class="value">3.76 </span>
+              </li>
+              <li>
+                <span class="label">上月流量：</span>
+                <span class="value">4.2</span>
+              </li>
+              <li>
+                <span class="label">当月累计流量：</span>
+                <span class="value">2.56 </span>
+              </li>
+              <li>
+                <span class="label">总故障次数：</span>
+                <span class="value">2 </span>
+              </li>
+              <li>
+                <span class="label">当前故障次数：</span>
+                <span class="value">0 </span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="label">建设成本：</span>
+                <span class="value">60万元</span>
+              </li>
+              <li>
+                <span class="label">累计租费：</span>
+                <span class="value">50万元 </span>
+              </li>
+              <li>
+                <span class="label">累计电费：</span>
+                <span class="value">5万元</span>
+              </li>
+              <li>
+                <span class="label">维修费：</span>
+                <span class="value">2000元 </span>
+              </li>
+              <li>
+                <span class="label">累计收入：</span>
+                <span class="value">800万元</span>
+              </li>
+              <li>
+                <span class="label">投资回收周期：</span>
+                <span class="value">20月</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="chart_one">
+          <p>
+            <b>运行状态</b>
+          </p>
+          <div class="title">
+            <span class="on">实时监测</span>
+            <span>实时告警</span>
+            <span>性能信息</span>
+            <span>负荷信息</span>
+          </div>
+          <div class="content">
+            <div class="on">
+              <div class="splash">
+                <div>
+                  <div class="loading-circle">
+                    <p><span class="loadedNum">0</span>%</p>
+                    <canvas class="mask" id="loadingProgress1" width="84" height="84"></canvas>
+                    <canvas class="bg" width="204" height="204"></canvas>
+                    <h3>PRB利用率</h3>
+                  </div>
+                </div>
+                <div>
+                  <div class="loading-circle">
+                    <p><span class="loadedNum">0</span>%</p>
+                    <canvas class="mask" id="loadingProgress2" width="84" height="84"></canvas>
+                    <canvas class="bg" width="204" height="204"></canvas>
+                    <h3>连接成功率</h3>
+                  </div>
+                </div>
+                <div>
+                  <div class="bussUser">23</div>
+                  <h3>忙时用户数</h3>
+                </div>
+              </div>
+              <div class="echart" id="chart">
+
+              </div>
+            </div>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th width="20%">级别</th>
+                    <th width="40%">告警时间</th>
+                    <th width="40%">告警内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="20%">中</td>
+                    <td width="40%">2019-11-10 14：00</td>
+                    <td width="40%">上行通道告警</td>
+                  </tr>
+                  <tr>
+                    <td>低</td>
+                    <td>2019-11-10 14：00</td>
+                    <td>驻波比异常</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="natureInfo">
+              <div class="one">
+                <img class="bg" src="./expamle/test/image/select_off.png" alt="">
+                <img class="inner" src="./expamle/test/image/select_on.png" alt="">
+                <span><b>52</b>%</span>
+                <p>连接成功率</p>
+              </div>
+              <div  class="one">
+                <img class="bg" src="./expamle/test/image/select_off.png" alt="">
+                <img class="inner" src="./expamle/test/image/select_on.png" alt="">
+                <span><b>5</b>%</span>
+                <p>掉线率</p>
+              </div>
+              <div  class="one">
+                <img class="bg" src="./expamle/test/image/select_off.png" alt="">
+                <img class="inner" src="./expamle/test/image/select_on.png" alt="">
+                <span><b>84</b>%</span>
+                <p>优良率</p>
+              </div>
+              <div  class="one">
+                <img class="bg" src="./expamle/test/image/select_off.png" alt="">
+                <img class="inner" src="./expamle/test/image/select_on.png" alt="">
+                <span><b>78</b>%</span>
+                <p>覆盖率</p>
+              </div>
+            </div>
+            <div class="chargeInfo">
+              <div class="info_one">
+                <div>
+                  <p>高负荷小区</p>
+                  <h1>是</h1>
+                </div>
+                <div>
+                  <p>超闲小区</p>
+                  <h1>是</h1>
+                </div>
+                <div>
+                  <p>最大RRC连接用户数</p>
+                  <h1>10</h1>
+                </div>
+              </div>
+              <div class="info_two">
+                <p>PRB利用率</p>
+                <p>(7*24小时最大值)</p>
+                <div id="info_two_one"></div>
+              </div>
+              <div class="info_three">
+                <p>PRB利用率</p>
+                <div>
+                  <p>上行</p>
+                  <div id="info_three_one"></div>
+                </div>
+                <div>
+                  <p>下行</p>
+                  <div id="info_three_two"></div>
+                </div>
+              </div>
+              <div class="info_four">
+                <p>7天平均流量(MB)</p>
+                <h1>6.8</h1>
+              </div>
+              <div class="info_five">
+                <div>
+                  <p>PDCP层上行流量(MB)</p>
+                  <h1>34.53</h1>
+                </div>
+                <div>
+                  <p>PDCP层下行流量(MB)</p>
+                  <h1>78.21</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right goods">
+        <span id="closeGoods"></span>
+        <div class="chart_one">
+          <p>
+            <b>设备状态</b>
+          </p>
+          <div class="content">
+            <div class="on">
+              <h3>BBU</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th width="35%">设备名称</th>
+                    <th width="35%">SN码</th>
+                    <th width="20%">设备型号</th>
+                    <th width="10%">状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="35%">ABX/BBU1234</td>
+                    <td width="35%">BBU12345678</td>
+                    <td width="20%">BBU3900</td>
+                    <td width="10%">正常</td>
+                  </tr>
+                  <tr>
+                    <td>ABX/BBU1235</td>
+                    <td>BBU12345679/td>
+                    <td>BBU8800</td>
+                    <td>正常</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>传输设备</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th width="30%">设备名称</th>
+                    <th width="20%">IP地址</th>
+                    <th width="30%">SN码</th>
+                    <th width="10%">设备型号</th>
+                    <th width="10%">状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="30%">ABX/R-R820-1</td>
+                    <td width="20%">1.2.3.4</td>
+                    <td width="30%">CS12345678</td>
+                    <td width="10%">R820</td>
+                    <td width="10%">正常</td>
+                  </tr>
+                  <tr>
+                    <td width="30%">ABX/R-R820-2</td>
+                    <td width="20%">1.2.3.3</td>
+                    <td width="30%">CS12345679</td>
+                    <td width="10%">R820</td>
+                    <td width="10%">正常</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>电源柜</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th width="30%">设备名称</th>
+                    <th width="30%">SN码</th>
+                    <th width="20%">设备型号</th>
+                    <th width="20%">状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="30%">ABX/XXX1234</td>
+                    <td width="30%">TP12345678</td>
+                    <td width="20%">TP48600T</td>
+                    <td width="20%">正常</td>
+                  </tr>
+                  <tr>
+                    <td width="30%">ABX/XXX1233</td>
+                    <td width="30%">TP12345679</td>
+                    <td width="20%">TP48600T</td>
+                    <td width="20%">正常</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>蓄电池</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th width="30%">设备名称</th>
+                    <th width="20%">SN码</th>
+                    <th width="20%">设备型号</th>
+                    <th width="15%">续航时间</th>
+                    <th width="15%">状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="30%">ABX/UPS1234</td>
+                    <td width="30%">UPS12345678</td>
+                    <td width="20%">R820</td>
+                    <td width="15%">3小时</td>
+                    <td width="15%">正常</td>
+                  </tr>
+                  <tr>
+                    <td width="30%">ABX/UPS1234</td>
+                    <td width="30%">UPS12345679</td>
+                    <td width="20%">R820</td>
+                    <td width="15%">3小时</td>
+                    <td width="15%">正常</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="chart_two">
+          <p>
+            <b>基站评估</b>
+          </p>
+          <div class="title">
+            <span class="on">评估</span>
+            <span>运行</span>
+            <span>成本</span>
+          </div>
+          <div class="content">
+            <ul class="on">
+              <li>
+                <span class="label">是否异常：</span>
+                <span class="value">否 </span>
+              </li>
+              <li>
+                <span class="label">是否故障：</span>
+                <span class="value">否 </span>
+              </li>
+              <li>
+                <span class="label">是否高负荷小区：</span>
+                <span class="value">否</span>
+              </li>
+              <li>
+                <span class="label">是否超闲小区：</span>
+                <span class="value">是 </span>
+              </li>
+              <li>
+                <span class="label">覆盖用户数：</span>
+                <span class="value">0 </span>
+              </li>
+              <li>
+                <span class="label">最大RRC连接用户数：</span>
+                <span class="value">1 </span>
+              </li>
+              <li>
+                <span class="label">PRB利用率：</span>
+                <span class="value">3.52</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="label">总流量：</span>
+                <span class="value">200T</span>
+              </li>
+              <li>
+                <span class="label">平均月流量：</span>
+                <span class="value">3.76 </span>
+              </li>
+              <li>
+                <span class="label">上月流量：</span>
+                <span class="value">4.2</span>
+              </li>
+              <li>
+                <span class="label">当月累计流量：</span>
+                <span class="value">2.56 </span>
+              </li>
+              <li>
+                <span class="label">总故障次数：</span>
+                <span class="value">2 </span>
+              </li>
+              <li>
+                <span class="label">当前故障次数：</span>
+                <span class="value">0 </span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="label">建设成本：</span>
+                <span class="value">60万元</span>
+              </li>
+              <li>
+                <span class="label">累计租费：</span>
+                <span class="value">50万元 </span>
+              </li>
+              <li>
+                <span class="label">累计电费：</span>
+                <span class="value">5万元</span>
+              </li>
+              <li>
+                <span class="label">维修费：</span>
+                <span class="value">2000元 </span>
+              </li>
+              <li>
+                <span class="label">累计收入：</span>
+                <span class="value">800万元</span>
+              </li>
+              <li>
+                <span class="label">投资回收周期：</span>
+                <span class="value">20月</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right rightcopy">
+        <div class="spec">
+          <p>
+            <span id="closeCopy"></span>
+          </p>
+          <div class="title">
+            <span class="on">前后对比</span>
+            <span>影响小区</span>
+          </div>
+          <div class="chartContainer">
+            <div class="on">
+              <h4>小区名称：(默认为模拟小区，根据入口小区变化)</h4>
+              <div class="chartInfo">
+                <p><span></span>基站日均流量变化</p>
+                <div id="chart_one"></div>
+              </div>
+              <div class="chartInfo">
+                <p><span></span>基站覆盖用户数变化</p>
+                <div id="chart_two"></div>
+              </div>
+              <div class="chartInfo">
+                <p><span></span>基站PRB利用率</p>
+                <div id="chart_three"></div>
+              </div>
+              <div class="chartInfo">
+                <p><span></span>基站日均收入变化</p>
+                <div id="chart_four"></div>
+              </div>
+            </div>
+            <div class="detailCon">
+              <div class="diff">
+                <span class="on" data-aff="gongInfo">工参信息</span>
+                <span data-aff="xingInfo">性能信息</span>
+                <span data-aff="zhiInfo">质量信息</span>
+                <span data-aff="fuInfo">负荷信息</span>
+              </div>
+              <div class="detailInfo">
+                <div>
+                  <h4>
+                    小区名称：<span>WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_1</span>
+                    <a>前后对比</a>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="label">小区名称：</span>
+                      <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_1</span>
+                    </li>
+                    <li>
+                      <span class="label">区县：</span>
+                      <span class="value">西北路分局</span>
+                    </li>
+                    <li>
+                      <span class="label">支局：</span>
+                      <span class="value">红庙子城区</span>
+                    </li>
+                    <li>
+                      <span class="label">ENBID：</span>
+                      <span class="value">1043985</span>
+                    </li>
+                    <li>
+                      <span class="label">CELLID：</span>
+                      <span class="value">18</span>
+                    </li>
+                    <li>
+                      <span class="label">城市/农村：</span>
+                      <span class="value">城市</span>
+                    </li>
+                  </ul>
+                  <h4>
+                    小区名称：<span>WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_2</span>
+                    <a>前后对比</a>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="label">小区名称：</span>
+                      <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_2</span>
+                    </li>
+                    <li>
+                      <span class="label">区县：</span>
+                      <span class="value">西北路分局</span>
+                    </li>
+                    <li>
+                      <span class="label">支局：</span>
+                      <span class="value">红庙子城区</span>
+                    </li>
+                    <li>
+                      <span class="label">ENBID：</span>
+                      <span class="value">1043985</span>
+                    </li>
+                    <li>
+                      <span class="label">CELLID：</span>
+                      <span class="value">18</span>
+                    </li>
+                    <li>
+                      <span class="label">城市/农村：</span>
+                      <span class="value">城市</span>
+                    </li>
+                  </ul>
+                  <h4>
+                    小区名称：<span>WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_3</span>
+                    <a>前后对比</a>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="label">小区名称：</span>
+                      <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_3</span>
+                    </li>
+                    <li>
+                      <span class="label">区县：</span>
+                      <span class="value">西北路分局</span>
+                    </li>
+                    <li>
+                      <span class="label">支局：</span>
+                      <span class="value">红庙子城区</span>
+                    </li>
+                    <li>
+                      <span class="label">ENBID：</span>
+                      <span class="value">1043985</span>
+                    </li>
+                    <li>
+                      <span class="label">CELLID：</span>
+                      <span class="value">18</span>
+                    </li>
+                    <li>
+                      <span class="label">城市/农村：</span>
+                      <span class="value">城市</span>
+                    </li>
+                  </ul>
+                  <h4>
+                    小区名称：<span>WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_4</span>
+                    <a>前后对比</a>
+                  </h4>
+                  <ul>
+                    <li>
+                      <span class="label">小区名称：</span>
+                      <span class="value">WLMQ_XBL0_西城康居苑南(800M)D_CSCPI_SGT2C_4</span>
+                    </li>
+                    <li>
+                      <span class="label">区县：</span>
+                      <span class="value">西北路分局</span>
+                    </li>
+                    <li>
+                      <span class="label">支局：</span>
+                      <span class="value">红庙子城区</span>
+                    </li>
+                    <li>
+                      <span class="label">ENBID：</span>
+                      <span class="value">1043985</span>
+                    </li>
+                    <li>
+                      <span class="label">CELLID：</span>
+                      <span class="value">18</span>
+                    </li>
+                    <li>
+                      <span class="label">城市/农村：</span>
+                      <span class="value">城市</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="opreate">
+          <span class="on">流程管理</span>
+          <span>生命周期</span>
+          <span>扩容工单</span>
+        </div>
+        <div class="flex-viewport none">
+          <ul class="slides on">
+            <li>
+              <div class="point"></div>
+              <span>2019-10-10</span>
+              <div class="textContent">
+                <a href="#">问题发现</a>
+                <div>
+                  <p>操作人：CRM系统</p>
+                  <p>操作时间：2019-10-10 10：00</p>
+                  <p>操作内容：该小区连续xx日为超闲小区，小CEO反馈可拆除。工单结束。该小区连续xx日为超闲小区，小CEO反馈可拆除。工单结束该小区连续xx日为超闲小区，小CEO反馈可拆除。工单结束该小区连续xx日为超闲小区，小CEO反馈可拆除。工单结束该小区连续xx日为超闲小区，小CEO反馈可拆除。工单结束</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-10-30</span>
+              <div class="textContent">
+                <a href="#">回单</a>
+                <div>
+                  <p>操作人：啊撒发</p>
+                  <p>操作时间：2019-10-10 10：00</p>
+                  <p>操作内容：该小区位于景区，淡季用户较少，无法发展新用户，可拆除。</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-10-30</span>
+              <div class="textContent">
+                <a href="#">结单</a>
+                <div>
+                  <p>操作人：CRM系统</p>
+                  <p>操作时间：2019-10-30 10:05</p>
+                  <p>操作内容：该小区连续xx日为超闲小区，小CEO反馈可拆除。工单结束。</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-11-1</span>
+              <div class="textContent">
+                <a href="#">超忙工单</a>
+                <div>
+                  <p>操作人：CRM系统</p>
+                  <p>操作时间：2019-11-1 10:05</p>
+                  <p>操作内容：超忙工单：<a href="#">20191016211</a>，超忙基站HM_HM1_红星一场采摘园D_CHAJN_SGJ2_(800M)需扩容。进入拆闲补忙流程。</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-11-2</span>
+              <div class="textContent">
+                <a href="#">拆除超闲小区</a>
+                <div>
+                  <p>操作人：好过分</p>
+                  <p>操作时间：2019-11-2 10:05</p>
+                  <p>操作内容：施工队XXX拆除超闲小区WLMQ_XBL0_西城康居苑南D_ZSCPI_SGT2C_2，设备SN码：BBU1234567890。上传拆除现场照片，短信通知小CEO XXX。</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-11-2</span>
+              <div class="textContent">
+                <a href="#">超忙小区扩容</a>
+                <div>
+                  <p>操作人：XXX</p>
+                  <p>操作时间：2019-11-2 15:00</p>
+                  <p>操作内容：施工队XXX对超忙基站HM_HM1_红星一场采摘园D_CHAJN_SGJ2_(800M)扩容，扩容工单：2019090311。新装设备SN码：BBU1234567890，CELL ID：3。上传现场照片，短信通知小CEO YYY。</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-11-5</span>
+              <div class="textContent">
+                <a href="#">小区开通</a>
+                <div>
+                  <p>操作人：CRM系统</p>
+                  <p>操作时间：2019-11-5 10：30</p>
+                  <p>操作内容：小区HM_HM1_红星一场采摘园D_CHAJN_SGJ2_(800M)_3验收通过，正式开通。短信通知小CEO YYY。</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="slides ">
+            <li>
+              <div class="point"></div>
+              <span>2011-4-1</span>
+              <div class="textContent">
+                <a href="#">设备入库</a>
+                <div>
+                  <p>RRU SN码: RRU1234567890</p>
+                  <p>日期：2011-4-1</p>
+                  <p>设备厂家：华为</p>
+                  <p>负责人：XXX</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2011-8-30</span>
+              <div class="textContent">
+                <a href="#">设备出库</a>
+                <div>
+                  <p>RRU SN码: RRU1234567890</p>
+                  <p>日期：2011-8-30</p>
+                  <p>运输公司：XXX运输公司</p>
+                  <p>负责人：XXX</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2011-9-1</span>
+              <div class="textContent">
+                <a href="#">设备入网</a>
+                <div>
+                  <p>小区名称：WLMQ_XBL0_西城康居苑南D_ZSCPI_SGT2C_2</p>
+                  <p>RRU SN码: RRU1234567890</p>
+                  <p>日期：2011-9-1</p>
+                  <p>施工单位：XXX施工队</p>
+                  <p>负责人：YYY</p>
+                  <p>建设工单：<a href="#"> JS12345678</a></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2011-4-1</span>
+              <div class="textContent">
+                <a href="#">超闲小区告警</a>
+                <div>
+                  <p>小区名称：WLMQ_XBL0_西城康居苑南D_ZSCPI_SGT2C_2</p>
+                  <p>RRU SN码: RRU1234567890</p>
+                  <p>操作日期：2019-11-2</p>
+                  <p>施工单位：XXX施工队</p>
+                  <p>负责人：YYY</p>   
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2011-4-1</span>
+              <div class="textContent">
+                <a href="#">超闲小区拆除</a>
+                <div>
+                  <p>小区名称：WLMQ_XBL0_西城康居苑南D_ZSCPI_SGT2C_2</p>
+                  <p>RRU SN码: RRU1234567890</p>
+                  <p>日期：2019-11-2</p>
+                  <p>施工单位：XXX施工队</p>
+                  <p>负责人：YYY</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2011-4-1</span>
+              <div class="textContent">
+                <a href="#">超忙小区扩容</a>
+                <div>
+                  <p>小区名称：WLMQ_XBL0_西城康居苑南D_ZSCPI_SGT2C_2</p>
+                  <p>RRU SN码: RRU1234567890</p>
+                  <p>日期：2011-4-1</p>
+                  <p>设备厂家：华为</p>
+                  <p>负责人：XXX</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="slides ">
+            <li>
+              <div class="point"></div>
+              <span>2019-9-6</span>
+              <div class="textContent">
+                <a href="#">开工申请</a>
+                <div>
+                  <p>操作人：高启堂</p>
+                  <p>操作时间：2019-9-6 15:11:07</p>
+                  <p>信息处理：已处理</p>
+                  <p>信息时限：4小时</p>
+                  <p>历时7.8天</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-9-20</span>
+              <div class="textContent">
+                <a href="#">开工申请</a>
+                <div>
+                  <p>操作人：高启堂</p>
+                  <p>操作时间：2019-9-20 16:16:07</p>
+                  <p>信息处理：已处理</p>
+                  <p>信息时限：5天</p>
+                  <p>历时14.0天</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-9-30</span>
+              <div class="textContent">
+                <a href="#">开工申请</a>
+                <div>
+                  <p>操作人：高启堂</p>
+                  <p>操作时间：2019-9-30 12:11:07</p>
+                  <p>信息处理：已处理</p>
+                  <p>信息时限：4小时</p>
+                  <p>历时1.8天</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019-9-6</span>
+              <div class="textContent">
+                <a href="#">开工申请</a>
+                <div>
+                  <p>操作人：高启堂</p>
+                  <p>操作时间：2019-10-7 16:11:07</p>
+                  <p>信息处理：已处理</p>
+                  <p>信息时限：2天</p>
+                  <p>历时4.9天</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="point"></div>
+              <span>2019————</span>
+              <div class="textContent">
+                <a href="#">开工申请</a>
+                <div>
+                  <p>操作人：————</p>
+                  <p>操作时间：—————</p>
+                  <p>信息处理：已处理</p>
+                  <p>信息时限：2天</p>
+                  <p>历时4.9天</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="map">
+      </div>
+      <div class="videomeet">
+        <span></span>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="container" id="cont">
+      <span class="close"></span>
+      <div id="info">
+        <a >岳西店前杏花站址库</a>
+      </div>
+      <div class="infoBox">
+        <span class="colsebtn"></span>
+        <div></div>
+      </div>
+      <div class="btnInfo">
+        <span data-label="xinhaota">信号塔</span>
+        <span data-label="rru">rru</span>
+        <span data-label="bbu">bbu</span>
+        <span data-label="jixiang">机箱</span>
+        <span data-label="jijia">机架</span>
+        <span data-label="xudian">蓄电池</span>
+        <span data-label="chuanshu">传输设备</span>
+        <span data-label="miehuoqi">灭火器</span>
+        <span data-label="kongtiao">空调</span>
+        <span data-label="kaiguan">开关</span>
+      </div>
+    </div>
+	</body>
+</html>
