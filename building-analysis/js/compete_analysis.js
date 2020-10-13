@@ -1,7 +1,23 @@
 var URL_ROOT = Common.url_server_root;
 var wisdomManage;
 $(function () {
-    wisdomManage = new WisdomManageFn(2020070300, 2020070323);
+    var date = new Date((new Date()).getTime() - 24*60*60*1000);
+    // var start = date.Format('yyyyMMdd') + '00';
+    // var end = date.Format('yyyyMMdd') + '23';
+    var start = '2020100100';
+    var end = '2020100123';
+
+    if($.cookie('start_time')) {
+        start = $.cookie('start_time');
+    } else {
+        $.cookie('start_time', start, { path: '/'});
+    }
+    if($.cookie('end_time')) {
+        end = $.cookie('end_time');
+    } else {
+        $.cookie('end_time', end, { path: '/'});
+    }
+    wisdomManage = new WisdomManageFn(start, end);
     wisdomManage.loadLoginInfo();
     wisdomManage.bindTimeDaySelect();
     wisdomManage.bindTimeDaySlider();
@@ -103,6 +119,11 @@ WisdomManageFn.prototype.loadLoginInfo = function() {
         $.removeCookie('token_id');
         $.removeCookie('user_name');
         $.removeCookie('phone');
+        $.removeCookie('busi_main_id');
+        $.removeCookie('busi_compete_id');
+        $.removeCookie('busi_compete_type');
+        $.removeCookie('start_time');
+        $.removeCookie('end_time');
         window.location.href = Common.url_static_root + '/login/login.html';
     });
 }
@@ -145,6 +166,7 @@ WisdomManageFn.prototype.bindTimeDaySelect = function () {
                     if (value != null && value != '') {
                         value = value.replace(/-/g, "")
                         _this.startDay = value;
+                        $.cookie('start_time', _this.startDay+_this.startTime, { path: '/'});
                         // _this._update();
                         _this.bindTimeDaySelect();
                     } else {
@@ -162,6 +184,7 @@ WisdomManageFn.prototype.bindTimeDaySelect = function () {
                     if (value != null && value != '') {
                         value = value.replace(/-/g, "")
                         _this.endDay = value;
+                        $.cookie('end_time', _this.endDay+_this.endTime, { path: '/'});
                         // _this._update();
                         _this.bindTimeDaySelect();
                     } else {
