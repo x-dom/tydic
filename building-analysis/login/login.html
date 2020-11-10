@@ -41,7 +41,7 @@
             <div class="login-value left"><input id="user-pas" type="password" name="user_password" placeholder="密码"></div>
         </div>
         <p class="login-rows-err pas-err-info"></p>
-        <div class="login-info-rows">
+        <!-- <div class="login-info-rows">
             <input type="hidden" id="dragCheck" value="1">
             <div id="drag" style="color: rgb(255, 255, 255);">
                 <div class="drag_bg" style="width: 255px;"></div>
@@ -49,7 +49,18 @@
                 <div class="handler handler_ok_bg borderRB start" style="left: 255px;" data-login="0"></div>
             </div>
         </div>
-        <p class="drag-rows-err login-rows-err"></p>
+        <p class="drag-rows-err login-rows-err"></p> -->
+        <div class="login-info-rows msg-row ">
+            <div class="msg-text">
+                <div class="login-names left"><i class="login-icon msg-icon"></i></div>
+                <div class="login-value left"><input id="user-msg" type="text" name="user_code" placeholder="验证码"></div>
+            </div>
+            <div class="msg-btn" id="msg_code">
+                <span>获取验证码</span>
+            </div>
+        </div>
+        <p class="login-rows-err msg-err-info"></p>
+       
         <div class="login-info-rows">
             <div id="submit-button"  class="submit-button left">登录</div>
             <!-- <div id="submit-button" class="submit-button left"></div> -->

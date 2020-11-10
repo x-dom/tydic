@@ -81,6 +81,35 @@ body,html,.page-box-wrap{
   background-color: #63c6de;
   border:1px solid #b8e6f0;
 }
+.msg-text{
+  float: left;
+  background-color: #63c6de;
+  border:1px solid #b8e6f0;
+  border-right: 0px;
+  border-radius: 5px 0px 0px 5px;
+  width: calc(100% - 100px);
+  height: 40px;
+}
+.msg-btn{
+  float: left;
+  background-color: #1eb9de;
+  border:1px solid #b8e6f0;
+  color: #FFF;
+  border-left: 0px;
+  border-radius: 0px 5px 5px 0px;
+  width: 96px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+.msg-btn.disable{
+  pointer-events: none;
+  background-color: #c9cdce;
+  color: #FFF;
+  cursor: default;
+}
 .login-names{
   width: 50px;
   height: 40px;
@@ -117,14 +146,19 @@ input:-webkit-autofill,input[type="password" i],input[type="text" i]{
   display: block;
 }
 .user-icon{
-  width: 28px;
+  width: 30px;
   height: 30px;
-  background-image: url(../image/user.gif);
+  background-image: url(../image/user.png);
 }
 .pas-icon{
-  width: 21px;
+  width: 30px;
   height: 30px;
-  background-image: url(../image/pas.gif);
+  background-image: url(../image/pas.png);
+}
+.msg-icon{
+  width: 30px;
+  height: 30px;
+  background-image: url(../image/msg.png);
 }
 .submit-button,.pas-button{
   width: 50%;

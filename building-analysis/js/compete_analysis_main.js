@@ -53,6 +53,7 @@ WisdomManageFn.prototype.changeBusi = function(busi) {
     var _this = this;
     _this.currentBusi =  busi;
     _this.busiId = busi.busi_id;
+    _this.cityId = busi.city_id;
     if(gis.map) {
         gis.changeBusi(busi);
     }
@@ -359,6 +360,7 @@ WisdomManageFn.prototype.loadRankList = function () {
         url: URL_ROOT + '/competitor/queryMainQuotaList',
         method: 'get',
         data: {
+            city_id: _this.cityId,
             busi_id: _this.busiId,
             day_st: _this.startDay,
             day_end: _this.endDay,

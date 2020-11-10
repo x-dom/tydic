@@ -1,6 +1,6 @@
 const Common  = {};
 Common.url_static_root =  "";//
-Common.url_server_root =  "http://192.168.10.212:8002/building-analysis-server";//springboot server url
+Common.url_server_root =  "http://172.16.30.1:8002/building-analysis-server";//springboot server url
 Common.url_geoserver =  'http://192.168.10.212:9600/geoserver/postgres/wms';//geoserver server url
 Common.url_cell_layer =   'postgres:dw_commercial_area_info';//geoserver server url
 Common.url_grid_layer =   'postgres:dm_commercial_complex_user_h_bak';//geoserver server url
@@ -72,10 +72,10 @@ Common.map_server_gaode_symbol_local.maximumLevel =  18;
 Common.map_server = [];
 // Common.map_server.push(Common.map_server_google_satellite_online);
 // Common.map_server.push(Common.map_server_tianditu_symbol_online);
-Common.map_server.push(Common.map_server_gaode_vector_online);
-Common.map_server.push(Common.map_server_gaode_satellite_online);
-// Common.map_server.push(Common.map_server_gaode_vector_local);
-// Common.map_server.push(Common.map_server_gaode_satellite_local);
+// Common.map_server.push(Common.map_server_gaode_vector_online);
+// Common.map_server.push(Common.map_server_gaode_satellite_online);
+Common.map_server.push(Common.map_server_gaode_vector_local);
+Common.map_server.push(Common.map_server_gaode_satellite_local);
 // Common.map_server.push(Common.map_server_gaode_symbol_online);
 // Common.map_server.push(Common.map_server_satellite_local_106);
 

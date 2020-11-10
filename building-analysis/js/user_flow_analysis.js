@@ -102,6 +102,7 @@ WisdomManageFn.prototype.changeBusi = function(busi) {
     var _this = this;
     _this.currentBusi =  busi;
     _this.busiId = busi.busi_id;
+    _this.cityId = busi.city_id;
     _this.loadDetailList();
     _this.loadChartList();
     if(gis.map) {
@@ -543,7 +544,7 @@ WisdomManageFn.prototype.loadDetailList = function () {
         table.render({
             elem: '#detail-data'
             ,
-            url: URL_ROOT + '/demo/getDetailData?day_st=' + _this.startDay +"&hour_st="+ _this.startTime + "&field_name=" + field + "&day_end=" + _this.endDay + "&hour_end=" + _this.endTime+"&busi_id="+_this.busiId
+            url: URL_ROOT + '/demo/getDetailData?day_st=' + _this.startDay +"&hour_st="+ _this.startTime + "&field_name=" + field + "&day_end=" + _this.endDay + "&hour_end=" + _this.endTime+"&busi_id="+_this.busiId+"&city_id="+_this.cityId
             ,
             height: $("#detail-data-box").height()
             ,
@@ -608,6 +609,7 @@ WisdomManageFn.prototype.loadChartList = function () {
     $.ajax({
         url: URL_ROOT + '/demo/getData',
         data: {
+            city_id: _this.cityId,
             busi_id: _this.busiId,
             day_st: _this.startDay,
             day_end: _this.endDay,
@@ -856,7 +858,8 @@ WisdomManageFn.prototype.charts = {
                     day_end: wisdomManage.endDay,
                     hour_st: wisdomManage.startTime,
                     hour_end: wisdomManage.endTime,
-                    busi_id: wisdomManage.busiId
+                    busi_id: wisdomManage.busiId,
+                    city_id: wisdomManage.cityId
                 },
                 success: function (countData) {
                     if (countData) {

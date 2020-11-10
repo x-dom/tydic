@@ -331,6 +331,7 @@ WisdomManageFn.prototype.loadCountInfo = function () {
         method: 'get',
         data: {
             busi_id: _this.busiId1,
+            city_id: _this.busi1.city_id,
             competitor_busi_id: _this.busiId2,
             day_st: _this.startDay,
             day_end: _this.endDay,
@@ -390,6 +391,7 @@ WisdomManageFn.prototype.loadChartList = function () {
         method: 'get',
         data: {
             busi_id: _this.busiId1,
+            city_id: _this.busi1.city_id,
             competitor_busi_id: _this.busiId2,
             day_st: _this.startDay,
             day_end: _this.endDay,
@@ -423,7 +425,7 @@ WisdomManageFn.prototype.loadChartList = function () {
             $(".analysis-charts-content").unblock();
         },
         error: function() {
-            isLoadingEnd = true;
+            _this.isLoadingEnd = true;
             $(".analysis-charts-content").unblock();
         }
     });
@@ -433,7 +435,7 @@ WisdomManageFn.prototype.charts = {
     userFlowCountCompare: {
         name: '客流对比统计',
         load: function (obj) {
-            data = {
+            var data = {
                 localUserFlowNum: wisdomManage.formatNumber(obj.self_total_flow),
                 otherUserFlowNum: wisdomManage.formatNumber(obj.other_total_flow),
                 localUserCntNum: wisdomManage.formatNumber(obj.self_total_user),
@@ -617,7 +619,7 @@ WisdomManageFn.prototype.charts = {
     travelModeAndComsumptionPerference: {
         name: '出行方式与消费偏好',
         load: function(obj) {
-            data = {
+            var data = {
                 drive_trip_cnt: wisdomManage.formatNumber(obj.travel_car),
                 metro_trip_cnt: wisdomManage.formatNumber(obj.travel_metro),
                 transit_trip_cnt: wisdomManage.formatNumber(obj.travel_transit),
@@ -1639,7 +1641,7 @@ WisdomManageFn.prototype.charts = {
                         barWidth: '15%',
                         barCategoryGap: "50%",
                         data: userCnt.map((item, i) => {
-                            itemStyle = {
+                            var itemStyle = {
                                 color: i%2==0 ? "#4ebc97" : "#4d82de"
                             }
                             return {
