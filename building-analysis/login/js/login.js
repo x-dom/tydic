@@ -116,6 +116,7 @@ var login = {
                     $.cookie('role_id', data.data.role_id, { path: '/'});
                     $.cookie('user_name', data.data.user_name, { path: '/'});
                     $.cookie('phone', data.data.phone, { path: '/'});
+                    $.cookie('busi_main_id', 2, { path: '/'});
                     window.localStorage.setItem("login",JSON.stringify(data.data))
                     window.location.href = Common.url_static_root + "/user_flow_analysis.html";
                 }

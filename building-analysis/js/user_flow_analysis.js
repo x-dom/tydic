@@ -51,8 +51,8 @@ $(function () {
     var date = new Date((new Date()).getTime() - 24*60*60*1000);
     // var start = date.Format('yyyyMMdd') + '00';
     // var end = date.Format('yyyyMMdd') + '23';
-    var start = '2020100100';
-    var end = '2020100123';
+    var start = '2020110600';
+    var end = '2020110623';
 
     if($.cookie('start_time')) {
         start = $.cookie('start_time');
@@ -261,14 +261,14 @@ WisdomManageFn.prototype.bindTimeDaySelect = function () {
                 , format: "yyyy-MM-dd"
                 , btns: ['confirm']
                 , value: startDay
-                , max: endDay
+                // , max: endDay //设置最大日期
                 , done: function (value, date, endDate) {
                     if (value != null && value != '') {
                         value = value.replace(/-/g, "")
                         _this.startDay = value;
                         $.cookie('start_time', _this.startDay+_this.startTime, { path: '/'});
                         // _this._update();
-                        _this.bindTimeDaySelect();
+                        // _this.bindTimeDaySelect();
                     } else {
                         layui.msg("请选择日期")
                     }
@@ -279,14 +279,14 @@ WisdomManageFn.prototype.bindTimeDaySelect = function () {
                 , format: "yyyy-MM-dd"
                 , btns: ['confirm']
                 , value: endDay
-                , min: startDay
+                // , min: startDay //设置最小日期
                 , done: function (value, date, endDate) {
                     if (value != null && value != '') {
                         value = value.replace(/-/g, "")
                         _this.endDay = value;
                         $.cookie('end_time', _this.endDay+_this.endTime, { path: '/'});
                         // _this._update();
-                        _this.bindTimeDaySelect();
+                        // _this.bindTimeDaySelect();
                     } else {
                         layui.msg("请选择日期")
                     }
