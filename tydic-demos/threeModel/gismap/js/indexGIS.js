@@ -58,18 +58,19 @@ gis.init = function(){
     //     });
 
     //MapServer
-    // var baseLayer = new Cesium.ArcGisMapServerImageryProvider({
-    //     url: "http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer",
-    //     enablePickFeatures: false,
-    // });
+    var baseLayer = new Cesium.ArcGisMapServerImageryProvider({
+        url: "http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer",
+        enablePickFeatures: false,
+    });
 
     //谷歌影像地图
-    var baseLayer=new Cesium.UrlTemplateImageryProvider({            	
-        url:'http://www.google.cn/maps/vt?lyrs=s@800&x={x}&y={y}&z={z}',  
-        tilingScheme:new Cesium.WebMercatorTilingScheme(),            	
-        minimumLevel:1,            
-        maximumLevel:20        
-    }); 
+    // var baseLayer=new Cesium.UrlTemplateImageryProvider({            	
+    //     // url:'http://www.google.cn/maps/vt?lyrs=s@800&x={x}&y={y}&z={z}',  
+    //     url:'http://www.google.cn/maps/vt?lyrs=r@189&gl=cn&x={x}&y={y}&z={z}',  
+    //     tilingScheme:new Cesium.WebMercatorTilingScheme(),            	
+    //     minimumLevel:1,            
+    //     maximumLevel:20        
+    // }); 
 
     _this.viewer = new Cesium.Viewer('map', {
         requestRenderMode: false, // 进入后台停止渲染
@@ -96,12 +97,12 @@ gis.init = function(){
     _this.viewer.scene.debugShowFramesPerSecond = true;//FPS
     _this.viewer._cesiumWidget._creditContainer.style.display = "none";//去除版权信息
     _this.viewer.scene.globe.enableLighting = false;
-    _this.viewer.scene.highDynamicRange = true;// 解决瓦片地图偏灰问题
+    _this.viewer.scene.highDynamicRange = false;// 解决瓦片地图偏灰问题
     _this.webMercatorProjection = new Cesium.WebMercatorProjection(_this.viewer.scene.globe.ellipsoid);//墨卡托坐标转换工具
 
     var layers =  _this.viewer.imageryLayers;
     var tilemapLayer = layers.get(0);
-    tilemapLayer.brightness = 0.3;
+    // tilemapLayer.brightness = 0.3;
     // tilemapLayer.contrast = 1.45;
     // tilemapLayer.hue = 2.4;
     // tilemapLayer.saturation = 2;

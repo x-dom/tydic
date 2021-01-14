@@ -2035,7 +2035,7 @@ WisdomManageFn.prototype.charts = {
                 },
                 {
                     value: data.social_app_cnt,
-                    name: '设计',
+                    name: '社交',
                     unit: ''
                 },
             ];
@@ -2104,7 +2104,7 @@ WisdomManageFn.prototype.charts = {
                         interval: 0,
                         fontSize: 10
                     },
-                    data: ['购物', '游戏', '旅游', '影音', '社交'].reverse()
+                    data: ['购物', '游戏', '旅游', '影音', '社交']
         
                 },
                 series: [

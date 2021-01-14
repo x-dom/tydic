@@ -72,10 +72,10 @@ Common.map_server_gaode_symbol_local.maximumLevel =  18;
 Common.map_server = [];
 // Common.map_server.push(Common.map_server_google_satellite_online);
 // Common.map_server.push(Common.map_server_tianditu_symbol_online);
-// Common.map_server.push(Common.map_server_gaode_vector_online);
-// Common.map_server.push(Common.map_server_gaode_satellite_online);
-Common.map_server.push(Common.map_server_gaode_vector_local);
-Common.map_server.push(Common.map_server_gaode_satellite_local);
+Common.map_server.push(Common.map_server_gaode_vector_online);
+Common.map_server.push(Common.map_server_gaode_satellite_online);
+// Common.map_server.push(Common.map_server_gaode_vector_local);
+// Common.map_server.push(Common.map_server_gaode_satellite_local);
 // Common.map_server.push(Common.map_server_gaode_symbol_online);
 // Common.map_server.push(Common.map_server_satellite_local_106);
 
