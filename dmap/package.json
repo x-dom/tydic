@@ -6,7 +6,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.build.js",
     "xs": "webpack-dev-server --config webpack.config.xs.js",
-    "tjj": "webpack-dev-server --config webpack.config.tjj.js",
     "anhui": "webpack --config webpack.config.anhui.js",
     "sichuan": "webpack --config webpack.config.sichuan.js",
     "demo": "webpack-dev-server --config webpack.config.demo.js"
