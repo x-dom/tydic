@@ -1,0 +1,361 @@
+.ol-popup {
+    position: absolute;
+    /* border: 1px solid #00a0e9; */
+    bottom: 12px;
+    left: -50px;
+    min-width: 240px;
+    overflow: hidden;
+}
+.dark .ol-popup{
+    background-color: #081e36;
+}
+.tint .ol-popup{
+    background-color:#e3f2f9;
+}
+
+.ol-popup>i{
+    position: absolute;
+}
+.ol-popup>.left-top{
+    border-left:1px solid #00a0e9;
+    height: 5px;
+    top:0;
+    left: 0;
+}
+.ol-popup>.left-bottom{
+    border-left:1px solid #00a0e9;
+    height: 5px;
+    bottom:0;
+    left: 0;
+}
+.ol-popup>.top-left{
+    border-top:1px solid #00a0e9;
+    width: 5px;
+    top:0;
+    left: 0;
+    
+}
+.ol-popup>.bottom-left{
+    border-top:1px solid #00a0e9;
+    width: 5px;
+    bottom:0;
+    left: 0;
+}
+.ol-popup>.right-top{
+    border-left:1px solid #00a0e9;
+    height: 5px;
+    top:0;
+    right: 0;
+}
+.ol-popup>.right-bottom{
+    border-left:1px solid #00a0e9;
+    height: 5px;
+    bottom:0;
+    right: 0;
+}
+.ol-popup>.top-right{
+    border-top:1px solid #00a0e9;
+    width: 5px;
+    top:0;
+    right: 0;
+}
+.ol-popup>.bottom-right{
+    border-top:1px solid #00a0e9;
+    width: 5px;
+    bottom:0;
+    right: 0;
+}
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.ol-popup:after {
+    border-top-color: #081e36;;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+.ol-popup:before {
+    border-top-color: #00a0e9;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+}
+.dark .ol-popup-closer{
+    color:white;
+}
+.tint .ol-popup-closer{
+    color:#1298b9;
+}
+/* .ol-popup-closer:after {
+    content: "x";
+    color: #027899;
+    
+} */
+.ol-popup-content {
+    z-index: 10;
+    padding:5px;
+}
+.dark .ol-popup-content{
+    color: #85c8f7;
+}
+.tint .ol-popup-content{
+    color: #357bad;
+}
+.dark .ol-popup-content span{
+     color: #fff;
+ }
+.tint .ol-popup-content span{
+    color: #333;
+}
+.ol-popup-content td:last-child{
+    color:#fff;
+}
+.ol-popup .ol-popup-title{
+    width: 100%;
+    height: 20px;
+    padding:5px 5px 0 5px;
+    color: #e8e8e9;
+    text-align: center;
+}
+.dark .ol-popup .ol-popup-title{
+    background-image: url("../image/bg_gis_content_title.png");
+    background-size:100% 100%;
+    border-bottom: 1px solid #00a0e9;
+}
+.tint .ol-popup .ol-popup-title{
+    background-color: #ecf7f9 ;
+    border-bottom: 1px solid #85afc7;
+}
+.ol-popup .ol-popup-title>a{
+    float: right;
+}
+.ol-popup-content-title{
+    background-image: url("../image/bg_gis_content_title.png") ;
+    background-size:100% 100%;
+    color: #e8e8e9;
+    text-align: center;
+    border-bottom: 1px solid #00a0e9;
+}
+.ol-popup-content-btn{
+    float: right;
+    margin-bottom: 10px;
+}
+
+.ol-popup-content-btn-left {
+    background-image: url("../image/bg_gis_bottom_btn_left.png");
+    width:13px;
+    height: 17px;
+    float: left;
+}
+.ol-popup-content-btn-center {
+    background-image: url("../image/bg_gis_bottom_btn_center.png");
+    height: 17px;
+    font-size: 8px;
+    color: #00b5e0;
+    float: left;
+}
+.ol-popup-content-btn-right {
+    background-image: url("../image/bg_gis_bottom_btn_right.png");
+    width:13px;
+    height: 17px;
+    float: left;
+}
+
+.ol-popup-content-table-left-justify {
+    text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+}
+
+.estateInfosBox{
+    width:230px;
+    font-size: 1.4vh;
+}
+.estateInfosCon{
+    width:100%;
+    display:none;
+}
+.estateInfosCon.showItem{
+    display:block;
+}
+.estateInfosCon li{
+    /* display:flex; */
+    width: 100%;
+}
+.estateInfosCon li::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.estateInfosCon li .formName{
+    width:9vh;
+    text-align: justify;
+    text-align-last: justify;
+    position:relative;
+    float: left;
+}
+.dark .estateInfosCon li .formName{
+    color:#85c8f7;
+}
+.tint .estateInfosCon li .formName{
+    color:#357bad;
+}
+.estateInfosCon li .formName:after{
+    display: block;
+    width: 10px;
+    height: 100%;
+    content: "";
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.estateInfosCon li .formVal{
+    width:calc(100% - 9vh);
+    /* overflow:hidden; */
+    float: left;
+    /*text-overflow:ellipsis;*/
+    /*white-space: nowrap;*/
+    word-break:break-all;
+}
+.dark .estateInfosCon li .formVal{
+    color:#fff;
+}
+.tint .estateInfosCon li .formVal{
+    color:#333;
+}
+.estatePage{
+    height:24px;
+    display:flex;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.dark .estatePage{
+    border-top: 1px solid #104277;
+}
+.tint .estatePage{
+    border-top: 1px solid #a3def5;
+}
+.estatePage div{
+    width:50%;
+    line-height:24px;
+    text-align:center;
+    cursor:pointer;
+}
+.estatePage div.disabled{
+    cursor:default;
+}
+.estatePage div i{
+    vertical-align:middle;
+    display:inline-block;
+    width:0;
+    height:0;
+    margin:0 6px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+.dark .estatePage div:first-child i{
+    border-right:10px solid #5da0f5;
+}
+.dark .estatePage div:last-child i{
+    border-left:10px solid #5da0f5;
+}
+.tint .estatePage div:first-child i{
+    border-right:10px solid #357bad;
+}
+.tint .estatePage div:last-child i{
+    border-left:10px solid #357bad;
+}
+.estatePage div span{
+    display:inline-block;
+    vertical-align:middle;
+}
+.dark .estatePage div span{
+    color:#5da0f5;
+}
+.tint .estatePage div span{
+    color:#357bad;
+}
+.dark .estatePage div:hover span{
+    color:#9ec9ff;
+}
+.dark .estatePage div:hover:first-child i{
+    border-right:10px solid #9ec9ff;
+}
+.dark .estatePage div:hover:last-child i{
+    border-left:10px solid #9ec9ff;
+}
+.tint .estatePage div:hover span{
+    color:#0f68a9;
+}
+.tint .estatePage div:hover:first-child i{
+    border-right:10px solid #0f68a9;
+}
+.tint .estatePage div:hover:last-child i{
+    border-left:10px solid #0f68a9;
+}
+.dark .estatePage div.disabled span,.dark .estatePage div.disabled:hover span{
+    color:#5e7084;
+}
+.dark .estatePage div.disabled:first-child i,.dark .estatePage div.disabled:hover:first-child i{
+    border-right:10px solid #5e7084;
+}
+.dark .estatePage div.disabled:last-child i,.dark .estatePage div.disabled:hover:last-child i{
+    border-left:10px solid #5e7084;
+}
+.tint .estatePage div.disabled span,.tint .estatePage div.disabled:hover span{
+    color:#bdd9f7;
+}
+.tint .estatePage div.disabled:first-child i,.tint .estatePage div.disabled:hover:first-child i{
+    border-right:10px solid #bdd9f7;
+}
+.tint .estatePage div.disabled:last-child i,.tint .estatePage div.disabled:hover:last-child i{
+    border-left:10px solid #bdd9f7;
+}
+.dark .labelsDesc li:nth-child(2) i{
+    background: rgba(199,192,79,1) !important;
+}
+.tint .labelsDesc li:nth-child(2) i {
+    background: rgba(199,192,79,1) !important;
+}
+.bgMap .ol-overlay-container{
+    z-index: auto;
+}
+.ol-popup {
+    position: absolute;
+    z-index: 11;
+}
+
+.popup_text_perception{
+    width: 36px;
+    height: 22px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    z-index: 10;
+}
+
+.helpTooltip,.measureTooltip{
+    position: relative;
+    z-index: 10;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>解析文件</title>
+  <link rel="stylesheet" type="text/css" href="plugins/ol3/ol.css">
+  <script src="plugins/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="/plugins/ol3/ol.js"></script>
+  <script src="/plugins/ol3/jsts.min.js"></script>
+</head>
+<body>
+  
+</body>
+<script>
+  var wktformat = new ol.format.WKT();
+  var geoParser = new ol.format.GeoJSON();
+  var ol3Parser = new jsts.io.OL3Parser();
+  var data;
+  $.get('resource/gis/beijing.geojson',(val) => {
+    data = val;
+  }) 
+  
+</script>
+</html>

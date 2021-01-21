@@ -1,0 +1,97 @@
+.noi-boxs {
+	position: absolute;
+	width: 20.5%;
+	height: 4%;
+	left: 39.75%;
+	top: 0;
+	background-color: rgba(19, 41, 117,0.8);
+	float: left;
+	border-radius: 0px 0px 15px 15px;
+	text-align: center;
+	margin: 0 auto;
+	display:block;
+	z-index:9999;
+}
+
+.noi-boxs-body {
+	margin-left: 25%
+}
+
+.noi-boxs-home {
+	float: left;
+	color: #FFFFFF;
+	width: 3vw;
+	height: 3vh;
+	margin: 2%;
+}
+
+.noi-boxs-home-imge {
+	background: url(../image/menulist2.png) no-repeat center;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	display: block;
+	height: 3vh;
+	width: 1.5vw;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+.noi-boxs-home-imge:hover {
+	text-decoration: none;
+	background: url(../image/menulist1.png) no-repeat center;
+	background-size: 100%;
+}
+
+
+.noi-boxs-menu {
+	float: left;
+	color: #FFFFFF;
+	width: 3vw;
+	height: 3vh;
+	margin: 2%;
+}
+
+.noi-boxs-menu-imge {
+	background: url(../image/set2.png) no-repeat center;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	display: block;
+	height: 3vh;
+	width: 1.5vw;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+.noi-boxs-menu-imge:hover {
+	text-decoration: none;
+	background: url(../image/set1.png) no-repeat center;
+	background-size: 100%;
+}
+
+.noi-boxs-shutdown {
+	float: left;
+	color: #FFFFFF;
+	width: 3vw;
+	height: 3vh;
+	margin: 2%;
+}
+
+.noi-boxs-shutdown-imge {
+	background: url(../image/closesystem2.png) no-repeat center;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	display: block;
+	height: 3vh;
+	width: 1.5vw;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+.noi-boxs-shutdown-imge:hover {
+	text-decoration: none;
+	background: url(../image/closesystem1.png) no-repeat center;
+	background-size: 100%;
+}

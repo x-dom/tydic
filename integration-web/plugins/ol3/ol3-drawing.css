@@ -1,0 +1,51 @@
+.ol-drawing-div {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    left: 50px;
+}
+
+.ol-drawing-add {
+    position: absolute;
+    /*width: 300px;*/
+    height: 15px;
+    line-height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #666666;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 3px;
+    /*border-radius: 3px;*/
+    display: inline-block;
+    vertical-align: middle;
+    /*background-image: url("image/add.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 0px;*/
+    /*background-color: transparent;*/
+}
+.ol-drawing-add:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.ol-drawing-add>input{
+    margin-top: 1px;
+}
+.ol-drawing-add>span{
+    vertical-align: top;
+}
+/*.ol-drawing-add {*/
+    /*background-color: #F47164;*/
+    /*border: 1px solid #F47164;*/
+/*}*/
+
+.ol-drawing-table {
+    width: 300px;
+    height: 270px;
+    top: 30px;
+}
+
+#ol-drawing-tableP {
+    position: absolute;
+    width: 300px;
+    height: 270px;
+    top: 30px;
+}

@@ -1,0 +1,591 @@
+[{
+  "name": "伊犁哈萨克自治州",
+  "lngat": [81.32, 43.92],
+  "regionalGrade": "86",
+  "fenData": [["43.62", "219.67", "新市区"],
+    ["40.62", "229.67", "天山区"],
+    ["33.62", "209.67", "沙依巴克区"],
+    ["23.62", "239.67", "水磨沟区"],
+    ["53.62", "229.67", "头屯河区"],
+    ["63.62", "289.67", "达坂城区"],
+    ["53.62", "279.67", "米东区"],
+    ["63.62", "249.67", "乌鲁木齐县"]],
+  "picMind": [
+    {
+    "id": "root",
+    "isroot": true,
+    "topic": "伊犁州资产效益",
+    "isreadonly": "false"
+  },
+    {
+      "id": "sub1",
+      "parentid": "root",
+      "topic": "资产利用率 80%",
+      "isreadonly": "true",
+      "expanded": "false"
+    },
+    {
+      "id": "sub12",
+      "parentid": "sub1",
+      "topic": "<span class='red'></span>单基站流量1.1G/小时",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub13",
+      "parentid": "sub1",
+      "topic": "<span class='red'></span>RRU在线率95.6%",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub14",
+      "parentid": "sub1",
+      "topic": "<span class='red'></span>零低基站占比3.1%",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub15",
+      "parentid": "sub1",
+      "topic": "<span class='red'></span>超忙预警占比5.2%",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub131",
+      "parentid": "sub13",
+      "topic": "故障基站1"
+    },
+    {
+      "id": "sub141",
+      "parentid": "sub14",
+      "topic": "低效基站"
+    },
+    {
+      "id": "sub1311",
+      "parentid": "sub131",
+      "topic": "故障总时长"
+    },
+    {
+      "id": "sub2",
+      "parentid": "root",
+      "topic": "预算完成率60%",
+      "isreadonly": "true",
+      "expanded": false
+    },
+    {
+      "id": "sub21",
+      "parentid": "sub2",
+      "topic": "<span class='red'></span>实际收入18亿",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub22",
+      "parentid": "sub2",
+      "topic": "<span class='red'></span>制造业（100）",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub211",
+      "parentid": "sub21",
+      "topic": "AURP值",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub212",
+      "parentid": "sub21",
+      "topic": "用户数",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub2121",
+      "parentid": "sub212",
+      "topic": "高价值用户数",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub2122",
+      "parentid": "sub212",
+      "topic": "活跃用户数",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub3",
+      "parentid": "root",
+      "topic": "资产周转率90%",
+      "isreadonly": "true",
+      "expanded": false
+    },
+    {
+      "id": "sub4",
+      "parentid": "root",
+      "topic": "成本利润率204%",
+      "isreadonly": "true",
+      "expanded": false
+    },
+    {
+      "id": "sub41",
+      "parentid": "sub4",
+      "topic": "<span class='red'>单站造价16万 </span>",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub42",
+      "parentid": "sub4",
+      "topic": "<span class='red'>投资成本5421万</span>",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub43",
+      "parentid": "sub4",
+      "topic": "<span class='red'>基站总数200000</span>",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub411",
+      "parentid": "sub41",
+      "topic": "建设场景",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub421",
+      "parentid": "sub42",
+      "topic": "采购成本",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub422",
+      "parentid": "sub42",
+      "topic": "建设成本",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub423",
+      "parentid": "sub42",
+      "topic": "铁塔租费",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub424",
+      "parentid": "sub42",
+      "topic": "电费",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub4211",
+      "parentid": "sub421",
+      "topic": "供应商",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub4221",
+      "parentid": "sub422",
+      "topic": "施工单位建设成本高",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub42211",
+      "parentid": "sub4221",
+      "topic": "XX公司",
+      "isreadonly": "true"
+    },
+    {
+      "id": "sub42212",
+      "parentid": "sub4221",
+      "topic": "YY公司",
+      "isreadonly": "true"
+    }
+  ],
+  "code": "654000",
+  "city": [
+    {
+    "name": "察布查尔县",
+      "fenData": [["43.62", "219.67", "新市区"],
+        ["40.62", "229.67", "天山区"],
+        ["33.62", "209.67", "沙依巴克区"],
+        ["23.62", "239.67", "水磨沟区"],
+        ["53.62", "229.67", "头屯河区"],
+        ["63.62", "289.67", "达坂城区"],
+        ["53.62", "279.67", "米东区"],
+        ["63.62", "249.67", "乌鲁木齐县"]],
+    "picMind": [{
+      "id": "root",
+      "isroot": true,
+      "topic": "新疆资产效益",
+      "isreadonly": "false"
+    },
+      {
+        "id": "sub1",
+        "parentid": "root",
+        "topic": "资产利用率 80%",
+        "isreadonly": "true",
+        "expanded": "false"
+      },
+      {
+        "id": "sub12",
+        "parentid": "sub1",
+        "topic": "<span class='red'></span>单基站流量1.1G/小时",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub13",
+        "parentid": "sub1",
+        "topic": "<span class='red'></span>RRU在线率95.6%",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub14",
+        "parentid": "sub1",
+        "topic": "<span class='red'></span>零低基站占比3.1%",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub15",
+        "parentid": "sub1",
+        "topic": "<span class='red'></span>超忙预警占比5.2%",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub131",
+        "parentid": "sub13",
+        "topic": "故障基站1"
+      },
+      {
+        "id": "sub141",
+        "parentid": "sub14",
+        "topic": "低效基站"
+      },
+      {
+        "id": "sub1311",
+        "parentid": "sub131",
+        "topic": "故障总时长"
+      },
+      {
+        "id": "sub2",
+        "parentid": "root",
+        "topic": "预算完成率60%",
+        "isreadonly": "true",
+        "expanded": false
+      },
+      {
+        "id": "sub21",
+        "parentid": "sub2",
+        "topic": "<span class='red'></span>实际收入18亿",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub22",
+        "parentid": "sub2",
+        "topic": "<span class='red'></span>制造业（100）",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub211",
+        "parentid": "sub21",
+        "topic": "AURP值",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub212",
+        "parentid": "sub21",
+        "topic": "用户数",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub2121",
+        "parentid": "sub212",
+        "topic": "高价值用户数",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub2122",
+        "parentid": "sub212",
+        "topic": "活跃用户数",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub3",
+        "parentid": "root",
+        "topic": "资产周转率90%",
+        "isreadonly": "true",
+        "expanded": false
+      },
+      {
+        "id": "sub4",
+        "parentid": "root",
+        "topic": "成本利润率204%",
+        "isreadonly": "true",
+        "expanded": false
+      },
+      {
+        "id": "sub41",
+        "parentid": "sub4",
+        "topic": "<span class='red'>单站造价16万 </span>",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub42",
+        "parentid": "sub4",
+        "topic": "<span class='red'>投资成本5421万</span>",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub43",
+        "parentid": "sub4",
+        "topic": "<span class='red'>基站总数200000</span>",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub411",
+        "parentid": "sub41",
+        "topic": "建设场景",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub421",
+        "parentid": "sub42",
+        "topic": "采购成本",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub422",
+        "parentid": "sub42",
+        "topic": "建设成本",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub423",
+        "parentid": "sub42",
+        "topic": "铁塔租费",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub424",
+        "parentid": "sub42",
+        "topic": "电费",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub4211",
+        "parentid": "sub421",
+        "topic": "供应商",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub4221",
+        "parentid": "sub422",
+        "topic": "施工单位建设成本高",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub42211",
+        "parentid": "sub4221",
+        "topic": "XX公司",
+        "isreadonly": "true"
+      },
+      {
+        "id": "sub42212",
+        "parentid": "sub4221",
+        "topic": "YY公司",
+        "isreadonly": "true"
+      }
+    ],
+    "lngat": [81.331, 43.9122],
+    "regionalGrade": "86"
+  },
+    {
+      "name": "昭苏县",
+      "fenData": [["43.62", "219.67", "新市区"],
+        ["40.62", "229.67", "天山区"],
+        ["33.62", "209.67", "沙依巴克区"],
+        ["23.62", "239.67", "水磨沟区"],
+        ["53.62", "229.67", "头屯河区"],
+        ["63.62", "289.67", "达坂城区"],
+        ["53.62", "279.67", "米东区"],
+        ["63.62", "249.67", "乌鲁木齐县"]],
+      "picMind": [
+        {
+        "id": "root",
+        "isroot": true,
+        "topic": "新疆资产效益",
+        "isreadonly": "false"
+      },
+        {
+          "id": "sub1",
+          "parentid": "root",
+          "topic": "资产利用率 80%",
+          "isreadonly": "true",
+          "expanded": "false"
+        },
+        {
+          "id": "sub12",
+          "parentid": "sub1",
+          "topic": "<span class='red'></span>单基站流量1.1G/小时",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub13",
+          "parentid": "sub1",
+          "topic": "<span class='red'></span>RRU在线率95.6%",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub14",
+          "parentid": "sub1",
+          "topic": "<span class='red'></span>零低基站占比3.1%",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub15",
+          "parentid": "sub1",
+          "topic": "<span class='red'></span>超忙预警占比5.2%",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub131",
+          "parentid": "sub13",
+          "topic": "故障基站1"
+        },
+        {
+          "id": "sub141",
+          "parentid": "sub14",
+          "topic": "低效基站"
+        },
+        {
+          "id": "sub1311",
+          "parentid": "sub131",
+          "topic": "故障总时长"
+        },
+        {
+          "id": "sub2",
+          "parentid": "root",
+          "topic": "预算完成率60%",
+          "isreadonly": "true",
+          "expanded": false
+        },
+        {
+          "id": "sub21",
+          "parentid": "sub2",
+          "topic": "<span class='red'></span>实际收入18亿",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub22",
+          "parentid": "sub2",
+          "topic": "<span class='red'></span>制造业（100）",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub211",
+          "parentid": "sub21",
+          "topic": "AURP值",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub212",
+          "parentid": "sub21",
+          "topic": "用户数",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub2121",
+          "parentid": "sub212",
+          "topic": "高价值用户数",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub2122",
+          "parentid": "sub212",
+          "topic": "活跃用户数",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub3",
+          "parentid": "root",
+          "topic": "资产周转率90%",
+          "isreadonly": "true",
+          "expanded": false
+        },
+        {
+          "id": "sub4",
+          "parentid": "root",
+          "topic": "成本利润率204%",
+          "isreadonly": "true",
+          "expanded": false
+        },
+        {
+          "id": "sub41",
+          "parentid": "sub4",
+          "topic": "<span class='red'>单站造价16万 </span>",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub42",
+          "parentid": "sub4",
+          "topic": "<span class='red'>投资成本5421万</span>",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub43",
+          "parentid": "sub4",
+          "topic": "<span class='red'>基站总数200000</span>",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub411",
+          "parentid": "sub41",
+          "topic": "建设场景",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub421",
+          "parentid": "sub42",
+          "topic": "采购成本",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub422",
+          "parentid": "sub42",
+          "topic": "建设成本",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub423",
+          "parentid": "sub42",
+          "topic": "铁塔租费",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub424",
+          "parentid": "sub42",
+          "topic": "电费",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub4211",
+          "parentid": "sub421",
+          "topic": "供应商",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub4221",
+          "parentid": "sub422",
+          "topic": "施工单位建设成本高",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub42211",
+          "parentid": "sub4221",
+          "topic": "XX公司",
+          "isreadonly": "true"
+        },
+        {
+          "id": "sub42212",
+          "parentid": "sub4221",
+          "topic": "YY公司",
+          "isreadonly": "true"
+        }
+      ],
+      "lngat": [81.331, 43.9122],
+      "regionalGrade": "96"
+    }
+  ]
+
+}]
